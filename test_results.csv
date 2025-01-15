@@ -1,0 +1,6 @@
+id,status,ip,latitude,longitude,send_date,reported,modified_date,email,first_name,last_name,position
+1jMROEw,Email Sent,,0,0,2025-01-14T10:09:17.2827346Z,FALSE,2025-01-14T10:09:17.2827346Z,mstoehr89@gmail.com,Miriam,Stoehr,Trainee
+SwfOZ0d,Email Opened,,0,0,2025-01-14T10:09:17.8986675Z,FALSE,2025-01-14T10:09:17.8986675Z,mia.0.0.0.0.6.1.2@gmail.com,M,S,Finance
+SwfOZ0w,Clicked Link,,0,0,2025-01-14T12:09:17.8986675Z,FALSE,2025-01-14T12:09:17.8986675Z,olha.devproject@gmail.com,Olha,Slutska,Trainee
+SofOZ0k,Submitted Data,,0,0,2025-01-14T11:09:17.8986675Z,FALSE,2025-01-14T11:09:17.8986675Z,holly.devproject@gmail.com,O,S,Finance
+KpfOZ0k,Email Reported,,0,0,2025-01-14T10:19:17.8986675Z,FALSE,2025-01-14T10:19:17.8986675Z,,Stef,N,Trainee
