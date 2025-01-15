@@ -10,6 +10,24 @@ import google.generativeai as genai
 prompts = {}
 GEMINI_API_KEY = ""
 
+# Context manager for Gemini API client
+class GeminiClient:
+    """
+    Context manager for the Gemini API client.
+    Initialize the Gemini API client
+    """
+    def __init__(self, system_instruction: str) -> None:
+        self.client = None
+        self.system_instruction = system_instruction
+
+    def __enter__(self) -> genai.GenerativeModel:
+        self.client = genai.GenerativeModel(model_name="gemini-1.5-pro",
+                                            system_instruction= self.system_instruction)
+        return self.client
+    
+    def __exit__(self, exc_type, exc_value, exc_traceback) -> None:
+        pass
+
 # Functions
 
 def load_env() -> None:
@@ -56,10 +74,8 @@ def generate_mail_body_gemini(department: str) -> str:
 
     # Generate the mail body
     # Use the Gemini API to generate the mail body
-    model=genai.GenerativeModel(
-    model_name="gemini-1.5-pro",
-    system_instruction=developer_message)
-    mail_body = model.generate_content(user_prompt.format(department=department))
+    with GeminiClient(system_instruction= developer_message) as client:
+        mail_body = client.generate_content(contents = user_prompt.format(department=department))
 
     return mail_body.text
 
@@ -78,11 +94,8 @@ def generate_mail_subject_gemini(mail_body: str) -> str:
 
     # Generate the mail subject
     # Use the Gemini API to generate the mail subject
-    model=genai.GenerativeModel(
-    model_name="gemini-1.5-pro",
-    system_instruction=developer_message_subject)
-    mail_subject = model.generate_content(mail_body)
-
+    with GeminiClient(system_instruction= developer_message_subject) as client:
+        mail_subject = client.generate_content(contents = mail_body)
     return mail_subject.text
 
 # Main code block
