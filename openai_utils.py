@@ -7,7 +7,7 @@ from openai import OpenAI, APIConnectionError, RateLimitError, APIStatusError
 
 # Global variables
 
-config = {}
+prompts = {}
 
 # Functions
 
@@ -22,22 +22,19 @@ def load_env() -> None:
     else:
         raise FileNotFoundError(f"Environment file '{env_file}' not found.")
     
-def load_config() -> None:
+def load_prompts() -> None:
     """
-    Load the configuration from the config.json file.
+    Load the prompts from the prompts.json file.
     """
     # Globals
-    global config
+    global prompts
     # Load the JSON file
-    config_file = "config.json"  # Replace with your JSON file's name if different
-    if os.path.exists(config_file):
-        with open(config_file, "r") as file:
-            config = json.load(file)
-            #developer_message = config["developer_message"]
-            #user_prompt = config["user_prompt"]
-            #developer_message_subject = config["developer_message_subject"]
+    prompts_file = "prompts.json"  # Replace with your JSON file's name if different
+    if os.path.exists(prompts_file):
+        with open(prompts_file, "r") as file:
+            prompts = json.load(file)
     else:
-        raise FileNotFoundError(f"Configuration file '{config_file}' not found.")
+        raise FileNotFoundError(f"Prompts file '{prompts_file}' not found.")
     
 def generate_mail_body_openai(department: str) -> str:
     """
@@ -48,14 +45,9 @@ def generate_mail_body_openai(department: str) -> str:
     :return: str: The generated phishing mail body.
     """
     # Globals
-    global config
-    developer_message = config["developer_message"]
-    user_prompt = config["user_prompt"]
-    # Load the environment variables
-    #load_env()
-
-    # Load the configuration
-    #load_config()
+    global prompts
+    developer_message = prompts["developer_message"]
+    user_prompt = prompts["user_prompt"]
 
     # Generate the mail body
     with OpenAI() as client:
@@ -89,8 +81,8 @@ def generate_mail_subject_openai(mail_body: str) -> str:
     """
 
     # Globals
-    global config
-    developer_message_subject = config["developer_message_subject"]
+    global prompts
+    developer_message_subject = prompts["developer_message_subject"]
 
     # Generate Subject
     with OpenAI() as client:
@@ -120,7 +112,7 @@ if __name__ == "__main__":
     
     # Load the environment variables
     load_env()
-    load_config()
+    load_prompts()
 
     # Set department
     department = "HR"
