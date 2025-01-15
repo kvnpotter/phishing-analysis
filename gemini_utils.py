@@ -93,15 +93,22 @@ def random_topic(department: str) -> dict[str:str]:
 
     return random_topic
     
-def generate_mail_body_gemini(department: str, topic: dict[str, str]) -> str:
+def generate_mail_body_gemini(department: str) -> str:
     """
     Generate the phishing mail body from the Gemini API.
 
     :param department: str: The department to target.
-    :param topic: dict[str:str]]]: The random topic for the department as a dictionary containing email subject, sender name and sender email as str.
     
     :return: str: The generated phishing mail body.
     """
+    # Load environment variables, prompts, and topics
+    load_env()
+    load_prompts()
+    load_topics()
+
+    # Get a random topic for the department
+    topic = random_topic(department)
+
     # Globals
     global prompts, GEMINI_API_KEY
     developer_message = prompts["developer_message"]
@@ -118,8 +125,8 @@ def generate_mail_body_gemini(department: str, topic: dict[str, str]) -> str:
         mail_body = client.generate_content(contents = user_prompt.format(department=department,
                                                                           sender=sender,
                                                                           subject=subject))
-
-    return mail_body.text
+    print("Mail body generated")
+    return (mail_body.text, sender, subject)
 
 def generate_mail_subject_gemini(mail_body: str) -> str:
     """
@@ -145,17 +152,16 @@ def generate_mail_subject_gemini(mail_body: str) -> str:
 if __name__ == "__main__":
     
     # Load the environment variables
-    load_env()
-    load_prompts()
-    load_topics()
+    #load_env()
+    #load_prompts()
+    #load_topics()
 
     # Set topic and department
     department = "HR"
-    topic = random_topic(department)
+    #topic = random_topic(department)
 
     # Generate mail body
-    mail_body = generate_mail_body_gemini(department=department,
-                                          topic=topic)
+    mail_body = generate_mail_body_gemini(department=department)
 
     # Generate mail subject
     #mail_subject = generate_mail_subject_gemini(mail_body)
