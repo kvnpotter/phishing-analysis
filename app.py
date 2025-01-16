@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 import plotly.express as px
+from typing import List, Tuple
 
 # Load data
 code_dir = os.path.dirname(os.path.realpath(__file__))  # Directory of the script
@@ -11,7 +12,8 @@ data_path = os.path.join(code_dir, "./test_results.csv")
 @st.cache_data
 def load_data(data_path):
     """Load and cache data from CSV."""
-    return pd.read_csv(data_path)
+    data = pd.read_csv(data_path)
+    return data
 
 df = load_data(data_path)
 
@@ -92,6 +94,12 @@ fig_funnel = px.funnel(
 
 # Remove the legend
 fig_funnel.update_layout(showlegend=False)
+
+# Add percentage sign to the labels
+fig_funnel.update_traces(
+    texttemplate="%{x}%",  # Add '%' to the data labels
+    textposition="inside"  # Place labels inside the funnel sections
+)
 
 # Display the funnel chart in Streamlit
 st.plotly_chart(fig_funnel)
