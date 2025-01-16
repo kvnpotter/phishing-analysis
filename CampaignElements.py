@@ -3,11 +3,6 @@
 import random
 from gemini_utils import generate_mail_body_gemini
 from openai_utils import generate_mail_body_openai
-import os
-import json
-import pandas as pd
-from gophish import Gophish
-from gophish.models import *
 from datetime import datetime
 
 # Classes
@@ -16,7 +11,10 @@ class PhishingMail():
     """
 
     """
-    def __init__(self,id: int, department: str) -> None:
+    def __init__(self,id: int,
+                 department: str,
+                 topics,
+                 prompts) -> None:
         """
         Initialize the Template object to contain phishing email for the recipient.
 
@@ -25,6 +23,8 @@ class PhishingMail():
         """
         self.id = id
         self.department = department
+        self.topics = topics
+        self.prompts = prompts
         self.model = None
         self.mail_body = None
         self.sender_email = None
@@ -54,7 +54,9 @@ class PhishingMail():
         Generate an email using OpenAI.
         """
         print("Generating OpenAI email...")
-        result = generate_mail_body_openai(department=self.department)
+        result = generate_mail_body_openai(department=self.department,
+                                           topics=self.topics,
+                                           prompts=self.prompts)
 
         self.mail_body, self.sender_email, self.subject, self.sender_name = result
 
@@ -63,7 +65,10 @@ class PhishingMail():
         Generate an email using Gemini.
         """
         print("Generating Gemini email...")
-        result = generate_mail_body_gemini(department=self.department)
+        result = generate_mail_body_gemini(department=self.department,
+                                           topics=self.topics,
+                                           prompts=self.prompts,
+                                           api_key=None) # PLACEHOLDER - can put own API key
 
         self.mail_body, self.sender_email, self.subject, self.sender_name = result
 
@@ -72,7 +77,7 @@ class PhishingMail():
         Generate a GoPhish template object.
         """
         self.template = Template(id=self.id,
-                                 name=f"{self.department}_{datetime.now().strftime('%Y-%m-%d_%H:%M:%S')}",
+                                 name=self.subject,
                                  text=self.mail_body)
 
 class UserGroup:
@@ -134,7 +139,7 @@ class SenderProfile:
                                    name=self.name,
                                    interface_type="SMTP",
                                    host = "host:port",
-                                   from_address=self.sender_email,
+                                   from_address=self.sender_email, # PLACEHOLER - can put own email
                                    ignore_cert_errors=True)
         
 class LandingPage:
@@ -188,14 +193,8 @@ class GoPhishCampaign:
                  last_name: str,
                  recipient_email: str,
                  department: str,
-                 #groups: list[Group],
-                 #page: Page,
-                 #template: Template, 
-                 #smtp: SMTP,
-                 #url: str,
-                 #send_by_date: datetime|None = None,
-                 #launch_date: datetime|None = None
-                 ) -> None:
+                 topics: dict[str:list[dict[str:str]]],
+                 prompts: dict[str:str]) -> None:
         """
         Initialize the GoPhishCampaign object to contain individual campaign information.
 
@@ -204,29 +203,27 @@ class GoPhishCampaign:
         :param last_name: str: The last name of recipient of campaign.
         :param recipient_email: str: The email address of recipient of campaign.
         :param department: str: The department of recipient of campaign.
-
-        :param name: str: The name of the campaign.
-        :param send_by_date: datetime.datetime: (Optional)The date by which the campaign should be sent.
-        :param launch_date: datetime.datetime: (Optional)The date on which the campaign should be launched.
-        :param groups: list[Group]: List containing GoPhish groups for the campaign. (One group containing one recipient)
-        :param page: Page: The GoPhish landing page object.
-        :param template: Template: The GoPhish template object.
-        :param smtp: SMTP: The GoPhish SMTP (sender) object.
-        :param url: str: The URL of the phishing site.
+        :param topics: dict[str:list[dict[str:str]]]: The topics for the departments.
+        :param prompts: dict[str:str]: The prompts for the phishing mail generation	
         """
         self.id = id
         self.first_name = first_name
         self.last_name = last_name
         self.recipient_email = recipient_email
         self.department = department
+        self.topics = topics
+        self.prompts = prompts
         self.template = None
+        self.model = None
         self.sender_name = None
         self.sender_email = None
         self.mail_subject = None
         self.user = None
         self.group = None
-        self.sender_profile = None
+        self.smtp = None
         self.landing_page = None
+        self.url = None ### PLACEHOLDER
+        self.campaign = None
 
     def setup_campaign(self) -> None:
         """
@@ -234,7 +231,10 @@ class GoPhishCampaign:
         """
 
         # Create the template
-        template = PhishingMail(id=self.id, department=self.department)
+        template = PhishingMail(id=self.id,
+                                department=self.department,
+                                topics=self.topics,
+                                prompts=self.prompts)
         template.random_select_model()
         template.select_email_generator()
         template.generate_gp_template()
@@ -243,6 +243,7 @@ class GoPhishCampaign:
         self.sender_name = template.sender_name
         self.sender_email = template.sender_email
         self.mail_subject = template.subject
+        self.model = template.model
 
         # Create user and user group
 
@@ -262,7 +263,7 @@ class GoPhishCampaign:
         sender = SenderProfile(id=self.id, name=self.sender_name, sender_email=self.sender_email)
         sender.generate_gp_sender()
 
-        self.sender_profile = sender.sender_profile
+        self.smtp = sender.sender_profile
 
         # Create landing page
 
@@ -276,77 +277,66 @@ class GoPhishCampaign:
 
         self.landing_page = page.page
 
-
-        self.name = name
-        self.send_by_date = send_by_date
-        self.launch_date = launch_date
-        self.groups = groups
-        self.page = page
-        self.template = template
-        self.smtp = smtp
-        self.url = url
-        self.campaign = None
-
     def generate_gp_campaign(self) -> None:
         """
         Generate a GoPhish campaign object.
         """
         self.campaign = Campaign(id=self.id,
-                                 name=self.name,
-                                 send_by_date=self.send_by_date,
-                                 launch_date=self.launch_date,
-                                 groups=self.groups,
-                                 page=self.page,
+                                 name=f"{self.last_name}_{self.first_name}_{datetime.now().strftime('%Y-%m-%d_%H:%M:%S')}",
+                                 # send_by_date=self.send_by_date, PLACEHOLDER, HOW WORKS
+                                 #launch_date=self.launch_date, PLACEHOLDER, HOW WORKS
+                                 groups=[self.group],
+                                 page=self.landing_page,
                                  template=self.template,
                                  smtp=self.smtp,
                                  url=self.url)
 
-if __name__ == "__main__":
-
-    # Testing template creation
-
-    template = PhishingMail(id=1, department="HR")
-    template.random_select_model()
-    template.select_email_generator()
-    template.generate_gp_template()
-    #print(template.subject)
-    #print(template.mail_body)
-    #print(template.sender)
-    #print(template.template.text)
-
-    # Testing user creation
-
-    user = UserGroup(id=1, first_name="John", last_name="Doe", email="john_doe@test.com", department="HR")
-    user.generate_gp_user()
-    user.generate_gp_group()
-    #print(user.group.name)
-
-    # Testing sender profile creation
-
-    sender = SenderProfile(id=1, name=template.sender, email="john_doe@test.com")
-    sender.generate_gp_sender()
-    #print(sender.sender_profile.name)
-
-    # Testing landing page creation
-
-    page = LandingPage(id=1,
-                       html="<html><body><h1>You failed the test!</h1></body></html>",
-                       name="Test Page",
-                       redirect_url="https://you_failed_the_test.com",
-                       capture_credentials=True,
-                       capture_passwords=True)
-    #print(page.html)
-
-    # Testing campaign creation
-
-    campaign = GoPhishCampaign(id=1,
-                               name="Test Campaign",
-                               send_by_date=datetime.now(),
-                               launch_date=datetime.now(),
-                               groups=[user.group],
-                               page=None,
-                               template=template.template,
-                               smtp=sender.sender_profile,
-                               url="https://you_failed_the_test.com")
-    campaign.generate_gp_campaign()
-    print(campaign.campaign)
+#if __name__ == "__main__":
+#
+#    # Testing template creation
+#
+#    template = PhishingMail(id=1, department="HR")
+#    template.random_select_model()
+#    template.select_email_generator()
+#    template.generate_gp_template()
+#    #print(template.subject)
+#    #print(template.mail_body)
+#    #print(template.sender)
+#    #print(template.template.text)
+#
+#    # Testing user creation
+#
+#    user = UserGroup(id=1, first_name="John", last_name="Doe", email="john_doe@test.com", department="HR")
+#    user.generate_gp_user()
+#    user.generate_gp_group()
+#    #print(user.group.name)
+#
+#    # Testing sender profile creation
+#
+#    sender = SenderProfile(id=1, name=template.sender, email="john_doe@test.com")
+#    sender.generate_gp_sender()
+#    #print(sender.sender_profile.name)
+#
+#    # Testing landing page creation
+#
+#    page = LandingPage(id=1,
+#                       html="<html><body><h1>You failed the test!</h1></body></html>",
+#                       name="Test Page",
+#                       redirect_url="https://you_failed_the_test.com",
+#                       capture_credentials=True,
+#                       capture_passwords=True)
+#    #print(page.html)
+#
+#    # Testing campaign creation
+#
+#    campaign = GoPhishCampaign(id=1,
+#                               name="Test Campaign",
+#                               send_by_date=datetime.now(),
+#                               launch_date=datetime.now(),
+#                               groups=[user.group],
+#                               page=None,
+#                               template=template.template,
+#                               smtp=sender.sender_profile,
+#                               url="https://you_failed_the_test.com")
+#    campaign.generate_gp_campaign()
+#    print(campaign.campaign)

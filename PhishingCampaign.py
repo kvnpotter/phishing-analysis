@@ -1,15 +1,9 @@
 # Imports
 
-import random
-from gemini_utils import generate_mail_body_gemini
-from openai_utils import generate_mail_body_openai
-from CampaignElements import PhishingMail, UserGroup, SenderProfile, LandingPage, GoPhishCampaign
+from CampaignElements import GoPhishCampaign
 import os
 import json
 import pandas as pd
-from gophish import Gophish
-from gophish.models import *
-from datetime import datetime
 
 # Classes
 
@@ -17,7 +11,17 @@ class PhishingCampaign:
     """
 
     """
-    def __init__(self):
+    def __init__(self,
+                 topics: dict[str:list[dict[str:str]]],
+                 prompts: dict[str:str]) -> None:
+        """
+        Create complete campaign, containing instances of all required classes.
+
+        :param topics: dict[str:list[dict[str:str]]]: The topics for the departments.
+        :param prompts: dict[str:str]: The prompts for the phishing mail generation.
+        """
+        self.topics = topics
+        self.prompts = prompts
         self.config = None
         self.data = None
         self.campaigns = []
@@ -52,7 +56,11 @@ class PhishingCampaign:
                                        first_name=recipient["First Name"],
                                        last_name=recipient["Last Name"],
                                        recipient_email=recipient["Email"],
-                                       department= recipient["Team Unit"])
+                                       department= recipient["Team Unit"],
+                                       topics=self.topics,
+                                       prompts=self.prompts,)
+            campaign.setup_campaign()
+            campaign.generate_gp_campaign()
             self.campaigns.append(campaign)
 
 
