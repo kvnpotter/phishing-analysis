@@ -68,13 +68,15 @@ def generate_mail_body_gemini(department: str,
     subject = topic["Topic"]
     sender_name = topic["Sender"]
     sender_email = topic["sender_mail"]
+    t = "{{.Tracker}}"
 
     # Generate the mail body
     # Use the Gemini API to generate the mail body
     with GeminiClient(system_instruction= developer_message) as client:
         mail_body = client.generate_content(contents = user_prompt.format(department=department,
                                                                           sender=sender_name,
-                                                                          subject=subject))
+                                                                          subject=subject,
+                                                                          t=t))
     print("Mail body generated")
     print("Waiting 45 seconds")
     time.sleep(45) # Wait for 45 seconds to not go over alotted quota to Gemini free !
@@ -103,23 +105,15 @@ def generate_mail_body_gemini(department: str,
 
 if __name__ == "__main__":
     
-    # Load the environment variables
-    #load_env()
-    #load_prompts()
-    #load_topics()
+    from environment_setup import load_env, load_prompts, load_topics
+    load_env()
+    topics = load_topics("Emailtopics.json")
+    prompts = load_prompts("prompts.json")
 
-    # Set topic and department
-    department = "HR"
-    #topic = random_topic(department)
-
-    # Generate mail body
-    mail_body = generate_mail_body_gemini(department=department)
-
-    # Generate mail subject
-    #mail_subject = generate_mail_subject_gemini(mail_body)
-
-    # Print the generated mail body and subject
-    #print(mail_subject)
-    print(mail_body)
+    result = generate_mail_body_gemini(department="Telecommunication Services",
+                                        topics=topics,
+                                        prompts=prompts,
+                                        api_key="")
+    print(result)
 
     

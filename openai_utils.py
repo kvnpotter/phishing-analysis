@@ -48,6 +48,7 @@ def generate_mail_body_openai(department: str,
     subject = topic["Topic"]
     sender_name = topic["Sender"]
     sender_email = topic["sender_mail"]
+    t = "{{.Tracker}}"
 
     # Generate the mail body
     with OpenAI() as client:
@@ -57,7 +58,8 @@ def generate_mail_body_openai(department: str,
                 messages=[{"role": "developer", "content": developer_message},
                 {"role": "user", "content": user_prompt.format(department=department,
                                                                sender=sender_name,
-                                                               subject=subject)}],
+                                                               subject=subject,
+                                                               t=t)}],
                 temperature=0.7,
                 max_tokens=300
             )
