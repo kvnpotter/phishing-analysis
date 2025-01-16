@@ -105,7 +105,7 @@ def generate_mail_body_gemini(department: str,
 
 if __name__ == "__main__":
     
-    from environment_setup import load_env, load_prompts, load_topics
+    from CampaignCreator.environment_setup import load_env, load_prompts, load_topics
     load_env()
     topics = load_topics("Emailtopics.json")
     prompts = load_prompts("prompts.json")

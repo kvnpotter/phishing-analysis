@@ -1,6 +1,6 @@
 # Imports
 
-from CampaignElements import GoPhishCampaign
+from .CampaignElements import GoPhishCampaign
 import os
 import json
 import pandas as pd
@@ -31,7 +31,7 @@ class PhishingCampaign:
         Load the recipient data from the CSV file.
 
         """
-        config_file = "config.json"  # Contains recipient employee data
+        config_file = "./config.json"  # Contains recipient employee data
         if os.path.exists(config_file):
             with open(config_file, "r") as file:
                 self.config = json.load(file)

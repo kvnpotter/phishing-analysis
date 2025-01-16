@@ -1,7 +1,7 @@
 # Imports
 
-from environment_setup import load_env, load_prompts, load_topics
-from PhishingCampaign import PhishingCampaign
+from CampaignCreator import load_env, load_topics, load_prompts
+from CampaignCreator import PhishingCampaign
 
 # Global variables
 
@@ -16,8 +16,8 @@ if __name__ == "__main__":
     # Initialize the environment
 
     GEMINI_API_KEY = load_env()
-    topics = load_topics("Emailtopics.json")
-    prompts = load_prompts("prompts.json")
+    topics = load_topics("input_data_prompts_topics/Emailtopics.json")
+    prompts = load_prompts("input_data_prompts_topics/prompts.json")
 
     # Create phishing campaign and load recipient data from CSV file with path specified in config.json
 
