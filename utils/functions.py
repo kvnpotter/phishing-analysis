@@ -24,6 +24,9 @@ def create_groups(file, api):
 
     PARAMS
     file json: 
+
+    RETURNS
+    group -list
     """
     # Convert string to json
     file = json.loads(file)
@@ -33,12 +36,11 @@ def create_groups(file, api):
     target = [User(first_name=row['first_name'], last_name=row['last_name'], email=row['email'], position=row['position']) for row in rows]
     for user in target:
         group = Group(name=user.first_name, targets=[user])
-        #Send to GoPhish
+        # Add group to groups
         api.groups.post(group)
-        return group
 
 
-html_code = '<html lang="eng"><header><h1>You have been hacked!</h1></header><html>'
+html_code = '<html><body>Click here</a></body></html>)'
 
 page = Page(
     id=1,
@@ -50,18 +52,20 @@ temp = Template(
     name='First Template'
 )
 
-def new_campaign(group):
+
+def new_campaign(api, group, name):
+    smtp = api.smtp.get()[0]
     campaign = Campaign(
-    name="Password Reset Campaign",
+    name= name,
     groups=[group],
     page=page,
-    template=temp,
+    template=api.templates.get(template_id=1),
     smtp=smtp,
     url='https://celinab23.wixsite.com/phiishing-awareness',
     # Set launch date and time
     #launch_date=launch_date_iso 
     )
-    return campaign
+    api.campaigns.post(campaign)
 
 
 def create_campaign(file):
@@ -75,3 +79,9 @@ def create_campaign(file):
     api = connect()
     # Call func to create individual groups
     create_groups(file, api)
+    #retrieve groups
+    groups = api.groups.get()
+    #create new campaing per group (person)
+    for group in groups:
+        name = group.name
+        new_campaign(api, group, name)
