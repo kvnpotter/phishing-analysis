@@ -16,7 +16,7 @@ class GeminiClient:
         self.system_instruction = system_instruction
 
     def __enter__(self) -> genai.GenerativeModel:
-        self.client = genai.GenerativeModel(model_name="gemini-1.5-pro",
+        self.client = genai.GenerativeModel(model_name="gemini-1.5-flash",
                                             system_instruction= self.system_instruction)
         return self.client
     
@@ -78,8 +78,8 @@ def generate_mail_body_gemini(department: str,
                                                                           subject=subject))
     mail_with_tracker = mail_body.text + "\n{{.Tracker}}" # Add tracker
     print("Mail body generated")
-    print("Waiting 45 seconds")
-    time.sleep(45) # Wait for 45 seconds to not go over alotted quota to Gemini free !
+    #print("Waiting 45 seconds") #Only used to stop rate limitation for gemini-1.5-pro free
+    #time.sleep(45) # Wait for 45 seconds to not go over alotted quota to Gemini free !
     return (mail_with_tracker, sender_email, subject, sender_name)
 
 def generate_mail_body_openai(department: str,

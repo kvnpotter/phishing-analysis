@@ -3,1018 +3,1018 @@
         {
             "Sender": "Technical Support",
             "sender_mail": "support@proximus.com",
-    "Topic": "\"\"Urgent: Business customer’s voice line down in Uccle. Immediate assistance required.\"\""
+    "Topic": "Urgent: Business customer’s voice line down in Uccle. Immediate assistance required."
 },
 {
     "Sender": "Customer Service",
     "sender_mail": "complaints@proximus.com ",
-    "Topic": "\"\"Customer complaint: VoIP service is experiencing dropped calls.\"\""
+    "Topic": "Customer complaint: VoIP service is experiencing dropped calls."
 },
 {
     "Sender": "Sales",
     "sender_mail": "sales@proximus.com",
-    "Topic": "\"\"New service request: Installation of fiber internet for business location.\"\""
+    "Topic": "New service request: Installation of fiber internet for business location."
 },
 {
     "Sender": "Product Development",
     "sender_mail": "products@proximus.com",
-    "Topic": "\"\"Update on new VoIP phone plans for businesses. Full details.\"\""
+    "Topic": "Update on new VoIP phone plans for businesses. Full details."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"HR Service: Retirement and Pension Plan Update: Confirm Your Information\"\""
+    "Topic": "HR Service: Retirement and Pension Plan Update: Confirm Your Information"
 }],
 "Network Operations":[
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Register Now: Advanced Network Troubleshooting Techniques Workshop\"\""
+    "Topic": "Register Now: Advanced Network Troubleshooting Techniques Workshop"
 },
 {
     "Sender": "Network Operations",
     "sender_mail": "operations@proximus.com",
-    "Topic": "\"\"Network outage: Connectivity issues in Brussels.”"
+    "Topic": "Network outage: Connectivity issues in Brussels."
 },
 {
     "Sender": "Infrastructure Management",
     "sender_mail": "infrastructure@proximus.com",
-    "Topic": "\"\"Scheduled maintenance: Core network switches upgrade next month.\"\""
+    "Topic": "Scheduled maintenance: Core network switches upgrade next month."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"HR Service: Annual Performance Bonus – Confirm Your Bonus Amount Now\"\""
+    "Topic": "HR Service: Annual Performance Bonus – Confirm Your Bonus Amount Now"
 },
 {
     "Sender": "Infrastructure Management",
     "sender_mail": "infrastructure@proximus.com",
-    "Topic": "\"\"Capacity analysis: Preparing for increased demand in Gent.”"
+    "Topic": "Capacity analysis: Preparing for increased demand in Gent."
 }],
 "Infrastructure Management" : [
     { "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Webinar Alert: New Trends in Infrastructure Management – Register Now\"\""
+    "Topic": "Webinar Alert: New Trends in Infrastructure Management – Register Now"
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“HR Service: Complete Your Health Insurance Registration to Avoid Disruption\"\""
+    "Topic": "HR Service: Complete Your Health Insurance Registration to Avoid Disruption"
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Training Invitation: Optimize Your Infrastructure Management Skills\"\""
+    "Topic": "Training Invitation: Optimize Your Infrastructure Management Skills"
 },
 {
     "Sender": "Data Center Operations",
     "sender_mail": "datacenter@proximus.com",
-    "Topic": "\"\"Planned data center expansion: New server installation.\"\""
+    "Topic": "Planned data center expansion: New server installation."
 },
 {
     "Sender": "Cybersecurity",
     "sender_mail": "security@proximus.com",
-    "Topic": "\"\"Security breach alert: Suspicious activity detected in network node.\"\""
+    "Topic": "Security breach alert: Suspicious activity detected in network node."
 }],
 "Broadband and Mobile Services":[
 {
     "Sender": "Customer Service",
     "sender_mail": "complaints@proximus.com ",
-    "Topic": "\"\"Customer complaint: Slow internet speed at Uccle.”"
+    "Topic": "Customer complaint: Slow internet speed at Uccle."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“HR service: Employee Home Internet Program – Register Now\"\""
+    "Topic": "HR service: Employee Home Internet Program – Register Now"
 },
 {
     "Sender": "Infrastructure Management",
     "sender_mail": "infrastructure@proximus.com",
-    "Topic": "\"\"Scheduled maintenance of fiber network in Flanders. Expected downtime.\"\""
+    "Topic": "Scheduled maintenance of fiber network in Flanders. Expected downtime."
 },
 {
     "Sender": "Project Management",
     "sender_mail": "projects@proximus.com",
-    "Topic": "\"\"Daily team stand-up: Updates on network upgrade projects.\"\""
+    "Topic": "Daily team stand-up: Updates on network upgrade projects."
 },
 {
     "Sender": "Product Development",
     "sender_mail": "products@proximus.com",
-    "Topic": "\"\"New mobile package release: Plan details and pricing structure.\"\""
+    "Topic": "New mobile package release: Plan details and pricing structure."
 }],
 "IT Solutions" : [
 {
     "Sender": "Software Solutions",
     "sender_mail": "software@proximus.com",
-    "Topic": "\"\"Update on new software rollout for enterprise systems.\"\""
+    "Topic": "Update on new software rollout for enterprise systems."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“HR Service: Health & Wellness Benefits Enrolment Deadline\"\""
+    "Topic": "HR Service: Health & Wellness Benefits Enrolment Deadline"
 },
 {
     "Sender": "IT Support Services",
     "sender_mail": "itsupport@proximus.com",
-    "Topic": "\"\"Assistance needed: Configuration for new enterprise software system.\"\""
+    "Topic": "Assistance needed: Configuration for new enterprise software system."
 },
 {
     "Sender": "Technical Support",
     "sender_mail": "support@proximus.com",
-    "Topic": "\"\"Issue: Data synchronization error in customer portal.\"\""
+    "Topic": "Issue: Data synchronization error in customer portal."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Exclusive Webinar: Learn How to Enhance Your IT Solutions Strategy\"\""
+    "Topic": "Exclusive Webinar: Learn How to Enhance Your IT Solutions Strategy"
 }],
 "Cloud Computing":[
 {
     "Sender": "Product Development",
     "sender_mail": "products@proximus.com",
-    "Topic": "\"\"Cloud storage upgrade: Expanded capacity for enterprise customers.\"\""
+    "Topic": "Cloud storage upgrade: Expanded capacity for enterprise customers."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Confirm Your Participation: Cloud Computing Tools and Techniques Webinar\"\""
+    "Topic": "Confirm Your Participation: Cloud Computing Tools and Techniques Webinar"
 },
 {
     "Sender": "Cybersecurity",
     "sender_mail": "security@proximus.com",
-    "Topic": "\"\"Security patch update for cloud services infrastructure.\"\""
+    "Topic": "Security patch update for cloud services infrastructure."
 },
 {
     "Sender": "Compliance",
     "sender_mail": "compliance@proximus.com",
-    "Topic": "\"\"Reminder: Cloud service compliance review due next week.\"\""
+    "Topic": "Reminder: Cloud service compliance review due next week."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"HR Service: Company Car Allocation – Choose Your Vehicle Now\"\""
+    "Topic": "HR Service: Company Car Allocation – Choose Your Vehicle Now"
 }],
 "AI and Machine Learning":[
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Urgent: Machine Learning Training – Limited Seats Available\"\""
+    "Topic": "Urgent: Machine Learning Training – Limited Seats Available"
 },
 {
     "Sender": "AI and Machine Learning",
     "sender_mail": "ai@proximus.com",
-    "Topic": "\"\"AI algorithm optimization completed for better performance.\"\""
+    "Topic": "AI algorithm optimization completed for better performance."
 },
 {
     "Sender": "Technical Support",
     "sender_mail": "support@proximus.com",
-    "Topic": "\"\"AI model error: Detection failure in real-time data processing.\"\""
+    "Topic": "AI model error: Detection failure in real-time data processing."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Proximus Employee Stock Purchase Plan – Final Steps to Enroll\"\""
+    "Topic": "Proximus Employee Stock Purchase Plan – Final Steps to Enroll"
 },
 {
     "Sender": "AI and Machine Learning",
     "sender_mail": "ai@proximus.com",
-    "Topic": "\"\"New AI feature launched: Personalized recommendations for users.\"\""
+    "Topic": "New AI feature launched: Personalized recommendations for users."
 }],
 "IoT (Internet of Things)":[
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Training Alert: Building Secure IoT Networks Webinar\"\""
+    "Topic": "Training Alert: Building Secure IoT Networks Webinar"
 },
 {
     "Sender": "Technical Support",
     "sender_mail": "support@proximus.com",
-    "Topic": "\"\"IoT device malfunction: Connectivity issue reported in Uccle.”"
+    "Topic": "IoT device malfunction: Connectivity issue reported in Uccle."
 },
 {
     "Sender": "IoT Operations ",
     "sender_mail": "iotissues@proximus.com",
-    "Topic": "\"\"Performance monitoring: IoT infrastructure health check.\"\""
+    "Topic": "Performance monitoring: IoT infrastructure health check."
 },
 {
     "Sender": "Technical Support",
     "sender_mail": "support@proximus.com",
-    "Topic": "\"\"Issue with IoT data transmission: Delays in sensor readings.\"\""
+    "Topic": "Issue with IoT data transmission: Delays in sensor readings."
 },
 {
     "Sender": "Firewall Management.",
     "sender_mail": "firewalls@proximus.com",
-    "Topic": "\"\"IoT system update: Firmware upgrade for smart devices.\"\""
+    "Topic": "IoT system update: Firmware upgrade for smart devices."
 }],
 "Content Creation":[
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“HR Service: Referral Bonus Confirmation – Validate Your Referral Information\"\""
+    "Topic": "HR Service: Referral Bonus Confirmation – Validate Your Referral Information"
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Webinar on New Content Creation Tools\"\""
+    "Topic": "Webinar on New Content Creation Tools"
 },
 {
     "Sender": "Digital Marketing",
     "sender_mail": "marketing@proximus.com",
-    "Topic": "\"\"Meeting scheduled to discuss next digital content campaign.\"\""
+    "Topic": "Meeting scheduled to discuss next digital content campaign."
 },
 {
     "Sender": "Content Creation",
     "sender_mail": "content@proximus.com",
-    "Topic": "\"\"Content performance review: Evaluating engagement metrics for recent campaigns.\"\""
+    "Topic": "Content performance review: Evaluating engagement metrics for recent campaigns."
 },
 {
     "Sender": "Content Creation",
     "sender_mail": "content@proximus.com",
-    "Topic": "\"\"Content strategy update: Exploring new trends in digital storytelling.\"\""
+    "Topic": "Content strategy update: Exploring new trends in digital storytelling."
 }],
 "Broadcasting & Media Operations":[
 {
     "Sender": "Media Operations",
     "sender_mail": "media@proximus.com",
-    "Topic": "\"\"Live event broadcast scheduled for next season. Final preparations.\"\""
+    "Topic": "Live event broadcast scheduled for next season. Final preparations."
 },
 {
     "Sender": "Media Operations",
     "sender_mail": "media@proximus.com",
-    "Topic": "\"\"Technical issue: Live broadcast delay due to signal loss.\"\""
+    "Topic": "Technical issue: Live broadcast delay due to signal loss."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“HR Service: Project Completion Bonus: Confirm Your Project Status\"\""
+    "Topic": "HR Service: Project Completion Bonus: Confirm Your Project Status"
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Reminder: Register for Our Media Operations Webinar\"\""
+    "Topic": "Reminder: Register for Our Media Operations Webinar"
 },
 {
     "Sender": "Media Operations",
     "sender_mail": "media@proximus.com",
-    "Topic": "\"\"Broadcasting system issue: Equipment malfunction during live event.\"\""
+    "Topic": "Broadcasting system issue: Equipment malfunction during live event."
 }],
 "Digital Platforms Management":[
 {
     "Sender": "Digital Platforms Management",
     "sender_mail": "platform@proximus.com",
-    "Topic": "\"\"Scheduled maintenance for digital platform next month.”"
+    "Topic": "Scheduled maintenance for digital platform next month."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Join Our Workshop on Digital Platform Innovations\"\""
+    "Topic": "Join Our Workshop on Digital Platform Innovations"
 },
 {
     "Sender": "Customer Support",
     "sender_mail": "support@proximus.com",
-    "Topic": "\"\"User feedback: Issues with platform navigation on mobile.\"\""
+    "Topic": "User feedback: Issues with platform navigation on mobile."
 },
 {
     "Sender": "Digital Platforms Management",
     "sender_mail": "platform@proximus.com",
-    "Topic": "\"\"Critical bug reported: Error on login page for digital platform.\"\""
+    "Topic": "Critical bug reported: Error on login page for digital platform."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“HR Service: Activate Your Internet Discount – Limited Time Offer for Employees\"\""
+    "Topic": "HR Service: Activate Your Internet Discount – Limited Time Offer for Employees"
 }],
 "Research and Development (R&D)":[
 {
     "Sender": "Research and Development (R&D)",
     "sender_mail": "research@proximus.com",
-    "Topic": "\"\"Progress report on 6G network research.\"\""
+    "Topic": "Progress report on 6G network research."
 },
 {
     "Sender": "AI and Machine Learning",
     "sender_mail": "ai@proximus.com",
-    "Topic": "\"\"Update: AI-powered network optimization study results.\"\""
+    "Topic": "Update: AI-powered network optimization study results."
 },
 {
     "Sender": "Field Operations.",
     "sender_mail": "fieldtesting@proximus.com",
-    "Topic": "\"\"Request to schedule field testing for new antenna design.\"\""
+    "Topic": "Request to schedule field testing for new antenna design."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Last Call: R&D Techniques and Innovations Webinar\"\""
+    "Topic": "Last Call: R&D Techniques and Innovations Webinar"
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“HR Service: Performance-Based Bonus Eligibility – Verify Your Information Now\"\""
+    "Topic": "HR Service: Performance-Based Bonus Eligibility – Verify Your Information Now"
 }],
 "Emerging Technologies":[
 {
     "Sender": "Research and Development (R&D)",
     "sender_mail":  "research@proximus.com",
-    "Topic": "\"\"Analysis of quantum communication's potential for Proximus.\"\""
+    "Topic": "Analysis of quantum communication's potential for Proximus."
 },
 {
     "Sender": "Emerging Technologies",
     "sender_mail": "technology@proximus.com",
-    "Topic": "\"\"Update: Blockchain use cases in telecom.\"\""
+    "Topic": "Update: Blockchain use cases in telecom."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Reminder: Workshop on Latest Developments in Emerging Technologies\"\""
+    "Topic": "Reminder: Workshop on Latest Developments in Emerging Technologies"
 },
 {
     "Sender": "Customer Support Solutions Team",
     "sender_mail": "support@proximus.com",
-    "Topic": "\"\"Proposal to pilot VR/AR customer support systems.\"\""
+    "Topic": "Proposal to pilot VR/AR customer support systems."
 },
 {
     "Sender": "AI and Machine Learning",
     "sender_mail": "ai@proximus.com",
-    "Topic": "\"\"Trial deployment: AI-based fraud detection system.\"\""
+    "Topic": "Trial deployment: AI-based fraud detection system."
 }],
 "Digital Transformation Strategies":[
 {
     "Sender": "Digital Transformation Strategies",
     "sender_mail": "strategy@proximus.com",
-    "Topic": "\"\"Agenda for digital strategy planning session.\"\""
+    "Topic": "Agenda for digital strategy planning session."
 },
 {
     "Sender": "Digital Transformation Strategies",
     "sender_mail": "strategy@proximus.com",
-    "Topic": "\"\"Follow-up: Digital transformation roadmap for 2025.\"\""
+    "Topic": "Follow-up: Digital transformation roadmap for 2025."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Confirm Your Participation in Digital Strategy Training\"\""
+    "Topic": "Confirm Your Participation in Digital Strategy Training"
 },
 {
     "Sender": "Sales",
     "sender_mail": "crm@proximus.com",
-    "Topic": "\"\"Update: CRM system migration progress.\"\""
+    "Topic": "Update: CRM system migration progress."
 },
 {
     "Sender": "Client Onboarding",
     "sender_mail": "onboarding@proximus.com ",
-    "Topic": "\"\"New automation processes for customer onboarding.\"\""
+    "Topic": "New automation processes for customer onboarding."
 }],
 "Product Development":[
 {
     "Sender": "Product Development",
     "sender_mail": "products@proximus.com",
-    "Topic": "\"\"Details for the launch of new fiber internet plans.\"\""
+    "Topic": "Details for the launch of new fiber internet plans."
 },
 {
     "Sender": "Digital Marketing",
     "sender_mail": "marketing@proximus.com",
-    "Topic": "“Updates on Marketing strategy for 5G home solutions.\"\""
+    "Topic": "Updates on Marketing strategy for 5G home solutions."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“HR Service: Holiday or Year-End Bonus – Verify Your Payment Details\"\""
+    "Topic": "HR Service: Holiday or Year-End Bonus – Verify Your Payment Details"
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“Last Call: Webinar on Innovations in Product Development\"\""
+    "Topic": "Last Call: Webinar on Innovations in Product Development"
 },
 {
     "Sender": "Product Development",
     "sender_mail": "products@proximus.com",
-    "Topic": "\"\"Proposal for bundling streaming services with broadband.\"\""
+    "Topic": "Proposal for bundling streaming services with broadband."
 }],
 "Software Solutions":[
 {
     "Sender": "Technical Support",
     "sender_mail": "support@proximus.com",
-    "Topic": "\"\"Bug identified in customer portal login system.\"\""
+    "Topic": "Bug identified in customer portal login system."
 },
 {
     "Sender": "App Development Team",
     "sender_mail": "appdev@proximus.com",
-    "Topic": "\"\"Adding chatbot support to the customer app.\"\""
+    "Topic": "Adding chatbot support to the customer app."
 },
 {
     "Sender": "Software Solutions",
     "sender_mail": "software@proximus.com",
-    "Topic": "\"\"Integration of multi-language support in enterprise dashboard.\"\""
+    "Topic": "Integration of multi-language support in enterprise dashboard."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“Register Now: Software Solutions Best Practices Webinar\"\""
+    "Topic": "Register Now: Software Solutions Best Practices Webinar"
 },
 {
     "Sender": "Microsoft Team",
     "sender_mail": "support@microsoft.com",
-    "Topic": "\"\"Action Required: Confirm Your Microsoft Account Details for Security\"\""
+    "Topic": "Action Required: Confirm Your Microsoft Account Details for Security"
 }],
 "Customer Support":[
 {
     "Sender": "Customer Support",
     "sender_mail":  "complaints@proximus.com ",
-    "Topic": "\"\"Complaint: Internet downtime in Namur.”"
+    "Topic": "Complaint: Internet downtime in Namur."
 },
 {
     "Sender": "Customer Service",
     "sender_mail": "feedback@proximus.com",
-    "Topic": "\"\"Customer feedback on recent call center interactions.\"\""
+    "Topic": "Customer feedback on recent call center interactions."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Schedule for team training on handling 5G queries.\"\""
+    "Topic": "Schedule for team training on handling 5G queries."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Reminder: Join Our Workshop on Enhancing Customer Support Skills\"\""
+    "Topic": "Reminder: Join Our Workshop on Enhancing Customer Support Skills"
 },
 {
     "Sender": "Cybersecurity",
     "sender_mail": "security@proximus.com",
-    "Topic": "\"\"Security Warning: Unusual Activity Detected on Your Microsoft Account\"\""
+    "Topic": "Security Warning: Unusual Activity Detected on Your Microsoft Account"
 }],
 "Hardware Integration":[
 {
     "Sender": "Network Engineering",
     "sender_mail": "networkengineering@proximus.com",
-    "Topic": "\"\"Hardware requirements for 5G deployment in Flanders.”"
+    "Topic": "Hardware requirements for 5G deployment in Flanders."
 },
 {
     "Sender": "Infrastructure Management",
     "sender_mail": "infrastructure@proximus.com",
-    "Topic": "\"\"Inspection report for data center cooling systems.\"\""
+    "Topic": "Inspection report for data center cooling systems."
 },
 {
     "Sender": "Infrastructure Management",
     "sender_mail": "infrastructure@proximus.com",
-    "Topic": "\"\"Request for replacement parts for outdated routers.\"\""
+    "Topic": "Request for replacement parts for outdated routers."
 },
 {
     "Sender": "Infrastructure Management",
     "sender_mail": "infrastructure@proximus.com",
-    "Topic": "\"\"Update on tower infrastructure upgrades.\"\""
+    "Topic": "Update on tower infrastructure upgrades."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Register Now: Hardware Integration Optimization Webinar\"\""
+    "Topic": "Register Now: Hardware Integration Optimization Webinar"
 }],
 "Technical Support":[
 {
     "Sender": "Technical Support",
     "sender_mail": "support@proximus.com",
-    "Topic": "\"\"Report: Network congestion affecting business customers.\"\""
+    "Topic": "Report: Network congestion affecting business customers."
 },
 {
     "Sender": "Technical Support",
     "sender_mail": "support@proximus.com",
-    "Topic": "\"\"Follow-up: Resolution of network downtime in Gent.”"
+    "Topic": "Follow-up: Resolution of network downtime in Gent."
 },
 {
     "Sender": "Technical Support",
     "sender_mail": "support@proximus.com",
-    "Topic": "\"\"Issue: Fiber connection setup delay in Brussels.”"
+    "Topic": "Issue: Fiber connection setup delay in Brussels."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Last Call: Register Now for Technical Support Best Practices Workshop\"\""
+    "Topic": "Last Call: Register Now for Technical Support Best Practices Workshop"
 },
 {
     "Sender": "Cybersecurity",
     "sender_mail": "security@proximus.com",
-    "Topic": "\"\"Action Needed: Unauthorized Login Attempt Detected – Verify Your Identity\"\""
+    "Topic": "Action Needed: Unauthorized Login Attempt Detected – Verify Your Identity"
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“HR Service: Verify Your Performance Bonus Eligibility\"\""
+    "Topic": "HR Service: Verify Your Performance Bonus Eligibility"
 }],
 "Client Onboarding":[
 {
     "Sender": "Customer Support",
     "sender_mail": "support@proximus.com",
-    "Topic": "\"\"Customer support request during onboarding: VoIP setup.\"\""
+    "Topic": "Customer support request during onboarding: VoIP setup."
 },
 {
     "Sender": "Client Onboarding",
     "sender_mail": "onboarding@proximus.com ",
-    "Topic": "“Escalation: VIP Customer Onboarding Issue”"
+    "Topic": "Escalation: VIP Customer Onboarding Issue"
 },
 {
     "Sender": "Client Onboarding",
     "sender_mail": "onboarding@proximus.com ",
-    "Topic": "“Weekly Onboarding Status Report – Key Metrics”"
+    "Topic": "Weekly Onboarding Status Report – Key Metrics"
 },
 {
     "Sender": "Client Onboarding",
     "sender_mail": "onboarding@proximus.com ",
-    "Topic": "“Approval Needed: Tailored Onboarding Plan for Strategic Partnership”"
+    "Topic": "Approval Needed: Tailored Onboarding Plan for Strategic Partnership"
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“New Training Module: Onboarding Best Practices for 2025”"
+    "Topic": "New Training Module: Onboarding Best Practices for 2025"
 }],
 "Sales and Marketing":[
 {
     "Sender": "Sales and Marketing",
     "sender_mail": "sales@proximus.com",
-    "Topic": "\"\"New promotional offer: Triple-play bundle for customers.\"\""
+    "Topic": "New promotional offer: Triple-play bundle for customers."
 },
 {
     "Sender": "Sales and Marketing",
     "sender_mail": "sales@proximus.com",
-    "Topic": "\"\"Targeted campaign for students: Special mobile data plans.\"\""
+    "Topic": "Targeted campaign for students: Special mobile data plans."
 },
 {
     "Sender": "Sales and Marketing",
     "sender_mail": "sales@proximus.com",
-    "Topic": "\"\"Q1 sales performance report for mobile plans.\"\""
+    "Topic": "Q1 sales performance report for mobile plans."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Register for Our Sales & Marketing Webinar\"\""
+    "Topic": "Register for Our Sales & Marketing Webinar"
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“HR Service: Longevity or Tenure Bonus – Verify Your Eligibility for Bonus\"\""
+    "Topic": "HR Service: Longevity or Tenure Bonus – Verify Your Eligibility for Bonus"
 }],
 "Digital Marketing":[
 {
     "Sender": "Digital Marketing",
     "sender_mail": "marketing@proximus.com",
-    "Topic": "\"\"New visuals for email marketing campaign.\"\""
+    "Topic": "New visuals for email marketing campaign."
 },
 {
     "Sender": "Digital Marketing",
     "sender_mail": "marketing@proximus.com",
-    "Topic": "\"\"Performance metrics for Google Ads campaign.\"\""
+    "Topic": "Performance metrics for Google Ads campaign."
 },
 {
     "Sender": "Cybersecurity Awareness Team",
     "sender_mail": "security@proximus.com",
-    "Topic": "\"\"Proposal for blog posts on cybersecurity tips.\"\""
+    "Topic": "Proposal for blog posts on cybersecurity tips."
 },
 {
     "Sender": "Compliance",
     "sender_mail": "compliance@proximus.com",
-    "Topic": "\"\"Mandatory Training: Social Media Compliance and Best Practices for 2025\"\""
+    "Topic": "Mandatory Training: Social Media Compliance and Best Practices for 2025"
 },
 {
     "Sender": "Digital Marketing",
     "sender_mail": "marketing@proximus.com",
-    "Topic": "\"\"Urgent: Update on Digital Ad Strategies - RSVP for Upcoming Webinar\"\""
+    "Topic": "Urgent: Update on Digital Ad Strategies - RSVP for Upcoming Webinar"
 }],
 "Brand Management":[
 {
     "Sender": "Brand Management",
     "sender_mail": "branding@proximus.com",
-    "Topic": "\"\"New Training Module: Enhancing Brand Consistency Across Teams\"\""
+    "Topic": "New Training Module: Enhancing Brand Consistency Across Teams"
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Reminder: Attend the Brand Protection Guidelines Workshop\"\""
+    "Topic": "Reminder: Attend the Brand Protection Guidelines Workshop"
 },
 {
     "Sender": "Brand Management",
     "sender_mail": "branding@proximus.com",
-    "Topic": "\"\"Review: Brand guidelines for new digital platforms.\"\""
+    "Topic": "Review: Brand guidelines for new digital platforms."
 },
 {
     "Sender": "Social Media Team",
     "sender_mail": "socialmedia@proximus.com",
-    "Topic": "\"\"Coordination with influencers for brand campaign.\"\""
+    "Topic": "Coordination with influencers for brand campaign."
 },
 {
     "Sender": "Communications Team",
     "sender_mail": "communications@proximus.com",
-    "Topic": "\"\"Draft press release for new product launch.\"\""
+    "Topic": "Draft press release for new product launch."
 }],
 "B2B and B2C Sales":[
 {
     "Sender": "Product Development",
     "sender_mail": "products@proximus.com",
-    "Topic": "\"\"Details: B2C broadband package options for premium users.\"\""
+    "Topic": "Details: B2C broadband package options for premium users."
 },
 {
     "Sender": "Sales",
     "sender_mail": "sales@proximus.com",
-    "Topic": "\"\"Follow-up: Pricing negotiation for enterprise account.\"\""
+    "Topic": "Follow-up: Pricing negotiation for enterprise account."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Exclusive Sales Training: Effective B2B and B2C Tactics in Q1\"\""
+    "Topic": "Exclusive Sales Training: Effective B2B and B2C Tactics in Q1"
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Action Required: New Product Sales Training – Limited Seats\"\""
+    "Topic": "Action Required: New Product Sales Training – Limited Seats"
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"HR Policy Update: Attendance and Remote Work Guidelines\"\""
+    "Topic": "HR Policy Update: Attendance and Remote Work Guidelines"
 }],
 "Finance & Accounting":[
 {
     "Sender": "Customer Support",
     "sender_mail": "support@proximus.com",
-    "Topic": "\"\"Customer query: Clarification on VAT charges for recent bill.\"\""
+    "Topic": "Customer query: Clarification on VAT charges for recent bill."
 },
 {
     "Sender": "Finance & Accounting",
     "sender_mail": "accounting@proximus.com",
-    "Topic": "\"\"Follow-up: Resolving mismatches in accounts ledger.\"\""
+    "Topic": "Follow-up: Resolving mismatches in accounts ledger."
 },
 {
     "Sender": "Finance & Accounting",
     "sender_mail": "finance@proximus.com",
-    "Topic": "\"\"Inquiry: Clarification on overhead cost allocations.\"\""
+    "Topic": "Inquiry: Clarification on overhead cost allocations."
 },
 {
     "Sender": "Finance & Accounting",
     "sender_mail": "finance@proximus.com",
-    "Topic": "\"\"Critical Finance Policy Update: Mandatory Training on Financial Reporting Standards\"\""
+    "Topic": "Critical Finance Policy Update: Mandatory Training on Financial Reporting Standards"
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“HR Service: New Employee Benefits Portal – Login Required\"\""
+    "Topic": "HR Service: New Employee Benefits Portal – Login Required"
 }],
 "Budgeting and Financial Analysis":[
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Company-Wide Training: Mastering Advanced Financial Analysis Techniques\"\""
+    "Topic": "Company-Wide Training: Mastering Advanced Financial Analysis Techniques"
 },
 {
     "Sender": "Budgeting and Financial Analysis",
     "sender_mail": "budgeting@proximus.com",
-    "Topic": "\"\"Quarterly review of department budgets.\"\""
+    "Topic": "Quarterly review of department budgets."
 },
 {
     "Sender": "Finance & Accounting",
     "sender_mail": "finance@proximus.com",
-    "Topic": "\"\"Approval needed: Additional funds for infrastructure projects.\"\""
+    "Topic": "Approval needed: Additional funds for infrastructure projects."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“HR Service: Refer a Candidate and Earn Rewards – Submit Today\"\""
+    "Topic": "HR Service: Refer a Candidate and Earn Rewards – Submit Today"
 },
 {
     "Sender": "Finance & Accounting",
     "sender_mail": "finance@proximus.com",
-    "Topic": "\"\"Approval required for revised capital expenditure plan.\"\""
+    "Topic": "Approval required for revised capital expenditure plan."
 }],
 "Revenue Management":[
 {
     "Sender": "Business Intelligence ",
     "sender_mail": "Business Intelligence ",
-    "Topic": "\"\"Dashboard update: Key revenue metrics for executive team.\"\""
+    "Topic": "Dashboard update: Key revenue metrics for executive team."
 },
 {
     "Sender": "Finance & Accounting",
     "sender_mail": "finance@proximus.com",
-    "Topic": "\"\"Proposal: Adjusted revenue sharing terms for cloud service collaborations.\"\""
+    "Topic": "Proposal: Adjusted revenue sharing terms for cloud service collaborations."
 },
 {
     "Sender": "Finance & Accounting",
     "sender_mail": "finance@proximus.com",
-    "Topic": "\"\"Follow-up: Adjustments to revenue reporting for audit requirements.\"\""
+    "Topic": "Follow-up: Adjustments to revenue reporting for audit requirements."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Internal Training: Increasing Revenue with Data-Driven Insights\"\""
+    "Topic": "Internal Training: Increasing Revenue with Data-Driven Insights"
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“HR Service: You’re Invited to Upcoming HR-Sponsored Team Building Event\"\""
+    "Topic": "HR Service: You’re Invited to Upcoming HR-Sponsored Team Building Event"
 }],
 "Human Resources (HR)": [
 {
     "Sender": "Human Resources",
     "sender_mail":"hr@proximus.com",
-    "Topic": "\"\"HR-Hosted Webinar: How to Handle Workplace Scenarios\"\""
+    "Topic": "HR-Hosted Webinar: How to Handle Workplace Scenarios"
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Update: Job posting for software engineers.\"\""
+    "Topic": "Update: Job posting for software engineers."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Candidate interview schedule for next week.\"\""
+    "Topic": "Candidate interview schedule for next week."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Enrollment details for employee upskilling program.\"\""
+    "Topic": "Enrollment details for employee upskilling program."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Feedback on cybersecurity training session.\"\""
+    "Topic": "Feedback on cybersecurity training session."
 }],
 "Legal and Compliance":[
 {
     "Sender": "Legal and Compliance",
     "sender_mail":  "legal@proximus.com",
-    "Topic": "\"\"Analysis of new telecom regulations in the EU.\"\""
+    "Topic": "Analysis of new telecom regulations in the EU."
 },
 {
     "Sender": "Legal and Compliance",
     "sender_mail": "legal@proximus.com",
-    "Topic": "\"\"Request for drafting a new enterprise service contract.\"\""
+    "Topic": "Request for drafting a new enterprise service contract."
 },
 {
     "Sender": "Legal and Compliance",
     "sender_mail": "legal@proximus.com",
-    "Topic": "\"\"Mandatory Legal Awareness Workshop – Register by Friday\"\""
+    "Topic": "Mandatory Legal Awareness Workshop – Register by Friday"
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“HR Service: Verify Your Employee Account Information Immediately\"\""
+    "Topic": "HR Service: Verify Your Employee Account Information Immediately"
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“HR Survey: Share Your Thoughts on Diversity in Our Workplace\"\""
+    "Topic": "HR Survey: Share Your Thoughts on Diversity in Our Workplace"
 }],
 "Sustainability & Corporate Social Responsibility (CSR)":[
 {
     "Sender": "Sustainability & Corporate Social Responsibility (CSR)",
     "sender_mail": "csr@proximus.com",
-    "Topic": "\"\"New collaboration with NGO for tech education.\"\""
+    "Topic": "New collaboration with NGO for tech education."
 },
 {
     "Sender": "Sustainability & Corporate Social Responsibility (CSR)",
     "sender_mail": "csr@proximus.com",
-    "Topic": "\"\"Update: Recycling program for old devices.\"\""
+    "Topic": "Update: Recycling program for old devices."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"New Sustainability Initiatives: HR-Sponsored Green Training\"\""
+    "Topic": "New Sustainability Initiatives: HR-Sponsored Green Training"
 },
 {
     "Sender": "Sustainability & Corporate Social Responsibility (CSR)",
     "sender_mail": "csr@proximus.com",
-    "Topic": "\"\"Review: Alignment with UN Sustainable Development Goals (SDGs).\"\""
+    "Topic": "Review: Alignment with UN Sustainable Development Goals (SDGs)."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“HR Service: Register for the Employee Appreciation Lunch\"\""
+    "Topic": "HR Service: Register for the Employee Appreciation Lunch"
 }],
 "Green Technology Initiatives":[
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Feedback: Employee suggestions for eco-friendly workplace initiatives.\"\""
+    "Topic": "Feedback: Employee suggestions for eco-friendly workplace initiatives."
 },
 {
     "Sender": "Sustainability & Corporate Social Responsibility (CSR)",
     "sender_mail": "csr@proximus.com",
-    "Topic": "\"\"Request: Data collection for carbon emissions reporting.\"\""
+    "Topic": "Request: Data collection for carbon emissions reporting."
 },
 {
     "Sender": "Sustainability & Corporate Social Responsibility (CSR)",
     "sender_mail": "csr@proximus.com",
-    "Topic": "\"\"Follow-up: Meeting with NGO to discuss e-waste recycling program.\"\""
+    "Topic": "Follow-up: Meeting with NGO to discuss e-waste recycling program."
 },
 {
     "Sender": "Sustainability & Corporate Social Responsibility (CSR)",
     "sender_mail": "csr@proximus.com",
-    "Topic": "\"\"Mandatory Update: Sustainability Goals for 2025\"\""
+    "Topic": "Mandatory Update: Sustainability Goals for 2025"
 },
 {
     "Sender": "IT Support Services",
     "sender_mail": "support@proximus.com",
-    "Topic": "\"\"IT System Upgrade – Action Needed to Avoid Service Disruption\"\""
+    "Topic": "IT System Upgrade – Action Needed to Avoid Service Disruption"
 }],
     "Cybersecurity":[
 {
     "Sender": "Cybersecurity",
     "sender_mail": "security@proximus.com",
-    "Topic": "\"\"Review: Incident response plan for data breaches.\"\""
+    "Topic": "Review: Incident response plan for data breaches."
 },
 {
     "Sender": "Cybersecurity",
     "sender_mail": "security@proximus.com",
-    "Topic": "\"\"Urgent: Detection of phishing attack on email systems.\"\""
+    "Topic": "Urgent: Detection of phishing attack on email systems."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“HR Service: Mandatory Cybersecurity Awareness Training\"\""
+    "Topic": "HR Service: Mandatory Cybersecurity Awareness Training"
 },
 {
     "Sender": "Cybersecurity",
     "sender_mail": "security@proximus.com",
-    "Topic": "\"\"Critical Update: New Company Cybersecurity Protocols\"\""
+    "Topic": "Critical Update: New Company Cybersecurity Protocols"
 },
 {
     "Sender": "Cybersecurity",
     "sender_mail": "security@proximus.com",
-    "Topic": "\"\"Update: Mitigation of DDoS attack on servers.\"\""
+    "Topic": "Update: Mitigation of DDoS attack on servers."
 }],
 "Data Management and Analytics":[
 {
     "Sender": "Data Management and Analytics",
     "sender_mail": "datamanagement@proximus.com",
-    "Topic": "\"\"Error in customer database synchronization.\"\""
+    "Topic": "Error in customer database synchronization."
 },
 {
     "Sender": "Data Management and Analytics",
     "sender_mail": "datamanagement@proximus.com",
-    "Topic": "\"\"New Data Management Policies and Training\"\""
+    "Topic": "New Data Management Policies and Training"
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Reminder: HR-Sponsored Data Organization Techniques Workshop\"\""
+    "Topic": "Reminder: HR-Sponsored Data Organization Techniques Workshop"
 },
 {
     "Sender": "IT Security",
     "sender_mail": "security@proximus.com",
-    "Topic": "\"\"Request: Granting read-only access to marketing team for customer data.\"\""
+    "Topic": "Request: Granting read-only access to marketing team for customer data."
 },
 {
     "Sender": "Compliance",
     "sender_mail": "compliance@proximus.com",
-    "Topic": "\"\"Update: New guidelines for secure data sharing with external partners.\"\""
+    "Topic": "Update: New guidelines for secure data sharing with external partners."
 }],
 "IT Support Services":[
 {
     "Sender": "IT Operations",
     "sender_mail": "it@proximus.com",
-    "Topic": "\"\"Planned server downtime for software updates.\"\""
+    "Topic": "Planned server downtime for software updates."
 },
 {
     "Sender": "IT Support Services",
     "sender_mail": "itsupport@proximus.com",
-    "Topic": "\"\"Troubleshooting: Laptop connectivity issues for HR team.\"\""
+    "Topic": "Troubleshooting: Laptop connectivity issues for HR team."
 },
 {
     "Sender": "Network Operations",
     "sender_mail": "network@proximus.com",
-    "Topic": "\"\"Report: Status of application performance monitoring.\"\""
+    "Topic": "Report: Status of application performance monitoring."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“HR Service: IT Support Protocol Training – RSVP Today\"\""
+    "Topic": "HR Service: IT Support Protocol Training – RSVP Today"
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“HR Service: Confirm Your Payroll Information to Avoid Disruption\"\""
+    "Topic": "HR Service: Confirm Your Payroll Information to Avoid Disruption"
 }],
 "Partnerships & Affiliations": [
 {
     "Sender": "Partnerships & Affiliations",
     "sender_mail": "partnerships@proximus.com",
-    "Topic": "\"\"Proposal for partnership with ULB.”"
+    "Topic": "Proposal for partnership with ULB."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"HR Policy Update: Attendance and Remote Work Guidelines\"\""
+    "Topic": "HR Policy Update: Attendance and Remote Work Guidelines"
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"HR-Hosted Training: Developing Strong Ecosystem Partnerships\"\""
+    "Topic": "HR-Hosted Training: Developing Strong Ecosystem Partnerships"
 },
 {
     "Sender": "Partnerships & Affiliations",
     "sender_mail": "partnerships@proximus.com",
-    "Topic": "\"\"Agenda: Ecosystem development workshop with local startups.\"\""
+    "Topic": "Agenda: Ecosystem development workshop with local startups."
 },
 {
     "Sender": "Partnerships & Affiliations",
     "sender_mail": "partnerships@proximus.com",
-    "Topic": "\"\"Invitation: Join innovation hub for smart city projects.\"\""
+    "Topic": "Invitation: Join innovation hub for smart city projects."
 }],
 "Media and Entertainment":[
 {
     "Sender": "Media and Entertainment",
     "sender_mail":"broadcasting@proximus.com",
-    "Topic": "Preparation checklist for live sports broadcast.\"\""
+    "Topic": "Preparation checklist for live sports broadcast."
 },
 {
     "Sender": "Media and Entertainment",
     "sender_mail": "media@proximus.com",
-    "Topic": "\"\"Coordination: Hosting Proximus-sponsored music festival.\"\""
+    "Topic": "Coordination: Hosting Proximus-sponsored music festival."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Internal Training: Industry Trends in Media and Entertainment"
+    "Topic": "Internal Training: Industry Trends in Media and Entertainment"
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“HR Service: Employee Satisfaction Survey – We Value Your Feedback!\"\""
+    "Topic": "HR Service: Employee Satisfaction Survey – We Value Your Feedback!"
 },
 {
     "Sender": "Marketing",
     "sender_mail": "marketing@proximus.com",
-    "Topic": "\"\"Promotion strategy for upcoming sports event.\"\""
+    "Topic": "Promotion strategy for upcoming sports event."
 }],
 "Digital Identity and Authentication":[
 {
     "Sender": "Compliance",
     "sender_mail": "Digital Identity and Authentication",
-    "Topic": "\"\"Request for new digital ID verification process.\"\""
+    "Topic": "Request for new digital ID verification process."
 },
 {
     "Sender": "Cybersecurity",
     "sender_mail": "security@proximus.com",
-    "Topic": "\"\"Mandatory: Enhancing Security with Advanced Verification Tools\"\""
+    "Topic": "Mandatory: Enhancing Security with Advanced Verification Tools"
 },
 {
     "Sender": "Cybersecurity Awareness Team",
     "sender_mail": "security@proximus.com",
-    "Topic": "\"\"Mandatory Cybersecurity Awareness Training for All Employees – Enroll Now\"\""
+    "Topic": "Mandatory Cybersecurity Awareness Training for All Employees – Enroll Now"
 },
 {
     "Sender": "Technical Support",
     "sender_mail": "support@proximus.com",
-    "Topic": "\"\"Error: Authentication system failure during peak hours.\"\""
+    "Topic": "Error: Authentication system failure during peak hours."
 },
 {
     "Sender": "Customer Support",
     "sender_mail": "complaints@proximus.com ",
-    "Topic": "\"\"Follow-up: User complaints about identity verification delays.\"\""
+    "Topic": "Follow-up: User complaints about identity verification delays."
 }],
 "Cloud Services":[
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"HR-Hosted Workshop: Best Practices for Cloud Utilization\"\""
+    "Topic": "HR-Hosted Workshop: Best Practices for Cloud Utilization"
 },
 {
     "Sender": "Cloud Services",
     "sender_mail": "cloud@proximus.com",
-    "Topic": "\"\"Status update: Migration of systems to cloud infrastructure.\"\""
+    "Topic": "Status update: Migration of systems to cloud infrastructure."
 },
 {
     "Sender": "Cloud Services",
     "sender_mail": "cloud@proximus.com",
-    "Topic": "\"\"Critical: Verify Your Employee Account Information Immediately\"\""
+    "Topic": "Critical: Verify Your Employee Account Information Immediately"
 },
 {
     "Sender": "Cloud Services",
     "sender_mail": "cloud@proximus.com",
-    "Topic": "\"\"Troubleshooting: Latency issue in cloud storage services.\"\""
+    "Topic": "Troubleshooting: Latency issue in cloud storage services."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Mandatory Cloud Management Training\"\""
+    "Topic": "Mandatory Cloud Management Training"
 }],
 "CPaaS (Communication Platform as a Service) Solutions":[
 {
     "Sender": "CPaaS (Communication Platform as a Service) Solutions",
     "sender_mail": "cpaas@proximus.com",
-    "Topic": "\"\"Customer query: API integration for CPaaS services.\"\""
+    "Topic": "Customer query: API integration for CPaaS services."
 },
 {
     "Sender": "IT Support Services",
     "sender_mail": "itsupport@proximus.com",
-    "Topic": "\"\"Issue: API rate limit exceeded during application testing.\"\""
+    "Topic": "Issue: API rate limit exceeded during application testing."
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "\"\"Mandatory Training: Communication Platform Optimization\"\""
+    "Topic": "Mandatory Training: Communication Platform Optimization"
 },
 {
     "Sender": "Human Resources",
     "sender_mail": "hr@proximus.com",
-    "Topic": "“HR Service: Important Update: Changes to Vacation Policy – Review Now\"\""
+    "Topic": "HR Service: Important Update: Changes to Vacation Policy – Review Now"
 },
 {
     "Sender": "Product Development",
     "sender_mail": "products@proximus.com",
-    "Topic": "\"\"Proposal for enhanced video calling features on CPaaS.\"\""
+    "Topic": "Proposal for enhanced video calling features on CPaaS."
 }]
 }

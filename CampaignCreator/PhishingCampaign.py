@@ -13,15 +13,21 @@ class PhishingCampaign:
     """
     def __init__(self,
                  topics: dict[str:list[dict[str:str]]],
-                 prompts: dict[str:str]) -> None:
+                 prompts: dict[str:str],
+                 username: str,
+                 password: str) -> None:
         """
         Create complete campaign, containing instances of all required classes.
 
         :param topics: dict[str:list[dict[str:str]]]: The topics for the departments.
         :param prompts: dict[str:str]: The prompts for the phishing mail generation.
+        :param username: str: The username for the sender email.
+        :param password: str: The password for the sender email
         """
         self.topics = topics
         self.prompts = prompts
+        self.username = username
+        self.password = password
         self.config = None
         self.data = None
         self.campaigns = []
@@ -58,7 +64,9 @@ class PhishingCampaign:
                                        recipient_email=recipient["Email"],
                                        department= recipient["Team Unit"],
                                        topics=self.topics,
-                                       prompts=self.prompts,)
+                                       prompts=self.prompts,
+                                       username= self.username,
+                                       password= self.password)
             campaign.setup_campaign()
             campaign.generate_gp_campaign()
             self.campaigns.append(campaign)

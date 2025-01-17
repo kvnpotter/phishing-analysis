@@ -78,7 +78,9 @@ class PhishingMail():
         """
         self.template = Template(id=self.id,
                                  name=self.subject,
-                                 text=self.mail_body)
+                                 text=self.mail_body,
+                                 subject=self.subject,
+                                 envelope_sender=self.sender_email)
 
 class UserGroup:
     """
@@ -118,17 +120,21 @@ class SenderProfile:
     """
 
     """
-    def __init__(self, id: int, name: str, sender_email: str) -> None:
+    def __init__(self, id: int, name: str, sender_email: str, username: str, password: str) -> None:
         """
         Initialize the SenderProfile object to contain sender information.
 
         :param id: int: The sender's ID obtained from the supplied CSV file with employee data, row index of the recipient employee.
         :param name: str: The sender's name.
         :param sender_email: str: The sender's email address.
+        :param username: str: The username for the sender's email account.
+        :param password: str: The password for the sender's email account.
         """
         self.id = id
         self.name = name
         self.sender_email = sender_email
+        self.username = username
+        self.password = password
         self.sender_profile = None
 
     def generate_gp_sender(self) -> None:
@@ -138,7 +144,9 @@ class SenderProfile:
         self.sender_profile = SMTP(id = self.id, 
                                    name=self.name,
                                    interface_type="SMTP",
-                                   host = "host:port",
+                                   host = "smtp.gmail.com:465", # PLACEHOLDER - can put own SMTP server
+                                   username = self.username,
+                                   password = self.password,
                                    from_address=self.sender_email, # PLACEHOLER - can put own email
                                    ignore_cert_errors=True)
         
@@ -194,7 +202,9 @@ class GoPhishCampaign:
                  recipient_email: str,
                  department: str,
                  topics: dict[str:list[dict[str:str]]],
-                 prompts: dict[str:str]) -> None:
+                 prompts: dict[str:str],
+                 username: str,
+                 password: str) -> None:
         """
         Initialize the GoPhishCampaign object to contain individual campaign information.
 
@@ -204,7 +214,9 @@ class GoPhishCampaign:
         :param recipient_email: str: The email address of recipient of campaign.
         :param department: str: The department of recipient of campaign.
         :param topics: dict[str:list[dict[str:str]]]: The topics for the departments.
-        :param prompts: dict[str:str]: The prompts for the phishing mail generation	
+        :param prompts: dict[str:str]: The prompts for the phishing mail generation.
+        :param username: str: The username for the sender's email account.
+        :param password: str: The password for the sender's email account.
         """
         self.id = id
         self.first_name = first_name
@@ -213,6 +225,8 @@ class GoPhishCampaign:
         self.department = department
         self.topics = topics
         self.prompts = prompts
+        self.username = username
+        self.password = password
         self.template = None
         self.model = None
         self.sender_name = None
@@ -222,7 +236,7 @@ class GoPhishCampaign:
         self.group = None
         self.smtp = None
         self.landing_page = None
-        self.url = None ### PLACEHOLDER
+        self.url = 'https://r.mtdv.me/account_reset' ### PLACEHOLDER
         self.campaign = None
 
     def setup_campaign(self) -> None:
@@ -260,16 +274,19 @@ class GoPhishCampaign:
 
         # Create sender profile
 
-        sender = SenderProfile(id=self.id, name=self.sender_name, sender_email=self.sender_email)
+        smtp_name = f"{self.sender_name}_{self.id}" #PLACEHOLDER
+        sender = SenderProfile(id=self.id, name=smtp_name, sender_email=self.sender_email, username=self.username, password=self.password)
         sender.generate_gp_sender()
 
         self.smtp = sender.sender_profile
 
         # Create landing page
-
+        page_name = f"Test Page-{self.id}" #PLACEHOLDER
+        with open("./rickrolled.html", "r") as file:
+            html = file.read()
         page = LandingPage(id=self.id,
-                           html="<html><body><h1>You failed the test!</h1></body></html>", #### PLACEHOLDER
-                           name="Test Page", #### PLACEHOLDER
+                           html=html, #### PLACEHOLDER
+                           name=page_name, #### PLACEHOLDER
                            redirect_url="https://you_failed_the_test.com", #### PLACEHOLDER
                            capture_credentials=True,
                            capture_passwords=True)
