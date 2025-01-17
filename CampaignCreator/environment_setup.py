@@ -6,7 +6,7 @@ import json
 
 # Loading API keys, prompts and topics
 
-def load_env() -> None:
+def load_env() -> str|None:
     """
     Load the API keys from the .env file.
     """
@@ -22,7 +22,7 @@ def load_env() -> None:
     else:
         raise FileNotFoundError(f"Environment file '{env_file}' not found.")
     
-def load_topics(path: str) -> None:
+def load_topics(path: str) -> str|None:
     """
     Load the topics from the topics.json file.
 
@@ -39,7 +39,7 @@ def load_topics(path: str) -> None:
     else:
         raise FileNotFoundError(f"Topics file '{topics_file}' not found.")
     
-def load_prompts(path: str) -> None:
+def load_prompts(path: str) -> str|None:
     """
     Load the prompts from the prompts.json file.
 

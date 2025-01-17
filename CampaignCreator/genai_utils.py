@@ -1,5 +1,6 @@
 # Imports
 
+from openai import OpenAI, APIConnectionError, RateLimitError, APIStatusError
 import google.generativeai as genai
 import random
 import time
@@ -68,19 +69,68 @@ def generate_mail_body_gemini(department: str,
     subject = topic["Topic"]
     sender_name = topic["Sender"]
     sender_email = topic["sender_mail"]
-    t = "{{.Tracker}}"
 
     # Generate the mail body
     # Use the Gemini API to generate the mail body
     with GeminiClient(system_instruction= developer_message) as client:
         mail_body = client.generate_content(contents = user_prompt.format(department=department,
                                                                           sender=sender_name,
-                                                                          subject=subject,
-                                                                          t=t))
+                                                                          subject=subject))
+    mail_with_tracker = mail_body.text + "\n{{.Tracker}}" # Add tracker
     print("Mail body generated")
     print("Waiting 45 seconds")
     time.sleep(45) # Wait for 45 seconds to not go over alotted quota to Gemini free !
-    return (mail_body.text, sender_email, subject, sender_name)
+    return (mail_with_tracker, sender_email, subject, sender_name)
+
+def generate_mail_body_openai(department: str,
+                              topics: dict[str:list[dict[str:str]]],
+                              prompts: dict[str:str]) -> str:
+    """
+    Generate the phishing mail body from the OpenAI API.
+
+    :param department: str: The department to target.
+    :param topics: dict[str:list[dict[str:str]]]: The topics for the departments.
+    :param prompts: dict[str:str]: The prompts for the phishing mail generation.
+    
+    :return: str: The generated phishing mail body.
+    """
+
+    # Get a random topic for the department
+    topic = random_topic(department, topics)
+
+    # Get prompts
+    developer_message = prompts["developer_message"]
+    user_prompt = prompts["user_prompt"]
+
+    # Subject and sender setting
+
+    subject = topic["Topic"]
+    sender_name = topic["Sender"]
+    sender_email = topic["sender_mail"]
+
+    # Generate the mail body
+    with OpenAI() as client:
+        try:
+            mail_body = client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[{"role": "developer", "content": developer_message},
+                {"role": "user", "content": user_prompt.format(department=department,
+                                                               sender=sender_name,
+                                                               subject=subject)}],
+                temperature=0.7,
+                max_tokens=300
+            )
+        except APIConnectionError as e:
+            print("The server could not be reached")
+            print(e.__cause__)  # an underlying Exception, likely raised within httpx.
+        except RateLimitError as e:
+            print("A 429 status code was received; we should back off a bit.")
+        except APIStatusError as e:
+            print("Another non-200-range status code was received")
+            print(e.status_code)
+            print(e.response)
+    mail_body.choices[0].message.content += "\n{{.Tracker}}" #Add tracker
+    return mail_body.choices[0].message.content, sender_email, subject, sender_name
 
 # def generate_mail_subject_gemini(mail_body: str) -> str:
 #     """

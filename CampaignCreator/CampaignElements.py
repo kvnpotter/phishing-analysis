@@ -1,8 +1,7 @@
 # Imports
 
 import random
-from .gemini_utils import generate_mail_body_gemini
-from .openai_utils import generate_mail_body_openai
+from .genai_utils import generate_mail_body_gemini, generate_mail_body_openai
 from datetime import datetime
 from gophish.models import User, Group, SMTP, Page, Campaign, Template
 
