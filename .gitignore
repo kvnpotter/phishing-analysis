@@ -9,3 +9,5 @@ merged_data.csv
 test_events.csv
 test_results.csv
 
+analysis-prep.ipynb
+app_gen.py
