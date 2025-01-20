@@ -236,7 +236,7 @@ class GoPhishCampaign:
         self.group = None
         self.smtp = None
         self.landing_page = None
-        self.url = 'https://r.mtdv.me/account_reset' ### PLACEHOLDER
+        self.url = 'http://127.0.0.1/' ### PLACEHOLDER
         self.campaign = None
 
     def setup_campaign(self) -> None:
@@ -282,7 +282,7 @@ class GoPhishCampaign:
 
         # Create landing page
         page_name = f"Test Page-{self.id}" #PLACEHOLDER
-        with open("./rickrolled.html", "r") as file:
+        with open("./rickrolled - Copy.html", "r") as file:
             html = file.read()
         page = LandingPage(id=self.id,
                            html=html, #### PLACEHOLDER
