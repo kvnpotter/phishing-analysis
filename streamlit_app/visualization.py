@@ -150,7 +150,7 @@ def display_position_analysis(data: pd.DataFrame):
             y="Count",
             title="Email Count by Activity",
             color="Position",
-            color_discrete_sequence=px.colors.qualitative.Prism,
+            color_discrete_sequence=px.colors.sequential.Bluyl[-5:],
             height=400
         )
         # Update layout to remove the legend and center the title
@@ -172,7 +172,7 @@ def display_position_analysis(data: pd.DataFrame):
             names="Position",
             values="Count",
             title="Distribution of Emails by Activity",
-            color_discrete_sequence=px.colors.qualitative.Prism,
+            color_discrete_sequence=px.colors.sequential.Bluyl[-6:],
             height=400
         )
         # Update layout to remove the legend and center the title
