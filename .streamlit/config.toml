@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#3A7C89"                # Change the primary color (e.g., for buttons)
+backgroundColor = "#f0f0f0"             # App background color
+secondaryBackgroundColor = "#e0e0e0"    # Sidebar background color
+textColor = "#333333"                   # Default text color
+font = "sans serif"                     # Choose from 'sans serif', 'serif', or 'monospace'

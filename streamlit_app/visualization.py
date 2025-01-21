@@ -9,10 +9,14 @@ def display_kpi_and_funnel(data: pd.DataFrame, kpis: List[float], kpi_names: Lis
     Displays KPI metrics in the left column (1-column wide)
     and the funnel chart in the right column (4-columns wide).
     """
+    # Insert whitespace
+    st.write("")
+
     st.header("KPI Metrics")
-    
+    st.write("")
+
     # Create layout with 2 columns (1:4 ratio)
-    col1, col2 = st.columns([1, 4])
+    col1, col2, col3 = st.columns([1, 0.5, 4])
 
     # KPI Metrics in the left column
     with col1:
@@ -57,7 +61,7 @@ def display_kpi_and_funnel(data: pd.DataFrame, kpis: List[float], kpi_names: Lis
             )
 
     # Funnel Chart in the right column
-    with col2:
+    with col3:
         # Calculate KPIs for funnel chart
         abs_values = calculate_kpis_abs(data)
         rel_values = calculate_kpis_rel(data)
@@ -130,12 +134,27 @@ def display_kpi_and_funnel(data: pd.DataFrame, kpis: List[float], kpi_names: Lis
         # Display the funnel chart
         st.plotly_chart(fig_funnel, use_container_width=True)
 
+    # Insert whitespace
+    st.write("")
+    st.write("")
+
+    # Insert a line break for better spacing
+    st.divider()
+
 def display_position_analysis(data: pd.DataFrame):
     """
     Display analysis of phishing campaign data by position.
     Includes bar charts and pie charts for position-based insights.
     """
+    # Insert whitespace
+    st.write("")
+
     st.header("Position Analysis")
+
+    # Insert whitespace
+    st.write("")
+    st.write("")
+
     col1, col2 = st.columns(2)
 
     # Group data by position and calculate metrics
@@ -148,16 +167,16 @@ def display_position_analysis(data: pd.DataFrame):
             position_counts,
             x="Position",
             y="Count",
-            title="Email Count by Activity",
+            title="Email Count by Job Field",
             color="Position",
             color_discrete_sequence=px.colors.sequential.Bluyl[-5:],
-            height=400
+            height=450
         )
         # Update layout to remove the legend and center the title
         fig_position_bar.update_layout(
             showlegend=False,  # Remove the legend
             title={
-                "text": "Email Count by Activity",  # Title text
+                "text": "Email Count by Job Field",  # Title text
                 "x": 0.5,  # Center the title (horizontal alignment)
                 "xanchor": "center",  # Anchor the title to the center
                 "yanchor": "top"  # Anchor the title to the top
@@ -171,7 +190,7 @@ def display_position_analysis(data: pd.DataFrame):
             position_counts,
             names="Position",
             values="Count",
-            title="Distribution of Emails by Activity",
+            title="Distribution of Emails by Job Field",
             color_discrete_sequence=px.colors.sequential.Bluyl[-6:],
             height=400
         )
@@ -179,7 +198,7 @@ def display_position_analysis(data: pd.DataFrame):
         fig_position_pie.update_layout(
             showlegend=False,  # Remove the legend
             title={
-                "text": "Distribution of Emails by Activity",  # Title text
+                "text": "Distribution of Emails by Job Field",  # Title text
                 "x": 0.5,  # Center the title (horizontal alignment)
                 "xanchor": "center",  # Anchor the title to the center
                 "yanchor": "top"  # Anchor the title to the top
@@ -216,6 +235,9 @@ def calculate_kpis_table(data: pd.DataFrame, status_order: List[str]):
             # Count rows where the status matches the related statuses
             kpis_by_position[position][status] = len(group[group["status"].isin(related_statuses)])
 
+        # Add count of reported emails
+        kpis_by_position[position]["Email Reported"] = len(group[group["reported"] == True])    
+
     # Convert the dictionary to a DataFrame
     kpis_df = pd.DataFrame.from_dict(kpis_by_position, orient="index").reindex(columns=status_order, fill_value=0)
     
@@ -225,18 +247,31 @@ def calculate_kpis_table(data: pd.DataFrame, status_order: List[str]):
     # Convert DataFrame to HTML with centered alignment
     kpis_df_html = kpis_df.style.set_table_styles(
         [
-            {"selector": "th", "props": [("text-align", "center"), ("font-weight", "bold")]},
+            {"selector": "th", "props": [("text-align", "left"), ("font-weight", "bold")]},
             {"selector": "td", "props": [("text-align", "center")]}
         ]
     ).to_html()
 
+    # Clean up trailing whitespace
+    kpis_df_html = kpis_df_html.strip()
+
+    # Insert whitespace
+    for i in range(4):
+        st.write("")
+
     # Display the table
-    st.write("The table below shows the absolute KPIs for each activity field:")
+    st.write("")
+
+    # Display the table
     st.markdown(
-        f"""
-        <div style="overflow-x: auto;">
-            {kpis_df_html}
+         f"""
+        <div style="text-align: left; padding: 10px;">
+            <h5 style="margin-bottom: 40px;">Absolute KPIs per Professional Field</h5>
+            <div style="display: flex; justify-content: left; overflow-x: auto;">
+                {kpis_df_html}
+            </div>
         </div>
         """,
         unsafe_allow_html=True
     )
+    st.write("")
