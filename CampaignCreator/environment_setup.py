@@ -17,10 +17,10 @@ def load_env() -> str|None:
     env_file = ".env"
     if os.path.exists(env_file):
         load_dotenv(env_file)
-        GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
+        GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
         gmail_username = os.environ.get("gmail_username")
         gmail_app_password = os.environ.get("gmail_app_password")
-        return (GEMINI_API_KEY, gmail_username, gmail_app_password)
+        return (GOOGLE_API_KEY, gmail_username, gmail_app_password)
     else:
         raise FileNotFoundError(f"Environment file '{env_file}' not found.")
     

@@ -11,11 +11,13 @@ class GeminiClient:
     Context manager for the Gemini API client.
     Initialize the Gemini API client
     """
-    def __init__(self, system_instruction: str) -> None:
+    def __init__(self, system_instruction: str, api_key: str) -> None:
         self.client = None
         self.system_instruction = system_instruction
+        self.api_key = api_key
 
     def __enter__(self) -> genai.GenerativeModel:
+        genai.configure(api_key=self.api_key)
         self.client = genai.GenerativeModel(model_name="gemini-1.5-flash",
                                             system_instruction= self.system_instruction)
         return self.client
@@ -72,7 +74,7 @@ def generate_mail_body_gemini(department: str,
 
     # Generate the mail body
     # Use the Gemini API to generate the mail body
-    with GeminiClient(system_instruction= developer_message) as client:
+    with GeminiClient(system_instruction= developer_message, api_key=api_key) as client:
         mail_body = client.generate_content(contents = user_prompt.format(department=department,
                                                                           sender=sender_name,
                                                                           subject=subject))

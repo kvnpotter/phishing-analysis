@@ -1,6 +1,7 @@
 # Imports
 
 import random
+import os
 from .genai_utils import generate_mail_body_gemini, generate_mail_body_openai
 from datetime import datetime
 from gophish.models import User, Group, SMTP, Page, Campaign, Template
@@ -13,13 +14,15 @@ class PhishingMail():
     """
     def __init__(self,id: int,
                  department: str,
-                 topics,
-                 prompts) -> None:
+                 topics: dict[str:list[dict[str:str]]],
+                 prompts: dict[str:str]) -> None:
         """
         Initialize the Template object to contain phishing email for the recipient.
 
         :param id: int: The ID of the template, row index of the recipient employee in supplied CSV file.
         :param department: str: The department to target.
+        :param topics: dict[str:list[dict[str:str]]]: The topics for the departments.
+        :param prompts: dict[str:str]: The prompts for the phishing mail generation.
         """
         self.id = id
         self.department = department
@@ -68,7 +71,7 @@ class PhishingMail():
         result = generate_mail_body_gemini(department=self.department,
                                            topics=self.topics,
                                            prompts=self.prompts,
-                                           api_key=None) # PLACEHOLDER - can put own API key
+                                           api_key=os.environ.get("GOOGLE_API_KEY")) # PLACEHOLDER - can put own API key
 
         self.mail_body, self.sender_email, self.subject, self.sender_name = result
 
@@ -258,6 +261,12 @@ class GoPhishCampaign:
         self.sender_email = template.sender_email
         self.mail_subject = template.subject
         self.model = template.model
+
+        print(f"Recipient: {self.first_name} {self.last_name}")
+        print(f"Email: {self.recipient_email}")
+        print(f"Department: {self.department}")
+        print(f"Mail subject: {self.mail_subject}")
+        print(f"Mail Body:\n{self.template.text}")
 
         # Create user and user group
 

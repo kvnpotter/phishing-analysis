@@ -18,7 +18,7 @@ def gp_connect() -> None:
     global GOPHISH_API_KEY
     
     host = 'https://127.0.0.1:3333/'
-    api_key =  GOPHISH_API_KEY # from the settings page
+    api_key =  os.environ.get("GOPHISH_API_KEY") # from the settings page
     api = Gophish(api_key, host=host, verify=False)
     return api
 
