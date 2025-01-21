@@ -134,6 +134,72 @@ def generate_mail_body_openai(department: str,
     mail_body.choices[0].message.content += "\n{{.Tracker}}" #Add tracker
     return mail_body.choices[0].message.content, sender_email, subject, sender_name
 
+def generate_landing_page_gemini(phishing_mail_body: str,
+                                 prompts: dict[str:str],
+                                 api_key: str) -> str:
+    """
+    Generate the phishing landing page from the Gemini API.
+
+    :param phishing_mail_body: str: The phishing mail body.
+    :param prompts: dict[str:str]: The prompts for the phishing landing page generation.
+    :param api_key: str: The API key for the Gemini API.
+
+    :return: str: The generated phishing landing page in HTML format.
+    """
+
+    # Get prompts
+    developer_message_landing_page = prompts["developer_message_landing_page"]
+    user_prompt_landing_page = prompts["user_prompt_landing_page"]
+
+    # Generate the page
+    # Use the Gemini API to generate the mail body
+    with GeminiClient(system_instruction= developer_message_landing_page, api_key=api_key) as client:
+        landing_page = client.generate_content(contents = user_prompt_landing_page.format(email_body=phishing_mail_body))
+    #print("Waiting 45 seconds") #Only used to stop rate limitation for gemini-1.5-pro free
+    #time.sleep(45) # Wait for 45 seconds to not go over alotted quota to Gemini free !
+    print("Generated landing page")
+    return landing_page.text
+
+def generate_landing_page_openAI(phishing_mail_body: str,
+                          prompts: dict[str:str]) -> str:
+    """
+    Generate the phishing landing page from the OpenAI API.
+
+    :param phishing_mail_body: str: The phishing mail body.
+    :param prompts: dict[str:str]: The prompts for the phishing landing page generation.
+
+    :return: str: The generated phishing landing page in HTML format.
+    """
+
+    # Get prompts
+    developer_message_landing_page = prompts["developer_message_landing_page"]
+    user_prompt_landing_page = prompts["user_prompt_landing_page"]
+
+
+    # Generate the page HTML
+    with OpenAI() as client:
+        try:
+            landing_page_html = client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[{"role": "developer", "content": developer_message_landing_page},
+                {"role": "user", "content": user_prompt_landing_page.format(email_body=phishing_mail_body)}],
+                temperature=0.7,
+                max_tokens=300
+            )
+        except APIConnectionError as e:
+            print("The server could not be reached")
+            print(e.__cause__)  # an underlying Exception, likely raised within httpx.
+        except RateLimitError as e:
+            print("A 429 status code was received; we should back off a bit.")
+        except APIStatusError as e:
+            print("Another non-200-range status code was received")
+            print(e.status_code)
+            print(e.response)
+
+    print("Generated landing page")        
+    
+    return landing_page_html.choices[0].message.content
+
 # def generate_mail_subject_gemini(mail_body: str) -> str:
 #     """
 #     Generate the phishing mail subject from the Gemini API.

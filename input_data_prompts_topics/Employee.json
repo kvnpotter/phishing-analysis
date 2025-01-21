@@ -1,38 +1,8 @@
 {"recipients": [{
-            "first_name": "Sophie",
-            "last_name": "Martin",
-            "email": "d73176539@gmail.com",
-            "department": "Research and Development (R&D)"
-        },
-        {
-            "first_name": "Liam",
-            "last_name": "Dupont",
-            "email": "ana.rosales4580@gmail.com",
-            "department": "Product Development"
-        },
-        {
-            "first_name": "Maxime",
-            "last_name": "Lefevre",
-            "email": "olha.devproject@gmail.com",
-            "department": "Customer Support"
-        },
-        {
             "first_name": "Clara",
             "last_name": "Fontaine",
             "email": "devmail.kvnpotter@gmail.com",
             "department": "Legal and Compliance"
-        },
-        {
-            "first_name": "Julien",
-            "last_name": "Robert",
-            "email": "f.student71@gmail.com",
-            "department": "Finance & Accounting"
-        },
-        {
-            "first_name": "Antoine",
-            "last_name": "Petit",
-            "email": "ms.dev612@gmail.com",
-            "department": "IT Support Services"
         }
     ]
 }

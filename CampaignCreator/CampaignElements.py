@@ -2,7 +2,7 @@
 
 import random
 import os
-from .genai_utils import generate_mail_body_gemini, generate_mail_body_openai
+from .genai_utils import generate_mail_body_gemini, generate_mail_body_openai, generate_landing_page_openAI, generate_landing_page_gemini
 from datetime import datetime
 from gophish.models import User, Group, SMTP, Page, Campaign, Template
 
@@ -159,29 +159,71 @@ class LandingPage:
     """
     def __init__(self,
                  id: int,
-                 html: str,
+                 phishing_mail_body: str,
+                 prompts: dict[str:str],
                  name: str,
-                 redirect_url: str,
                  capture_credentials: bool = False,
                  capture_passwords: bool = False
                  ) -> None:
         """
         Initialize the LandingPage object to contain the phishing landing page information.
 
-        :param id: int: The landing page's ID obtained from the supplied CSV file with employee data, row index of the recipient employee.
-        :param html: str: The HTML content of the landing page.
+        :param id: int: The landing page's ID.
+        :param phishing_mail_body: str: The phishing mail body to use for generation.
+        :param prompts: dict[str:str]: The prompts for the phishing generation.
         :param name: str: The name of the landing page.
         :capture_credentials: bool: (Optional) Whether to capture credentials.
         :capture_passwords: bool: (Optional) Whether to capture passwords.
-        :redirect_url: str: The URL to redirect to after form submission.
         """
         self.id = id
-        self.html = html
+        self.phishing_mail_body = phishing_mail_body
+        self.prompts = prompts
         self.name = name
         self.capture_credentials = capture_credentials
         self.capture_passwords = capture_passwords
-        self.redirect_url = redirect_url
+        self.redirect_url = "https://r.mtdv.me/you-got-phished"
+        self.html = None
         self.page = None
+        self.model=  None
+
+    def random_select_model(self) -> None:
+        """
+        Randomly select an AI model for page generation.
+        """
+        self.model = random.choice(["OpenAI", "Gemini"])
+
+    def select_page_generator(self) -> None:
+        """
+        Select the page generator based on the model.
+        """
+        if self.model == "OpenAI":
+            self.generate_OpenAI_page()
+        elif self.model == "Gemini":
+            self.generate_Gemini_page()
+        else:
+            raise ValueError("Invalid model selected.")
+        
+    def generate_OpenAI_page(self) -> None:
+        """
+        Generate a landing page using OpenAI.
+        """
+        print("Generating OpenAI page...")
+        result = generate_landing_page_openAI(phishing_mail_body=self.phishing_mail_body,
+                                           prompts=self.prompts)
+
+        self.html = result
+
+    def generate_Gemini_page(self) -> None:
+        """
+        Generate a landing page using Gemini.
+        """
+        print("Generating Gemini page...")
+        result = generate_landing_page_gemini(phishing_mail_body=self.phishing_mail_body,
+                                           prompts=self.prompts,
+                                           api_key=os.environ.get("GOOGLE_API_KEY")) # PLACEHOLDER - can put own API key
+
+        self.html = result
+
 
     def generate_gp_page(self) -> None:
         """
@@ -290,15 +332,17 @@ class GoPhishCampaign:
         self.smtp = sender.sender_profile
 
         # Create landing page
-        page_name = f"Test Page-{self.id}" #PLACEHOLDER
-        with open("./rickrolled - Copy.html", "r") as file:
-            html = file.read()
+        page_name = f"{self.last_name}_{self.first_name}_{datetime.now().strftime('%Y-%m-%d_%H:%M:%S')}"
+
         page = LandingPage(id=self.id,
-                           html=html, #### PLACEHOLDER
-                           name=page_name, #### PLACEHOLDER
-                           redirect_url="https://you_failed_the_test.com", #### PLACEHOLDER
+                           phishing_mail_body=self.template.text,
+                           prompts=self.prompts,
+                           name=page_name, 
                            capture_credentials=True,
                            capture_passwords=True)
+#        page.random_select_model() # ISSUES WITH OPENAI RATE LIMIT...
+#        page.select_page_generator()
+        page.generate_Gemini_page()
         page.generate_gp_page()
 
         self.landing_page = page.page
