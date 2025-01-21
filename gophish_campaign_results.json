@@ -1,0 +1,47 @@
+[
+    {
+        "Campaign ID": 1,
+        "Campaign Name": "Dupont_Liam_2025-01-21_14:51:58",
+        "Email": "ana.rosales4580@gmail.com",
+        "Sent": true,
+        "Opened": false,
+        "Clicked": false,
+        "Submitted": false
+    },
+    {
+        "Campaign ID": 2,
+        "Campaign Name": "Lefevre_Maxime_2025-01-21_14:52:05",
+        "Email": "olha.devproject@gmail.com",
+        "Sent": true,
+        "Opened": false,
+        "Clicked": false,
+        "Submitted": false
+    },
+    {
+        "Campaign ID": 3,
+        "Campaign Name": "Fontaine_Clara_2025-01-21_14:52:13",
+        "Email": "devmail.kvnpotter@gmail.com",
+        "Sent": true,
+        "Opened": true,
+        "Clicked": true,
+        "Submitted": false
+    },
+    {
+        "Campaign ID": 4,
+        "Campaign Name": "Robert_Julien_2025-01-21_14:52:22",
+        "Email": "f.student71@gmail.com",
+        "Sent": true,
+        "Opened": false,
+        "Clicked": false,
+        "Submitted": false
+    },
+    {
+        "Campaign ID": 20,
+        "Campaign Name": "Martin_Sophie_2025-01-21_14:51:52",
+        "Email": "d73176539@gmail.com",
+        "Sent": true,
+        "Opened": false,
+        "Clicked": false,
+        "Submitted": false
+    }
+]
