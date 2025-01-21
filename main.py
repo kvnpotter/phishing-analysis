@@ -40,6 +40,8 @@ def read_root():
 
 @app.post("/recipients/upload-json/")
 def upload_recipients(user_list: UserList):
+    global recipient_database
+    recipient_database = []
     for recipient in user_list.recipients:
         recipient_database.append({"first_name": recipient.first_name,
                                    "last_name": recipient.last_name,
@@ -48,6 +50,12 @@ def upload_recipients(user_list: UserList):
 
     return {"message": "Recipients uploaded successfully!",
             "database": recipient_database}
+
+@app.delete("/recipients/delete-all/")
+def delete_all_recipients():
+    global recipient_database
+    recipient_database = []
+    return {"message": "All recipients deleted successfully!"}
 
 # GET endpoint to retrieve all recipients
 @app.get("/recipients/")
@@ -62,7 +70,7 @@ def launch_campaign():
 
     # Initialize the environment
 
-    global GEMINI_API_KEY, gmail_username, gmail_app_password, topics, prompts
+    global GEMINI_API_KEY, gmail_username, gmail_app_password, topics, prompts, recipient_database
 
     GEMINI_API_KEY, gmail_username, gmail_app_password = load_env()
     topics = load_topics("input_data_prompts_topics/Emailtopics.json")
@@ -81,5 +89,9 @@ def launch_campaign():
     # Connect to GoPhish and post campaign data
     gp_api = gp_connect()
     gp_post_campaign(campaign=campaign, gp_api=gp_api)
+
+    # Empty user database
+
+    recipient_database = []
 
     return {"message": "Campaign launched successfully!"}

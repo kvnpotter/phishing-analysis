@@ -294,8 +294,9 @@ class GoPhishCampaign:
                                 department=self.department,
                                 topics=self.topics,
                                 prompts=self.prompts)
-        template.random_select_model()
-        template.select_email_generator()
+        #template.random_select_model() # PLACEHOLDER ISSUES WITH OPENAI RATE LIMIT...
+        #template.select_email_generator()
+        template.generate_Gemini_email()
         template.generate_gp_template()
 
         self.template = template.template
