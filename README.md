@@ -1,6 +1,4 @@
-Here is the raw Markdown code for your README:  
 
-````markdown
 # **Proximus ADA Phishing Awareness Campaign**
 
 ![Phishing Awareness](https://www.shutterstock.com/image-vector/phishing-cyber-crime-hacker-attacks-online-600nw-1453782461.jpg)
