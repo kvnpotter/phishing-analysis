@@ -118,7 +118,3 @@ Ensure you have the following installed:
 - Expand phishing scenarios for a more comprehensive assessment.
 - Automate feedback and reporting mechanisms further.
 - Strengthen security and role-based access control.
-
----
-This project is an ongoing effort to strengthen cybersecurity awareness at Proximus ADA through innovative AI-driven automation.
-````
