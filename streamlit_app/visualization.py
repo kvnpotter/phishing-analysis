@@ -1,5 +1,6 @@
 import streamlit as st
 import plotly.express as px
+import plotly.graph_objects as go
 import pandas as pd
 from typing import List
 from .kpi_calculations import calculate_kpis_abs, calculate_kpis_rel
@@ -275,3 +276,79 @@ def calculate_kpis_table(data: pd.DataFrame, status_order: List[str]):
         unsafe_allow_html=True
     )
     st.write("")
+
+def display_reported_analysis(data: pd.DataFrame):
+    """
+    Display analysis of phishing campaign data by reporting.
+    Includes bar charts for reported-based insights.
+    """
+    # Insert whitespace
+    st.write("")
+    st.title("Reported Emails by Status")
+    st.write("")
+    st.write("")
+
+    # Define the desired order of statuses
+    desired_order = ["Email Sent", "Email Opened", "Clicked Link", "Submitted Data"]
+
+    # Calculate percentages of True and False for each status
+    status_counts = data.groupby("status")["reported"].value_counts(normalize=True).unstack(fill_value=0)
+    absolute_counts = data.groupby("status")["reported"].value_counts().unstack(fill_value=0)
+    status_counts.columns = ["Not Reported", "Reported"]
+    absolute_counts.columns = ["Not Reported", "Reported"]
+    status_counts = status_counts * 100  # Convert to percentages
+
+    # Reorder the data according to the desired order
+    status_counts = status_counts.reindex(desired_order)
+    absolute_counts = absolute_counts.reindex(desired_order)
+
+    # Create a stacked bar chart using Plotly
+    fig = go.Figure()
+
+    fig.add_trace(
+        go.Bar(
+            x=status_counts.index,
+            y=status_counts["Not Reported"],
+            name="Not Reported",
+            marker_color="#98DBC6",
+        )
+    )
+    fig.add_trace(
+        go.Bar(
+            x=status_counts.index,
+            y=status_counts["Reported"],
+            name="Reported",
+            marker_color="#028482",
+        )
+    )
+
+    # Add annotations for absolute values
+    for idx, status in enumerate(status_counts.index):
+        # Not Reported
+        fig.add_annotation(
+            x=status,
+            y=status_counts["Not Reported"][idx] / 2,
+            text=f"{absolute_counts['Not Reported'][idx]}",
+            showarrow=False,
+            font=dict(color="black", size=16),
+        )
+        # Reported
+        fig.add_annotation(
+            x=status,
+            y=status_counts["Not Reported"][idx] + (status_counts["Reported"][idx] / 2),
+            text=f"{absolute_counts['Reported'][idx]}",
+            showarrow=False,
+            font=dict(color="black", size=16),
+        )
+
+    # Update layout for the stacked bar chart
+    fig.update_layout(
+        barmode="stack",
+        title="Reported vs Not Reported Emails by Status",
+        xaxis_title="Status",
+        yaxis_title="Percentage (%)",
+        legend_title="Reported Status",
+    )
+
+    # Display the chart in Streamlit
+    st.plotly_chart(fig)
