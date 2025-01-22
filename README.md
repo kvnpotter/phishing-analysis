@@ -92,13 +92,13 @@ Ensure you have the following installed:
 
 ## **Contributors**
 
-- **[Kevin]** - [https://github.com/kvnpotter]
-- **[Celina Bolanos]** - [https://github.com/Celina-Bolanos]
-- **[Frank]** - (https://github.com/FraNnky96)
-- **[Stef]** - [https://github.com/StefVandekerckhove1]
-- **[Olha]** - [https://github.com/olhasl]
-- **[Miria]** - [(https://github.com/Miriam-Stoehr)]
-- **[fatemeh]** - [(https://github.com/Fatemeh992)]
+- **Kevin** - [https://github.com/kvnpotter]
+- **Celina Bolanos** - [https://github.com/Celina-Bolanos]
+- **Frank** - (https://github.com/FraNnky96)
+- **Stef** - [https://github.com/StefVandekerckhove1]
+- **Olha** - [https://github.com/olhasl]
+- **Miria** - [https://github.com/Miriam-Stoehr]
+- **fatemeh** - [https://github.com/Fatemeh992]
 
 
 ## **Timeline**
