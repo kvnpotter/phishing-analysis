@@ -81,7 +81,7 @@ class PhishingMail():
         """
         self.template = Template(id=self.id,
                                  name=self.subject,
-                                 text=self.mail_body,
+                                 html=self.mail_body, #EDIT
                                  subject=self.subject,
                                  envelope_sender=self.sender_email)
 
@@ -309,7 +309,7 @@ class GoPhishCampaign:
         print(f"Email: {self.recipient_email}")
         print(f"Department: {self.department}")
         print(f"Mail subject: {self.mail_subject}")
-        print(f"Mail Body:\n{self.template.text}")
+        print(f"Mail Body:\n{self.template.html}")
 
         # Create user and user group
 

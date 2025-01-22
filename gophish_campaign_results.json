@@ -1,47 +1,68 @@
 [
     {
         "Campaign ID": 1,
-        "Campaign Name": "Dupont_Liam_2025-01-21_14:51:58",
+        "Campaign Name": "Dupont_Liam_2025-01-22_14:12:48",
         "Email": "ana.rosales4580@gmail.com",
         "Sent": true,
         "Opened": false,
         "Clicked": false,
-        "Submitted": false
+        "Submitted": false,
+        "first_name": "Liam",
+        "last_name": "Dupont"
     },
     {
         "Campaign ID": 2,
-        "Campaign Name": "Lefevre_Maxime_2025-01-21_14:52:05",
+        "Campaign Name": "Lefevre_Maxime_2025-01-22_14:12:55",
         "Email": "olha.devproject@gmail.com",
         "Sent": true,
         "Opened": false,
         "Clicked": false,
-        "Submitted": false
+        "Submitted": false,
+        "first_name": "Maxime",
+        "last_name": "Lefevre"
     },
     {
-        "Campaign ID": 3,
-        "Campaign Name": "Fontaine_Clara_2025-01-21_14:52:13",
-        "Email": "devmail.kvnpotter@gmail.com",
+        "Campaign ID": 2,
+        "Campaign Name": "Lefevre_Maxime_2025-01-22_14:12:55",
+        "Email": "olha.devproject@gmail.com",
         "Sent": true,
-        "Opened": true,
-        "Clicked": true,
-        "Submitted": false
+        "Opened": false,
+        "Clicked": false,
+        "Submitted": false,
+        "first_name": "Maxime",
+        "last_name": "Lefevre"
     },
     {
         "Campaign ID": 4,
-        "Campaign Name": "Robert_Julien_2025-01-21_14:52:22",
+        "Campaign Name": "Robert_Julien_2025-01-22_14:13:09",
         "Email": "f.student71@gmail.com",
         "Sent": true,
         "Opened": false,
         "Clicked": false,
-        "Submitted": false
+        "Submitted": false,
+        "first_name": "Julien",
+        "last_name": "Robert"
     },
     {
-        "Campaign ID": 20,
-        "Campaign Name": "Martin_Sophie_2025-01-21_14:51:52",
+        "Campaign ID": 5,
+        "Campaign Name": "Petit_Antoine_2025-01-22_14:13:16",
+        "Email": "ms.dev612@gmail.com",
+        "Sent": true,
+        "Opened": false,
+        "Clicked": false,
+        "Submitted": false,
+        "first_name": "Antoine",
+        "last_name": "Petit"
+    },
+    {
+        "Campaign ID": 33,
+        "Campaign Name": "Martin_Sophie_2025-01-22_14:12:41",
         "Email": "d73176539@gmail.com",
         "Sent": true,
         "Opened": false,
         "Clicked": false,
-        "Submitted": false
+        "Submitted": false,
+        "first_name": "Sophie",
+        "last_name": "Martin"
     }
 ]

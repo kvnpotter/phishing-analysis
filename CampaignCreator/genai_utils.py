@@ -64,6 +64,14 @@ def generate_mail_body_gemini(department: str,
 
     # Get prompts
     developer_message = prompts["developer_message"]
+    tracker = '\"<img src="{{.TrackingURL}}" style="display:none"/>\"' #EDIT TRACKER
+    developer_message = developer_message.format(tracker=tracker,
+                                                 FirstName="{{.FirstName}}",
+                                                 LastName="{{.LastName}}",
+                                                 Position="{{.Position}}",
+                                                 Email="{{.Email}}",
+                                                 From="{{.From}}",
+                                                 URL="{{.URL}}")
     user_prompt = prompts["user_prompt"]
 
     # Subject and sender setting
@@ -78,7 +86,7 @@ def generate_mail_body_gemini(department: str,
         mail_body = client.generate_content(contents = user_prompt.format(department=department,
                                                                           sender=sender_name,
                                                                           subject=subject))
-    mail_with_tracker = mail_body.text + "\n{{.Tracker}}" # Add tracker
+    mail_with_tracker = mail_body.text #+ "\n{{.Tracker}}" # Add tracker EDIT
     print("Mail body generated")
     #print("Waiting 45 seconds") #Only used to stop rate limitation for gemini-1.5-pro free
     #time.sleep(45) # Wait for 45 seconds to not go over alotted quota to Gemini free !
@@ -102,6 +110,14 @@ def generate_mail_body_openai(department: str,
 
     # Get prompts
     developer_message = prompts["developer_message"]
+    tracker = '\"<img src="{{.TrackingURL}}" style="display:none"/>\"' #EDIT TRACKER
+    developer_message = developer_message.format(tracker=tracker,
+                                                 FirstName="{{.FirstName}}",
+                                                 LastName="{{.LastName}}",
+                                                 Position="{{.Position}}",
+                                                 Email="{{.Email}}",
+                                                 From="{{.From}}",
+                                                 URL="{{.URL}}")
     user_prompt = prompts["user_prompt"]
 
     # Subject and sender setting
@@ -131,7 +147,7 @@ def generate_mail_body_openai(department: str,
             print("Another non-200-range status code was received")
             print(e.status_code)
             print(e.response)
-    mail_body.choices[0].message.content += "\n{{.Tracker}}" #Add tracker
+    mail_body.choices[0].message.content #+= "\n{{.Tracker}}" #Add tracker EDIT
     return mail_body.choices[0].message.content, sender_email, subject, sender_name
 
 def generate_landing_page_gemini(phishing_mail_body: str,

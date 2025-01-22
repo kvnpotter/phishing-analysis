@@ -5,7 +5,7 @@ from pydantic import BaseModel
 from typing import List
 
 #from CampaignCreator import create_campaign
-from GoPhishConnector import gp_connect, gp_post_campaign
+from GoPhishConnector import gp_connect, gp_post_campaign, gp_delete_campaign
 from CampaignCreator import PhishingCampaign, load_env, load_topics, load_prompts
 
 # Global variables
@@ -95,3 +95,10 @@ def launch_campaign():
     recipient_database = []
 
     return {"message": "Campaign launched successfully!"}
+
+@app.delete("/campaign/delete-all/")
+def delete_gp_data():
+    result = load_env()
+    gp_api = gp_connect()
+    gp_delete_campaign(gp_api)
+    return {"message": "All campaign data deleted successfully!"}

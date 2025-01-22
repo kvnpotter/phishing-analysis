@@ -4,6 +4,7 @@ import streamlit as st
 import requests
 import json
 
+
 BASE_URL = 'http://127.0.0.1:8000'
 
 # Code
@@ -18,3 +19,6 @@ if st.button("Upload JSON recipients"):
 
 if st.sidebar.button("Launch campaign"):
     response = requests.get(f"{BASE_URL}/campaign/launch/")
+
+if st.sidebar.button("Delete all GP campaign data"):
+    response = requests.delete(f"{BASE_URL}/campaign/delete-all/")
