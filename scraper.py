@@ -2,6 +2,7 @@ import pandas as pd
 import requests
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 import time
 
 def generate_queries(file):
@@ -25,10 +26,9 @@ def generate_queries(file):
     return queries
 
 
-def get_link(query: str):
+def get_info(query: str):
     """ 
-    Searchs for links to target's LinkedIn Profile and photo.
-    Returns None if no profile found.
+    Gathers target basic information via online search.
 
     PARAMS:
     quere -str: name of the target person 
@@ -59,20 +59,20 @@ def get_link(query: str):
         return print(f'No results for {query}')
     
     else:
-        # Extract linkedIn profile
+        title = [item['title'] for item in results][0]
         profile_link = [item['link'] for item in results][0]
+        basic_data = [item['snippet'] for item in results][0]
 
-        # Extract link to photo
         pagemap = [item['pagemap'] for item in results][0]
         pagemap = pagemap['cse_thumbnail'][0]
         photo_link = pagemap['src']
-        print('Process has finished')
-        return (profile_link, photo_link)
+
+        return (title, profile_link, basic_data, photo_link)
 
 
 def get_details(url: str):
     """ 
-    Scraps target's information
+    Scraps target's information if Linked in profile is public
 
     PARAMS
     url -str: link to the target's linkedIn profile
@@ -88,7 +88,7 @@ def get_details(url: str):
     # Open LinkedIn profile
     driver.get(url)
 
-    time.sleep(3)
+    time.sleep(10)
     # test if profile is accessible (not private)
     try:
         popup = driver.find_element(By.CSS_SELECTOR, '#base-contextual-sign-in-modal > div > section > button > icon > svg')
@@ -97,13 +97,12 @@ def get_details(url: str):
     except:
         driver.close()
         return print('Private profile')
-    
+
     # Otherwise, get the information.
     else:
         # Get location
         location = driver.find_element(By.CLASS_NAME, 'not-first-middot')
         location = location.text.split(',')[0]
-
         try: 
             # Get school name
             school = driver.find_element(By.XPATH, '//*[@id="main-content"]/section[1]/div/section/section[1]/div/div[2]/div[2]/div/div[2]/a/span')
@@ -120,19 +119,6 @@ def get_details(url: str):
             languages = main.find_elements(By.TAG_NAME, 'h3')
             languages = [lang.text for lang in languages]
             posts = [post.text for post in posts if len(post.text) > 100 ]
-        
+
         driver.close()
-        return (location, school, languages, posts)
-
-
-
-############ Functions test  #############
-
-#file = pd.read_json('../phishing-analysis/target.json')
-#print(generate_queries(file))
-
-#prof_link, photo_link = get_link('Maxim Vermeulen proximus')
-#print(prof_link)
-#print(photo_link)
-
-#print(get_details('https://www.linkedin.com/in/michel-van-roosbroeck-34293b2/'))
+    return (location, school, languages, posts)
