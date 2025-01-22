@@ -1,7 +1,6 @@
 
 # **Proximus ADA Phishing Awareness Campaign**
 
-![Phishing Awareness](https://www.shutterstock.com/image-vector/phishing-cyber-crime-hacker-attacks-online-600nw-1453782461.jpg)
 
 [Introduction](#Introduction)     |     [Description](#Description)     |       [Installation-Environment setup](#Installation-Environment-setup)    |       [Usage](#Usage)    |[Contributors](#Contributors)    |      [Timeline](#Timeline)       |       [List of Improvements](#list-of-improvements)  
 
