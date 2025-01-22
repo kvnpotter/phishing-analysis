@@ -3,7 +3,7 @@ import pandas as pd
 from streamlit_app.data_loader import load_data
 from streamlit_app.filters import display_sidebar, filter_data
 from streamlit_app.kpi_calculations import calculate_kpis_abs
-from streamlit_app.visualization import display_kpi_and_funnel, display_position_analysis, calculate_kpis_table, display_reported_analysis
+from streamlit_app.visualization import display_kpi_and_funnel, display_position_analysis, calculate_kpis_table, display_personnal_data, display_reported_analysis
 
 st.set_page_config(
     page_title="Phishing Campaigns Dashboard",
@@ -50,7 +50,7 @@ def main():
     # KPI Table
     status_order = ["Email Sent", "Email Opened", "Clicked Link", "Submitted Data", "Email Reported"]
     calculate_kpis_table(filtered_data, status_order)
-
+    display_personnal_data(filtered_data)
     display_reported_analysis(filtered_data)
 
 if __name__ == '__main__':
