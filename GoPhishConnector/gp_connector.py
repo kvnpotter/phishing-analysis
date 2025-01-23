@@ -2,6 +2,7 @@
 
 import os
 from gophish import Gophish
+from CampaignCreator import load_config
 
 # Functions
 
@@ -11,8 +12,8 @@ def gp_connect() -> Gophish:
     
     : return: gophish.client.Gophish: Connection object to GoPhish API.
     """
-    
-    host = os.environ.get("GOPHISH_HOST") # from the .env
+    config = load_config()
+    host = config["GoPhish_host"]
     api_key =  os.environ.get("GOPHISH_API_KEY") # from the .env
     api = Gophish(api_key, host=host, verify=False)
     return api

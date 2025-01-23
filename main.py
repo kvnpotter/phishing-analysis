@@ -6,15 +6,16 @@ from typing import List
 import urllib3
 
 from GoPhishConnector import gp_connect, gp_post_campaign, gp_delete_campaign
-from CampaignCreator import PhishingCampaign, load_env, load_topics, load_prompts
+from CampaignCreator import PhishingCampaign, load_env, load_topics, load_prompts, load_config
 
 # Disable SSL warnings for development environments
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Global variables and GoPhish API connection
 
-topics = load_topics("input_data_prompts_topics/Emailtopics.json")
-prompts = load_prompts("input_data_prompts_topics/prompts.json")
+config = load_config()
+topics = load_topics(config["topics_path"])
+prompts = load_prompts(config["prompts_path"])
 GEMINI_API_KEY, gmail_username, gmail_app_password = load_env()
 gp_api = gp_connect()
 

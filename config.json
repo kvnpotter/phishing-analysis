@@ -1,3 +1,7 @@
 {
-    "employee_data_path": "input_data_prompts_topics/Employee.csv"
+    "prompts_path": "input_data_prompts_topics/prompts.json",
+    "topics_path": "input_data_prompts_topics/Emailtopics.json",
+    "GoPhish_host": "https://127.0.0.1:3333/",
+    "API_base_url": "http://127.0.0.1:8000",
+    "analysis_url": "https://gophish-analysis.streamlit.app/"
 }

@@ -3,14 +3,13 @@
 import streamlit as st
 import requests
 import json
-import os
 
-from CampaignCreator import load_env
+from CampaignCreator import load_config
 
 # Set base URL for requests to API
 
-result = load_env()
-BASE_URL = os.environ.get("API_BASE_URL") # from the .env
+config = load_config()
+BASE_URL = config["API_base_url"] # from the .env
 
 # App Code
 
@@ -35,4 +34,4 @@ if st.sidebar.button("Launch campaign"):
 if st.sidebar.button("Delete all GP campaign data"):
     response = requests.delete(f"{BASE_URL}/campaign/delete-all/")
 
-st.sidebar.link_button("Result analysis page", url="https://gophish-analysis.streamlit.app/")
+st.sidebar.link_button("Result analysis page", url=config["analysis_url"])

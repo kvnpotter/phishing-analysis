@@ -2,7 +2,6 @@
 
 import json
 from CampaignCreator import create_campaign
-
 import urllib3
 
 # Disable SSL warnings for development environments
