@@ -9,10 +9,9 @@ import json
 def load_env() -> str|None:
     """
     Load the API keys from the .env file.
-    """
 
-    # Globals
-    #global GEMINI_API_KEY #, #PLACEHOLDER
+    :return: tuple(str): The Google API key, Gmail username, and Gmail app password.
+    """
 
     env_file = ".env"
     if os.path.exists(env_file):
@@ -24,14 +23,28 @@ def load_env() -> str|None:
     else:
         raise FileNotFoundError(f"Environment file '{env_file}' not found.")
     
+def load_config() -> str:
+    """ 
+    Load the configuration from the config.json file.
+    """
+
+    config_file = "config.json"
+    if os.path.exists(config_file):
+        with open(config_file, "r", encoding='utf-8') as file:
+            config = json.load(file)
+            return config
+    else:
+        raise FileNotFoundError(f"Topics file '{config_file}' not found.")
+    
 def load_topics(path: str) -> str|None:
     """
     Load the topics from the topics.json file.
 
     :param path: str: The path to the topics.json file.
+
+    :return: dict: The topics dictionary.
     """
-    # Globals
-    global topics
+
     # Load the JSON file
     topics_file = path
     if os.path.exists(topics_file):
@@ -46,9 +59,10 @@ def load_prompts(path: str) -> str|None:
     Load the prompts from the prompts.json file.
 
     :param path: str: The path to the prompts.json file.
+
+    :return: dict: The prompts dictionary.
     """
-    # Globals
-    global prompts
+
     # Load the JSON file
     prompts_file = path 
     if os.path.exists(prompts_file):
@@ -57,17 +71,3 @@ def load_prompts(path: str) -> str|None:
             return prompts
     else:
         raise FileNotFoundError(f"Prompts file '{prompts_file}' not found.")
-
-# Main
-
-if __name__ == "__main__":
-
-    # Initialize the environment
-
-    load_env()
-    load_topics("Emailtopics.json")
-    load_prompts("prompts.json")
-
-    #print(GEMINI_API_KEY)
-    #department = "Telecommunication Services"
-    #print(topics[department])

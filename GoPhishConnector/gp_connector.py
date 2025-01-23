@@ -2,23 +2,19 @@
 
 import os
 from gophish import Gophish
-
-# Globals
-
-GOPHISH_API_KEY = os.environ.get("GOPHISH_API_KEY")
+from CampaignCreator import load_config
 
 # Functions
 
-def gp_connect() -> None:
+def gp_connect() -> Gophish:
     """
     Creates a connection with GoPhish via API.
     
-    RETURNS api: connection object
+    : return: gophish.client.Gophish: Connection object to GoPhish API.
     """
-    global GOPHISH_API_KEY
-    
-    host = 'https://127.0.0.1:3333/'
-    api_key =  os.environ.get("GOPHISH_API_KEY") # from the settings page
+    config = load_config()
+    host = config["GoPhish_host"]
+    api_key =  os.environ.get("GOPHISH_API_KEY") # from the .env
     api = Gophish(api_key, host=host, verify=False)
     return api
 

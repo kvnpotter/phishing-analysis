@@ -1,68 +1,145 @@
 [
     {
-        "Campaign ID": 1,
-        "Campaign Name": "Dupont_Liam_2025-01-22_14:12:48",
-        "Email": "ana.rosales4580@gmail.com",
+        "Campaign ID": 45,
+        "Campaign Name": "Fontaine_Clara_2025-01-23_16:44:41",
+        "Email": "devmail.kvnpotter@gmail.com",
         "Sent": true,
         "Opened": false,
         "Clicked": false,
         "Submitted": false,
-        "first_name": "Liam",
-        "last_name": "Dupont"
+        "first_name": "Clara",
+        "last_name": "Fontaine"
     },
     {
-        "Campaign ID": 2,
-        "Campaign Name": "Lefevre_Maxime_2025-01-22_14:12:55",
-        "Email": "olha.devproject@gmail.com",
+        "Campaign ID": 46,
+        "Campaign Name": "Fontaine_Clara_2025-01-23_16:45:41",
+        "Email": "devmail.kvnpotter@gmail.com",
         "Sent": true,
         "Opened": false,
         "Clicked": false,
         "Submitted": false,
-        "first_name": "Maxime",
-        "last_name": "Lefevre"
+        "first_name": "Clara",
+        "last_name": "Fontaine"
     },
     {
-        "Campaign ID": 2,
-        "Campaign Name": "Lefevre_Maxime_2025-01-22_14:12:55",
-        "Email": "olha.devproject@gmail.com",
+        "Campaign ID": 47,
+        "Campaign Name": "Fontaine_Clara_2025-01-23_16:46:11",
+        "Email": "devmail.kvnpotter@gmail.com",
         "Sent": true,
         "Opened": false,
         "Clicked": false,
         "Submitted": false,
-        "first_name": "Maxime",
-        "last_name": "Lefevre"
+        "first_name": "Clara",
+        "last_name": "Fontaine"
     },
     {
-        "Campaign ID": 4,
-        "Campaign Name": "Robert_Julien_2025-01-22_14:13:09",
-        "Email": "f.student71@gmail.com",
+        "Campaign ID": 48,
+        "Campaign Name": "Fontaine_Clara_2025-01-23_16:46:40",
+        "Email": "devmail.kvnpotter@gmail.com",
         "Sent": true,
         "Opened": false,
         "Clicked": false,
         "Submitted": false,
-        "first_name": "Julien",
-        "last_name": "Robert"
+        "first_name": "Clara",
+        "last_name": "Fontaine"
     },
     {
-        "Campaign ID": 5,
-        "Campaign Name": "Petit_Antoine_2025-01-22_14:13:16",
-        "Email": "ms.dev612@gmail.com",
+        "Campaign ID": 49,
+        "Campaign Name": "Fontaine_Clara_2025-01-23_16:47:10",
+        "Email": "devmail.kvnpotter@gmail.com",
         "Sent": true,
         "Opened": false,
         "Clicked": false,
         "Submitted": false,
-        "first_name": "Antoine",
-        "last_name": "Petit"
+        "first_name": "Clara",
+        "last_name": "Fontaine"
     },
     {
-        "Campaign ID": 33,
-        "Campaign Name": "Martin_Sophie_2025-01-22_14:12:41",
-        "Email": "d73176539@gmail.com",
+        "Campaign ID": 50,
+        "Campaign Name": "Fontaine_Clara_2025-01-23_16:47:40",
+        "Email": "devmail.kvnpotter@gmail.com",
         "Sent": true,
         "Opened": false,
         "Clicked": false,
         "Submitted": false,
-        "first_name": "Sophie",
-        "last_name": "Martin"
+        "first_name": "Clara",
+        "last_name": "Fontaine"
+    },
+    {
+        "Campaign ID": 51,
+        "Campaign Name": "Fontaine_Clara_2025-01-23_16:48:10",
+        "Email": "devmail.kvnpotter@gmail.com",
+        "Sent": true,
+        "Opened": false,
+        "Clicked": false,
+        "Submitted": false,
+        "first_name": "Clara",
+        "last_name": "Fontaine"
+    },
+    {
+        "Campaign ID": 52,
+        "Campaign Name": "Fontaine_Clara_2025-01-23_16:48:41",
+        "Email": "devmail.kvnpotter@gmail.com",
+        "Sent": true,
+        "Opened": false,
+        "Clicked": false,
+        "Submitted": false,
+        "first_name": "Clara",
+        "last_name": "Fontaine"
+    },
+    {
+        "Campaign ID": 53,
+        "Campaign Name": "Fontaine_Clara_2025-01-23_16:49:41",
+        "Email": "devmail.kvnpotter@gmail.com",
+        "Sent": true,
+        "Opened": false,
+        "Clicked": false,
+        "Submitted": false,
+        "first_name": "Clara",
+        "last_name": "Fontaine"
+    },
+    {
+        "Campaign ID": 54,
+        "Campaign Name": "Fontaine_Clara_2025-01-23_16:50:10",
+        "Email": "devmail.kvnpotter@gmail.com",
+        "Sent": true,
+        "Opened": false,
+        "Clicked": false,
+        "Submitted": false,
+        "first_name": "Clara",
+        "last_name": "Fontaine"
+    },
+    {
+        "Campaign ID": 55,
+        "Campaign Name": "Fontaine_Clara_2025-01-23_16:51:10",
+        "Email": "devmail.kvnpotter@gmail.com",
+        "Sent": true,
+        "Opened": false,
+        "Clicked": false,
+        "Submitted": false,
+        "first_name": "Clara",
+        "last_name": "Fontaine"
+    },
+    {
+        "Campaign ID": 56,
+        "Campaign Name": "Fontaine_Clara_2025-01-23_16:51:40",
+        "Email": "devmail.kvnpotter@gmail.com",
+        "Sent": true,
+        "Opened": false,
+        "Clicked": false,
+        "Submitted": false,
+        "first_name": "Clara",
+        "last_name": "Fontaine"
+    },
+    {
+        "Campaign ID": 57,
+        "Campaign Name": "Fontaine_Clara_2025-01-23_16:52:10",
+        "Email": "devmail.kvnpotter@gmail.com",
+        "Sent": true,
+        "Opened": false,
+        "Clicked": false,
+        "Submitted": false,
+        "first_name": "Clara",
+        "last_name": "Fontaine"
     }
 ]

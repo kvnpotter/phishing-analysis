@@ -1,3 +1,4 @@
 # Ignored files
 Testing_redundant/
 .env
+.log
