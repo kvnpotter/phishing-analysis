@@ -1690,3 +1690,148 @@ gophish.models.Error: Error inserting template into database
 2025-01-23 16:55:21,210 - INFO - Application shutdown complete.
 2025-01-23 16:55:21,213 - INFO - Finished server process [10904]
 2025-01-23 16:55:23,815 - INFO - Stopping reloader process [4252]
+2025-01-23 17:29:49,642 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 17:29:49,648 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 17:29:49,656 - INFO - Started reloader process [11772] using WatchFiles
+2025-01-23 17:30:05,666 - INFO - 5 changes detected
+2025-01-23 17:30:07,269 - INFO - Started server process [10264]
+2025-01-23 17:30:07,422 - INFO - Waiting for application startup.
+2025-01-23 17:30:07,549 - ERROR - Failed to start email scheduler: a coroutine was expected, got None
+2025-01-23 17:30:07,559 - INFO - Email scheduler started at 2025-01-23 17:30:07
+2025-01-23 17:30:07,559 - INFO - Scheduler started
+2025-01-23 17:30:07,571 - ERROR - Failed to start campaign scheduler: a coroutine was expected, got None
+2025-01-23 17:30:07,571 - INFO - Application startup complete.
+2025-01-23 17:30:07,610 - INFO - Scheduler started
+2025-01-23 17:30:07,617 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 17:30:07,632 - INFO - Added job "create_and_launch_campaign" to job store "default"
+2025-01-23 17:30:24,446 - INFO - 5 changes detected
+2025-01-23 17:30:37,642 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:30:37 CET)" (scheduled at 2025-01-23 17:30:37.632025+01:00)
+2025-01-23 17:30:37,722 - ERROR - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:31:07 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\CampaignScheduler\scheduler_campaigns.py", line 49, in create_and_launch_campaign
+    recipient_database = response["recipients"]
+                         ~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'recipients'
+2025-01-23 17:31:07,647 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:31:37 CET)" (scheduled at 2025-01-23 17:31:07.632025+01:00)
+2025-01-23 17:31:07,718 - ERROR - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:31:37 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\CampaignScheduler\scheduler_campaigns.py", line 49, in create_and_launch_campaign
+    recipient_database = response["recipients"]
+                         ~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'recipients'
+2025-01-23 17:31:37,648 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:32:07 CET)" (scheduled at 2025-01-23 17:31:37.632025+01:00)
+2025-01-23 17:31:37,688 - ERROR - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:32:07 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\CampaignScheduler\scheduler_campaigns.py", line 49, in create_and_launch_campaign
+    recipient_database = response["recipients"]
+                         ~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'recipients'
+2025-01-23 17:32:07,639 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:32:37 CET)" (scheduled at 2025-01-23 17:32:07.632025+01:00)
+2025-01-23 17:32:07,664 - ERROR - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:32:37 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\CampaignScheduler\scheduler_campaigns.py", line 49, in create_and_launch_campaign
+    recipient_database = response["recipients"]
+                         ~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'recipients'
+2025-01-23 17:32:37,641 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:33:07 CET)" (scheduled at 2025-01-23 17:32:37.632025+01:00)
+2025-01-23 17:32:37,679 - ERROR - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:33:07 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\CampaignScheduler\scheduler_campaigns.py", line 49, in create_and_launch_campaign
+    recipient_database = response["recipients"]
+                         ~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'recipients'
+2025-01-23 17:33:07,632 - INFO - Running job "send_emails_periodically (trigger: interval[0:03:00], next run at: 2025-01-23 17:33:07 CET)" (scheduled at 2025-01-23 17:33:07.617479+01:00)
+2025-01-23 17:33:07,644 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:33:37 CET)" (scheduled at 2025-01-23 17:33:07.632025+01:00)
+2025-01-23 17:33:07,674 - ERROR - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:33:37 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\CampaignScheduler\scheduler_campaigns.py", line 49, in create_and_launch_campaign
+    recipient_database = response["recipients"]
+                         ~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'recipients'
+2025-01-23 17:33:09,698 - INFO - No users to email (no one clicked the phishing link).
+2025-01-23 17:33:09,698 - INFO - Job "send_emails_periodically (trigger: interval[0:03:00], next run at: 2025-01-23 17:36:07 CET)" executed successfully
+2025-01-23 17:33:37,643 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:34:07 CET)" (scheduled at 2025-01-23 17:33:37.632025+01:00)
+2025-01-23 17:33:37,707 - ERROR - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:34:07 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\CampaignScheduler\scheduler_campaigns.py", line 49, in create_and_launch_campaign
+    recipient_database = response["recipients"]
+                         ~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'recipients'
+2025-01-23 17:33:37,983 - INFO - Shutting down
+2025-01-23 17:33:38,091 - INFO - Waiting for application shutdown.
+2025-01-23 17:33:38,097 - INFO - FastAPI app is shutting down...
+2025-01-23 17:33:38,097 - INFO - Application shutdown complete.
+2025-01-23 17:33:38,101 - INFO - Finished server process [10264]
+2025-01-23 17:33:38,460 - INFO - Stopping reloader process [11772]
+2025-01-23 17:36:22,497 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 17:36:22,501 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 17:36:22,503 - INFO - Started reloader process [11748] using WatchFiles
+2025-01-23 17:36:40,603 - INFO - Started server process [12076]
+2025-01-23 17:36:40,611 - INFO - Waiting for application startup.
+2025-01-23 17:36:40,621 - ERROR - Failed to start email scheduler: a coroutine was expected, got None
+2025-01-23 17:36:40,627 - ERROR - Failed to start campaign scheduler: a coroutine was expected, got None
+2025-01-23 17:36:40,627 - INFO - Email scheduler started at 2025-01-23 17:36:40
+2025-01-23 17:36:40,629 - INFO - Scheduler started
+2025-01-23 17:36:40,627 - INFO - Application startup complete.
+2025-01-23 17:36:40,633 - INFO - Scheduler started
+2025-01-23 17:36:40,640 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 17:36:40,640 - INFO - Added job "create_and_launch_campaign" to job store "default"
+2025-01-23 17:37:10,653 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:37:10 CET)" (scheduled at 2025-01-23 17:37:10.640381+01:00)
+2025-01-23 17:37:10,704 - ERROR - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:37:40 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\CampaignScheduler\scheduler_campaigns.py", line 49, in create_and_launch_campaign
+    recipient_database = response["recipients"]
+                         ~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'recipients'
+2025-01-23 17:37:40,641 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:38:10 CET)" (scheduled at 2025-01-23 17:37:40.640381+01:00)
+2025-01-23 17:37:40,679 - ERROR - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:38:10 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\CampaignScheduler\scheduler_campaigns.py", line 49, in create_and_launch_campaign
+    recipient_database = response["recipients"]
+                         ~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'recipients'
+2025-01-23 17:38:10,661 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:38:40 CET)" (scheduled at 2025-01-23 17:38:10.640381+01:00)
+2025-01-23 17:38:27,623 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:38:40 CET)" executed successfully
+2025-01-23 17:38:40,644 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:39:10 CET)" (scheduled at 2025-01-23 17:38:40.640381+01:00)
+2025-01-23 17:38:51,720 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:39:10 CET)" executed successfully
+2025-01-23 17:39:10,651 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:39:40 CET)" (scheduled at 2025-01-23 17:39:10.640381+01:00)
+2025-01-23 17:39:21,676 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:39:40 CET)" executed successfully
+2025-01-23 17:39:40,654 - INFO - Running job "send_emails_periodically (trigger: interval[0:03:00], next run at: 2025-01-23 17:39:40 CET)" (scheduled at 2025-01-23 17:39:40.640381+01:00)
+2025-01-23 17:39:40,655 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:40:10 CET)" (scheduled at 2025-01-23 17:39:40.640381+01:00)
+2025-01-23 17:39:43,454 - INFO - 1 change detected
+2025-01-23 17:39:47,310 - INFO - Email sent to devmail.kvnpotter@gmail.com successfully!
+2025-01-23 17:39:47,340 - INFO - Job "send_emails_periodically (trigger: interval[0:03:00], next run at: 2025-01-23 17:42:40 CET)" executed successfully
+2025-01-23 17:39:51,612 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 17:40:10 CET)" executed successfully
+2025-01-23 17:39:56,892 - INFO - Shutting down
+2025-01-23 17:39:56,999 - INFO - Waiting for application shutdown.
+2025-01-23 17:39:57,001 - INFO - FastAPI app is shutting down...
+2025-01-23 17:39:57,001 - INFO - Application shutdown complete.
+2025-01-23 17:39:57,004 - INFO - Finished server process [12076]
+2025-01-23 17:39:59,535 - INFO - Stopping reloader process [11748]

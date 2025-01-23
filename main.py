@@ -6,6 +6,7 @@ from typing import List
 import urllib3
 import logging
 from contextlib import asynccontextmanager
+import asyncio
 
 from GoPhishConnector import gp_connect, gp_post_campaign, gp_delete_campaign
 from CampaignCreator import PhishingCampaign, load_env, load_topics, load_prompts, load_config
@@ -45,18 +46,18 @@ async def lifespan(app: FastAPI):
 
     # Setup and start the email scheduler in the background
     try:
-        run_email_scheduler_in_background()
+        email_scheduler_task = asyncio.create_task(run_email_scheduler_in_background())
         logging.info("Email scheduler started successfully in the background.")
     except Exception as e:
         logging.error(f"Failed to start email scheduler: {e}")
 
     # Setup and start the campaign scheduler in the background
     try:
-        run_campaign_scheduler_in_background(gp_api=gp_api,
+        campaign_scheduler_task = asyncio.create_task(run_campaign_scheduler_in_background(gp_api=gp_api,
                                              topics=topics,
                                              prompts=prompts,
                                              gmail_username=gmail_username,
-                                             gmail_app_password=gmail_app_password)
+                                             gmail_app_password=gmail_app_password))
         logging.info("Campaign scheduler started successfully in the background.")
     except Exception as e:
         logging.error(f"Failed to start campaign scheduler: {e}")
