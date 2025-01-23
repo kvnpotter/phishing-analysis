@@ -304,6 +304,7 @@ class GoPhishCampaign:
         self.sender_email = template.sender_email
         self.mail_subject = template.subject
         self.model = template.model
+        self.template.name = f"{self.last_name}_{self.first_name}_{datetime.now().strftime('%Y-%m-%d_%H:%M:%S')}"
 
         print(f"Recipient: {self.first_name} {self.last_name}")
         print(f"Email: {self.recipient_email}")
@@ -326,7 +327,7 @@ class GoPhishCampaign:
 
         # Create sender profile
 
-        smtp_name = f"{self.sender_name}_{self.id}" #PLACEHOLDER
+        smtp_name = f"{self.last_name}_{self.first_name}_{datetime.now().strftime('%Y-%m-%d_%H:%M:%S')}"
         sender = SenderProfile(id=self.id, name=smtp_name, sender_email=self.sender_email, username=self.username, password=self.password)
         sender.generate_gp_sender()
 

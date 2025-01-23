@@ -1,0 +1,1692 @@
+2025-01-23 11:09:37,967 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 11:09:37,973 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 11:09:37,976 - INFO - Started reloader process [17532] using WatchFiles
+2025-01-23 11:09:56,868 - INFO - Started server process [10008]
+2025-01-23 11:09:56,910 - INFO - Waiting for application startup.
+2025-01-23 11:09:56,929 - INFO - Email scheduler started successfully in the background.
+2025-01-23 11:09:56,956 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-23 11:09:56,929 - INFO - Application startup complete.
+2025-01-23 11:09:57,004 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 11:09:57,004 - INFO - Scheduler started
+2025-01-23 11:10:06,969 - INFO - Running job "send_emails_periodically (trigger: interval[0:00:10], next run at: 2025-01-23 11:10:06 CET)" (scheduled at 2025-01-23 11:10:06.956073+01:00)
+2025-01-23 11:10:08,033 - WARNING - No campaign data found or failed to load.
+2025-01-23 11:10:08,034 - INFO - Job "send_emails_periodically (trigger: interval[0:00:10], next run at: 2025-01-23 11:10:16 CET)" executed successfully
+2025-01-23 11:10:16,969 - INFO - Running job "send_emails_periodically (trigger: interval[0:00:10], next run at: 2025-01-23 11:10:26 CET)" (scheduled at 2025-01-23 11:10:16.956073+01:00)
+2025-01-23 11:10:17,830 - WARNING - No campaign data found or failed to load.
+2025-01-23 11:10:17,830 - INFO - Job "send_emails_periodically (trigger: interval[0:00:10], next run at: 2025-01-23 11:10:26 CET)" executed successfully
+2025-01-23 11:10:26,959 - INFO - Running job "send_emails_periodically (trigger: interval[0:00:10], next run at: 2025-01-23 11:10:36 CET)" (scheduled at 2025-01-23 11:10:26.956073+01:00)
+2025-01-23 11:10:27,585 - INFO - Shutting down
+2025-01-23 11:10:27,711 - INFO - Waiting for application shutdown.
+2025-01-23 11:10:27,736 - INFO - FastAPI app is shutting down...
+2025-01-23 11:10:27,737 - INFO - Application shutdown complete.
+2025-01-23 11:10:27,758 - INFO - Finished server process [10008]
+2025-01-23 11:10:28,047 - WARNING - No campaign data found or failed to load.
+2025-01-23 11:10:28,048 - INFO - Job "send_emails_periodically (trigger: interval[0:00:10], next run at: 2025-01-23 11:10:36 CET)" executed successfully
+2025-01-23 11:10:28,256 - INFO - Stopping reloader process [17532]
+2025-01-23 11:12:45,882 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 11:12:45,887 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 11:12:45,895 - INFO - Started reloader process [11304] using WatchFiles
+2025-01-23 11:13:04,320 - INFO - Started server process [3100]
+2025-01-23 11:13:04,425 - INFO - Waiting for application startup.
+2025-01-23 11:13:04,505 - INFO - Email scheduler started successfully in the background.
+2025-01-23 11:13:04,505 - INFO - Application startup complete.
+2025-01-23 11:13:04,510 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-23 11:13:04,514 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 11:13:04,514 - INFO - Scheduler started
+2025-01-23 11:13:14,557 - INFO - Running job "send_emails_periodically (trigger: interval[0:00:10], next run at: 2025-01-23 11:13:14 CET)" (scheduled at 2025-01-23 11:13:14.510035+01:00)
+2025-01-23 11:13:16,506 - ERROR - Job "send_emails_periodically (trigger: interval[0:00:10], next run at: 2025-01-23 11:13:24 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\feedback.py", line 148, in send_emails_periodically
+    feedback = Feedback()
+               ^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\feedback.py", line 31, in __init__
+    raise ValueError("One or more email configuration values are missing in the environment variables.")
+ValueError: One or more email configuration values are missing in the environment variables.
+2025-01-23 11:13:16,555 - INFO - 1 change detected
+2025-01-23 11:13:24,515 - INFO - Running job "send_emails_periodically (trigger: interval[0:00:10], next run at: 2025-01-23 11:13:34 CET)" (scheduled at 2025-01-23 11:13:24.510035+01:00)
+2025-01-23 11:13:26,036 - ERROR - Job "send_emails_periodically (trigger: interval[0:00:10], next run at: 2025-01-23 11:13:34 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\feedback.py", line 148, in send_emails_periodically
+    feedback = Feedback()
+               ^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\feedback.py", line 31, in __init__
+    raise ValueError("One or more email configuration values are missing in the environment variables.")
+ValueError: One or more email configuration values are missing in the environment variables.
+2025-01-23 11:13:26,124 - INFO - 1 change detected
+2025-01-23 11:13:34,523 - INFO - Running job "send_emails_periodically (trigger: interval[0:00:10], next run at: 2025-01-23 11:13:44 CET)" (scheduled at 2025-01-23 11:13:34.510035+01:00)
+2025-01-23 11:13:36,309 - ERROR - Job "send_emails_periodically (trigger: interval[0:00:10], next run at: 2025-01-23 11:13:44 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\feedback.py", line 148, in send_emails_periodically
+    feedback = Feedback()
+               ^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\feedback.py", line 31, in __init__
+    raise ValueError("One or more email configuration values are missing in the environment variables.")
+ValueError: One or more email configuration values are missing in the environment variables.
+2025-01-23 11:13:36,366 - INFO - 1 change detected
+2025-01-23 11:13:44,542 - INFO - Running job "send_emails_periodically (trigger: interval[0:00:10], next run at: 2025-01-23 11:13:54 CET)" (scheduled at 2025-01-23 11:13:44.510035+01:00)
+2025-01-23 11:13:46,615 - ERROR - Job "send_emails_periodically (trigger: interval[0:00:10], next run at: 2025-01-23 11:13:54 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\feedback.py", line 148, in send_emails_periodically
+    feedback = Feedback()
+               ^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\feedback.py", line 31, in __init__
+    raise ValueError("One or more email configuration values are missing in the environment variables.")
+ValueError: One or more email configuration values are missing in the environment variables.
+2025-01-23 11:13:46,697 - INFO - 1 change detected
+2025-01-23 11:13:52,323 - INFO - Shutting down
+2025-01-23 11:13:52,433 - INFO - Waiting for application shutdown.
+2025-01-23 11:13:52,435 - INFO - FastAPI app is shutting down...
+2025-01-23 11:13:52,436 - INFO - Application shutdown complete.
+2025-01-23 11:13:52,438 - INFO - Finished server process [3100]
+2025-01-23 11:13:52,634 - INFO - Stopping reloader process [11304]
+2025-01-23 11:45:07,496 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 11:45:07,504 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 11:45:07,508 - INFO - Started reloader process [2352] using WatchFiles
+2025-01-23 11:45:19,479 - INFO - Started server process [7920]
+2025-01-23 11:45:19,487 - INFO - Waiting for application startup.
+2025-01-23 11:45:19,495 - INFO - Email scheduler started successfully in the background.
+2025-01-23 11:45:19,496 - INFO - Application startup complete.
+2025-01-23 11:45:20,937 - ERROR - Sender email is missing from environment variables.
+2025-01-23 11:45:20,995 - INFO - 1 change detected
+2025-01-23 11:46:40,314 - INFO - 1 change detected
+2025-01-23 11:46:40,316 - WARNING - WatchFiles detected changes in 'feedback.py'. Reloading...
+2025-01-23 11:46:40,353 - INFO - Shutting down
+2025-01-23 11:46:40,462 - INFO - Waiting for application shutdown.
+2025-01-23 11:46:40,464 - INFO - FastAPI app is shutting down...
+2025-01-23 11:46:40,464 - INFO - Application shutdown complete.
+2025-01-23 11:46:40,466 - INFO - Finished server process [7920]
+2025-01-23 11:46:44,053 - INFO - Stopping reloader process [2352]
+2025-01-23 11:46:52,356 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 11:46:52,365 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 11:46:52,371 - INFO - Started reloader process [16444] using WatchFiles
+2025-01-23 11:47:04,674 - INFO - Started server process [15496]
+2025-01-23 11:47:04,683 - INFO - Waiting for application startup.
+2025-01-23 11:47:04,695 - INFO - Email scheduler started successfully in the background.
+2025-01-23 11:47:04,695 - INFO - Application startup complete.
+2025-01-23 11:47:06,227 - INFO - 1 change detected
+2025-01-23 11:48:09,058 - INFO - Shutting down
+2025-01-23 11:48:09,166 - INFO - Waiting for application shutdown.
+2025-01-23 11:48:09,257 - INFO - FastAPI app is shutting down...
+2025-01-23 11:48:09,258 - INFO - Application shutdown complete.
+2025-01-23 11:48:09,446 - INFO - Finished server process [15496]
+2025-01-23 11:48:09,902 - INFO - Stopping reloader process [16444]
+2025-01-23 11:51:28,891 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 11:51:28,896 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 11:51:28,899 - INFO - Started reloader process [1936] using WatchFiles
+2025-01-23 11:51:41,430 - INFO - Started server process [13784]
+2025-01-23 11:51:41,492 - INFO - Waiting for application startup.
+2025-01-23 11:51:41,557 - INFO - Email scheduler started successfully in the background.
+2025-01-23 11:51:41,557 - INFO - Application startup complete.
+2025-01-23 11:51:43,448 - INFO - 1 change detected
+2025-01-23 11:51:54,702 - INFO - Shutting down
+2025-01-23 11:51:54,812 - INFO - Waiting for application shutdown.
+2025-01-23 11:51:54,814 - INFO - FastAPI app is shutting down...
+2025-01-23 11:51:54,814 - INFO - Application shutdown complete.
+2025-01-23 11:51:54,816 - INFO - Finished server process [13784]
+2025-01-23 11:51:55,040 - INFO - Stopping reloader process [1936]
+2025-01-23 11:56:54,693 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 11:56:54,705 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 11:56:54,709 - INFO - Started reloader process [2616] using WatchFiles
+2025-01-23 11:57:10,314 - INFO - Started server process [16424]
+2025-01-23 11:57:10,323 - INFO - Waiting for application startup.
+2025-01-23 11:57:10,333 - INFO - Email scheduler started successfully in the background.
+2025-01-23 11:57:10,334 - INFO - Application startup complete.
+2025-01-23 11:57:11,938 - INFO - 1 change detected
+2025-01-23 11:59:35,200 - INFO - Shutting down
+2025-01-23 11:59:35,307 - INFO - Waiting for application shutdown.
+2025-01-23 11:59:35,309 - INFO - FastAPI app is shutting down...
+2025-01-23 11:59:35,309 - INFO - Application shutdown complete.
+2025-01-23 11:59:35,311 - INFO - Finished server process [16424]
+2025-01-23 11:59:35,507 - INFO - Stopping reloader process [2616]
+2025-01-23 12:07:35,460 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 12:07:35,714 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 12:07:35,719 - INFO - Started reloader process [16200] using WatchFiles
+2025-01-23 12:07:49,946 - INFO - Started server process [14316]
+2025-01-23 12:07:49,960 - INFO - Waiting for application startup.
+2025-01-23 12:07:49,974 - INFO - Email scheduler started successfully in the background.
+2025-01-23 12:07:49,974 - INFO - Application startup complete.
+2025-01-23 12:07:51,742 - INFO - 1 change detected
+2025-01-23 12:07:56,825 - INFO - Email sent to devmail.kvnpotter@gmail.com successfully!
+2025-01-23 12:13:41,175 - INFO - 11 changes detected
+2025-01-23 12:16:33,861 - INFO - Shutting down
+2025-01-23 12:16:33,969 - INFO - Waiting for application shutdown.
+2025-01-23 12:16:33,970 - INFO - FastAPI app is shutting down...
+2025-01-23 12:16:33,970 - INFO - Application shutdown complete.
+2025-01-23 12:16:33,972 - INFO - Finished server process [14316]
+2025-01-23 12:16:34,146 - INFO - Stopping reloader process [16200]
+2025-01-23 12:27:05,000 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 12:27:05,006 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 12:27:05,014 - INFO - Started reloader process [8572] using WatchFiles
+2025-01-23 12:27:08,267 - INFO - 5 changes detected
+2025-01-23 12:27:21,264 - INFO - Started server process [13468]
+2025-01-23 12:27:21,271 - INFO - Waiting for application startup.
+2025-01-23 12:27:21,281 - INFO - Email scheduler started successfully in the background.
+2025-01-23 12:27:21,282 - INFO - Application startup complete.
+2025-01-23 12:27:21,286 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-23 12:27:21,287 - INFO - Email scheduler started at 2025-01-23 12:27:21
+2025-01-23 12:27:21,289 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 12:27:21,289 - INFO - Scheduler started
+2025-01-23 12:27:25,095 - INFO - 5 changes detected
+2025-01-23 12:27:36,204 - INFO - 5 changes detected
+2025-01-23 12:27:48,806 - INFO - 5 changes detected
+2025-01-23 12:28:02,339 - INFO - 5 changes detected
+2025-01-23 12:28:16,167 - INFO - 5 changes detected
+2025-01-23 12:28:21,359 - INFO - Running job "send_emails_periodically (trigger: interval[0:01:00], next run at: 2025-01-23 12:28:21 CET)" (scheduled at 2025-01-23 12:28:21.286779+01:00)
+2025-01-23 12:28:23,434 - INFO - 1 change detected
+2025-01-23 12:28:27,460 - INFO - Email sent to devmail.kvnpotter@gmail.com successfully!
+2025-01-23 12:28:27,529 - INFO - Job "send_emails_periodically (trigger: interval[0:01:00], next run at: 2025-01-23 12:29:21 CET)" executed successfully
+2025-01-23 12:28:32,793 - INFO - 5 changes detected
+2025-01-23 12:28:45,772 - INFO - 5 changes detected
+2025-01-23 12:29:21,301 - INFO - Running job "send_emails_periodically (trigger: interval[0:01:00], next run at: 2025-01-23 12:30:21 CET)" (scheduled at 2025-01-23 12:29:21.286779+01:00)
+2025-01-23 12:29:23,204 - INFO - 1 change detected
+2025-01-23 12:29:26,268 - INFO - Email sent to devmail.kvnpotter@gmail.com successfully!
+2025-01-23 12:29:26,294 - INFO - Job "send_emails_periodically (trigger: interval[0:01:00], next run at: 2025-01-23 12:30:21 CET)" executed successfully
+2025-01-23 12:30:21,293 - INFO - Running job "send_emails_periodically (trigger: interval[0:01:00], next run at: 2025-01-23 12:31:21 CET)" (scheduled at 2025-01-23 12:30:21.286779+01:00)
+2025-01-23 12:30:23,187 - INFO - 1 change detected
+2025-01-23 12:30:26,576 - INFO - Email sent to devmail.kvnpotter@gmail.com successfully!
+2025-01-23 12:30:26,593 - INFO - Job "send_emails_periodically (trigger: interval[0:01:00], next run at: 2025-01-23 12:31:21 CET)" executed successfully
+2025-01-23 12:31:14,770 - INFO - Shutting down
+2025-01-23 12:31:14,877 - INFO - Waiting for application shutdown.
+2025-01-23 12:31:14,879 - INFO - FastAPI app is shutting down...
+2025-01-23 12:31:14,879 - INFO - Application shutdown complete.
+2025-01-23 12:31:14,881 - INFO - Finished server process [13468]
+2025-01-23 12:31:15,066 - INFO - Stopping reloader process [8572]
+2025-01-23 12:32:13,058 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 12:32:13,089 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 12:32:13,100 - INFO - Started reloader process [15388] using WatchFiles
+2025-01-23 12:32:26,389 - INFO - 5 changes detected
+2025-01-23 12:32:29,961 - INFO - Started server process [12376]
+2025-01-23 12:32:29,986 - INFO - Waiting for application startup.
+2025-01-23 12:32:30,019 - INFO - Email scheduler started at 2025-01-23 12:32:30
+2025-01-23 12:32:30,019 - INFO - Email scheduler started successfully in the background.
+2025-01-23 12:32:30,019 - INFO - Application startup complete.
+2025-01-23 12:32:30,025 - INFO - Scheduler started
+2025-01-23 12:32:30,063 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 12:33:30,082 - INFO - Running job "send_emails_periodically (trigger: interval[0:01:00], next run at: 2025-01-23 12:33:30 CET)" (scheduled at 2025-01-23 12:33:30.063635+01:00)
+2025-01-23 12:33:32,491 - INFO - 1 change detected
+2025-01-23 12:33:35,969 - INFO - Email sent to devmail.kvnpotter@gmail.com successfully!
+2025-01-23 12:33:35,988 - INFO - Job "send_emails_periodically (trigger: interval[0:01:00], next run at: 2025-01-23 12:34:30 CET)" executed successfully
+2025-01-23 12:33:40,036 - INFO - Shutting down
+2025-01-23 12:33:40,144 - INFO - Waiting for application shutdown.
+2025-01-23 12:33:40,146 - INFO - FastAPI app is shutting down...
+2025-01-23 12:33:40,146 - INFO - Application shutdown complete.
+2025-01-23 12:33:40,148 - INFO - Finished server process [12376]
+2025-01-23 12:33:40,380 - INFO - Stopping reloader process [15388]
+2025-01-23 12:34:47,546 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 12:34:47,559 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 12:34:47,564 - INFO - Started reloader process [13840] using WatchFiles
+2025-01-23 12:34:59,323 - INFO - Started server process [7368]
+2025-01-23 12:34:59,334 - INFO - Waiting for application startup.
+2025-01-23 12:34:59,349 - INFO - Email scheduler started at 2025-01-23 12:34:59
+2025-01-23 12:34:59,350 - INFO - Email scheduler started successfully in the background.
+2025-01-23 12:34:59,353 - INFO - Scheduler started
+2025-01-23 12:34:59,350 - INFO - Application startup complete.
+2025-01-23 12:34:59,364 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 12:34:59,659 - INFO - 5 changes detected
+2025-01-23 12:35:59,370 - INFO - Running job "send_emails_periodically (trigger: interval[0:01:00], next run at: 2025-01-23 12:35:59 CET)" (scheduled at 2025-01-23 12:35:59.363483+01:00)
+2025-01-23 12:36:00,926 - INFO - 1 change detected
+2025-01-23 12:36:04,086 - INFO - Email sent to devmail.kvnpotter@gmail.com successfully!
+2025-01-23 12:36:04,104 - INFO - Job "send_emails_periodically (trigger: interval[0:01:00], next run at: 2025-01-23 12:36:59 CET)" executed successfully
+2025-01-23 12:36:15,478 - INFO - Shutting down
+2025-01-23 12:36:15,588 - INFO - Waiting for application shutdown.
+2025-01-23 12:36:15,591 - INFO - FastAPI app is shutting down...
+2025-01-23 12:36:15,591 - INFO - Application shutdown complete.
+2025-01-23 12:36:15,593 - INFO - Finished server process [7368]
+2025-01-23 12:36:15,755 - INFO - Stopping reloader process [13840]
+2025-01-23 14:00:00,451 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 14:00:00,460 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 14:00:00,462 - INFO - Started reloader process [11748] using WatchFiles
+2025-01-23 14:00:08,222 - INFO - 12 changes detected
+2025-01-23 14:00:21,059 - INFO - Started server process [10472]
+2025-01-23 14:00:21,124 - INFO - Waiting for application startup.
+2025-01-23 14:00:21,207 - INFO - Email scheduler started successfully in the background.
+2025-01-23 14:00:21,207 - INFO - Application startup complete.
+2025-01-23 14:00:21,209 - INFO - Email scheduler started at 2025-01-23 14:00:21
+2025-01-23 14:00:21,210 - INFO - Scheduler started
+2025-01-23 14:00:21,224 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 14:00:24,628 - INFO - 22 changes detected
+2025-01-23 14:00:30,721 - INFO - 5 changes detected
+2025-01-23 14:00:38,342 - INFO - 5 changes detected
+2025-01-23 14:02:08,460 - INFO - Shutting down
+2025-01-23 14:02:08,568 - INFO - Waiting for application shutdown.
+2025-01-23 14:02:08,570 - INFO - FastAPI app is shutting down...
+2025-01-23 14:02:08,570 - INFO - Application shutdown complete.
+2025-01-23 14:02:08,572 - INFO - Finished server process [10472]
+2025-01-23 14:02:08,610 - INFO - Stopping reloader process [11748]
+2025-01-23 14:04:31,158 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 14:04:31,170 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 14:04:31,175 - INFO - Started reloader process [17948] using WatchFiles
+2025-01-23 14:04:39,081 - INFO - 22 changes detected
+2025-01-23 14:04:45,678 - INFO - 5 changes detected
+2025-01-23 14:04:50,146 - INFO - Started server process [12008]
+2025-01-23 14:04:50,158 - INFO - Waiting for application startup.
+2025-01-23 14:04:50,167 - INFO - Email scheduler started successfully in the background.
+2025-01-23 14:04:50,167 - INFO - Application startup complete.
+2025-01-23 14:04:50,172 - INFO - Email scheduler started at 2025-01-23 14:04:50
+2025-01-23 14:04:50,172 - INFO - Scheduler started
+2025-01-23 14:04:50,179 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 14:05:23,231 - INFO - 1 change detected
+2025-01-23 14:05:23,232 - WARNING - WatchFiles detected changes in 'EmailScheduler\scheduler_emails.py'. Reloading...
+2025-01-23 14:05:24,571 - INFO - Shutting down
+2025-01-23 14:05:25,339 - INFO - Waiting for application shutdown.
+2025-01-23 14:05:25,343 - INFO - FastAPI app is shutting down...
+2025-01-23 14:05:25,343 - INFO - Application shutdown complete.
+2025-01-23 14:05:25,346 - INFO - Finished server process [12008]
+2025-01-23 14:05:28,538 - INFO - 1 change detected
+2025-01-23 14:05:38,796 - INFO - 5 changes detected
+2025-01-23 14:05:38,961 - INFO - Started server process [8328]
+2025-01-23 14:05:38,974 - INFO - Waiting for application startup.
+2025-01-23 14:05:38,992 - INFO - Email scheduler started successfully in the background.
+2025-01-23 14:05:38,994 - INFO - Email scheduler started at 2025-01-23 14:05:38
+2025-01-23 14:05:38,995 - INFO - Scheduler started
+2025-01-23 14:05:38,992 - INFO - Application startup complete.
+2025-01-23 14:05:39,004 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 14:05:39,769 - INFO - 9 changes detected
+2025-01-23 14:06:14,436 - INFO - Shutting down
+2025-01-23 14:06:14,544 - INFO - Waiting for application shutdown.
+2025-01-23 14:06:14,545 - INFO - FastAPI app is shutting down...
+2025-01-23 14:06:14,546 - INFO - Application shutdown complete.
+2025-01-23 14:06:14,548 - INFO - Finished server process [8328]
+2025-01-23 14:06:14,915 - INFO - Stopping reloader process [17948]
+2025-01-23 14:07:24,649 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 14:07:24,659 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 14:07:24,667 - INFO - Started reloader process [18232] using WatchFiles
+2025-01-23 14:07:32,576 - INFO - 10 changes detected
+2025-01-23 14:07:42,724 - INFO - Started server process [6100]
+2025-01-23 14:07:42,728 - INFO - Waiting for application startup.
+2025-01-23 14:07:42,738 - INFO - Email scheduler started successfully in the background.
+2025-01-23 14:07:42,738 - INFO - Application startup complete.
+2025-01-23 14:07:42,740 - INFO - Email scheduler started at 2025-01-23 14:07:42
+2025-01-23 14:07:42,740 - INFO - Scheduler started
+2025-01-23 14:07:42,746 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 14:08:12,755 - INFO - Running job "send_emails_periodically (trigger: interval[0:00:30], next run at: 2025-01-23 14:08:12 CET)" (scheduled at 2025-01-23 14:08:12.746238+01:00)
+2025-01-23 14:08:14,566 - INFO - 1 change detected
+2025-01-23 14:08:18,728 - INFO - Email sent to devmail.kvnpotter@gmail.com successfully!
+2025-01-23 14:08:18,745 - INFO - Job "send_emails_periodically (trigger: interval[0:00:30], next run at: 2025-01-23 14:08:42 CET)" executed successfully
+2025-01-23 14:08:42,757 - INFO - Running job "send_emails_periodically (trigger: interval[0:00:30], next run at: 2025-01-23 14:09:12 CET)" (scheduled at 2025-01-23 14:08:42.746238+01:00)
+2025-01-23 14:08:44,124 - INFO - 1 change detected
+2025-01-23 14:08:47,546 - INFO - Email sent to devmail.kvnpotter@gmail.com successfully!
+2025-01-23 14:08:47,563 - INFO - Job "send_emails_periodically (trigger: interval[0:00:30], next run at: 2025-01-23 14:09:12 CET)" executed successfully
+2025-01-23 14:08:50,646 - INFO - Shutting down
+2025-01-23 14:08:50,756 - INFO - Waiting for application shutdown.
+2025-01-23 14:08:50,757 - INFO - FastAPI app is shutting down...
+2025-01-23 14:08:50,758 - INFO - Application shutdown complete.
+2025-01-23 14:08:50,760 - INFO - Finished server process [6100]
+2025-01-23 14:08:51,146 - INFO - Stopping reloader process [18232]
+2025-01-23 14:45:31,569 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 14:45:31,576 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 14:45:31,579 - INFO - Started reloader process [14520] using WatchFiles
+2025-01-23 14:45:44,009 - INFO - 5 changes detected
+2025-01-23 14:45:53,164 - INFO - Started server process [4796]
+2025-01-23 14:45:53,174 - INFO - Waiting for application startup.
+2025-01-23 14:45:53,204 - INFO - Email scheduler started successfully in the background.
+2025-01-23 14:45:53,204 - INFO - Application startup complete.
+2025-01-23 14:45:53,204 - INFO - Email scheduler started at 2025-01-23 14:45:53
+2025-01-23 14:45:53,204 - INFO - Scheduler started
+2025-01-23 14:45:53,214 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 14:45:59,265 - INFO - 5 changes detected
+2025-01-23 14:47:09,261 - INFO - 1 change detected
+2025-01-23 14:47:09,664 - INFO - 1 change detected
+2025-01-23 14:47:10,034 - INFO - 1 change detected
+2025-01-23 14:47:10,392 - INFO - 1 change detected
+2025-01-23 14:47:10,761 - INFO - 1 change detected
+2025-01-23 14:47:11,145 - INFO - 1 change detected
+2025-01-23 14:47:11,524 - INFO - 1 change detected
+2025-01-23 14:47:11,883 - INFO - 1 change detected
+2025-01-23 14:47:12,243 - INFO - 1 change detected
+2025-01-23 14:47:12,606 - INFO - 1 change detected
+2025-01-23 14:47:12,966 - INFO - 1 change detected
+2025-01-23 14:47:13,328 - INFO - 1 change detected
+2025-01-23 14:47:13,682 - INFO - 1 change detected
+2025-01-23 14:47:14,068 - INFO - 1 change detected
+2025-01-23 14:47:14,422 - INFO - 1 change detected
+2025-01-23 14:47:14,785 - INFO - 1 change detected
+2025-01-23 14:47:15,145 - INFO - 1 change detected
+2025-01-23 14:47:15,512 - INFO - 1 change detected
+2025-01-23 14:47:15,868 - INFO - 1 change detected
+2025-01-23 14:47:16,226 - INFO - 1 change detected
+2025-01-23 14:47:16,582 - INFO - 1 change detected
+2025-01-23 14:47:16,936 - INFO - 1 change detected
+2025-01-23 14:47:17,301 - INFO - 1 change detected
+2025-01-23 14:47:17,662 - INFO - 1 change detected
+2025-01-23 14:47:18,024 - INFO - 1 change detected
+2025-01-23 14:47:18,393 - INFO - 1 change detected
+2025-01-23 14:47:18,751 - INFO - 1 change detected
+2025-01-23 14:47:19,109 - INFO - 1 change detected
+2025-01-23 14:47:19,477 - INFO - 1 change detected
+2025-01-23 14:47:19,831 - INFO - 1 change detected
+2025-01-23 14:47:20,189 - INFO - 1 change detected
+2025-01-23 14:47:20,551 - INFO - 1 change detected
+2025-01-23 14:47:20,910 - INFO - 1 change detected
+2025-01-23 14:47:21,269 - INFO - 1 change detected
+2025-01-23 14:47:21,627 - INFO - 1 change detected
+2025-01-23 14:47:21,984 - INFO - 1 change detected
+2025-01-23 14:47:22,339 - INFO - 1 change detected
+2025-01-23 14:47:22,695 - INFO - 1 change detected
+2025-01-23 14:47:23,061 - INFO - 1 change detected
+2025-01-23 14:47:23,417 - INFO - 1 change detected
+2025-01-23 14:47:23,789 - INFO - 1 change detected
+2025-01-23 14:47:24,152 - INFO - 1 change detected
+2025-01-23 14:47:24,532 - INFO - 1 change detected
+2025-01-23 14:47:24,898 - INFO - 1 change detected
+2025-01-23 14:47:25,263 - INFO - 1 change detected
+2025-01-23 14:47:25,624 - INFO - 1 change detected
+2025-01-23 14:47:26,023 - INFO - 1 change detected
+2025-01-23 14:47:26,378 - INFO - 1 change detected
+2025-01-23 14:47:26,733 - INFO - 1 change detected
+2025-01-23 14:47:27,089 - INFO - 1 change detected
+2025-01-23 14:47:27,442 - INFO - 1 change detected
+2025-01-23 14:47:27,795 - INFO - 1 change detected
+2025-01-23 14:47:28,155 - INFO - 1 change detected
+2025-01-23 14:47:28,512 - INFO - 1 change detected
+2025-01-23 14:47:28,877 - INFO - 1 change detected
+2025-01-23 14:47:29,242 - INFO - 1 change detected
+2025-01-23 14:47:29,608 - INFO - 1 change detected
+2025-01-23 14:47:29,969 - INFO - 1 change detected
+2025-01-23 14:47:30,338 - INFO - 1 change detected
+2025-01-23 14:47:30,699 - INFO - 1 change detected
+2025-01-23 14:47:31,056 - INFO - 1 change detected
+2025-01-23 14:47:31,415 - INFO - 1 change detected
+2025-01-23 14:47:31,770 - INFO - 1 change detected
+2025-01-23 14:47:32,124 - INFO - 1 change detected
+2025-01-23 14:47:32,481 - INFO - 1 change detected
+2025-01-23 14:47:32,837 - INFO - 1 change detected
+2025-01-23 14:47:33,195 - INFO - 1 change detected
+2025-01-23 14:47:33,550 - INFO - 1 change detected
+2025-01-23 14:47:33,910 - INFO - 1 change detected
+2025-01-23 14:47:34,279 - INFO - 1 change detected
+2025-01-23 14:47:34,655 - INFO - 1 change detected
+2025-01-23 14:47:35,011 - INFO - 1 change detected
+2025-01-23 14:47:35,369 - INFO - 1 change detected
+2025-01-23 14:47:35,733 - INFO - 1 change detected
+2025-01-23 14:47:36,090 - INFO - 1 change detected
+2025-01-23 14:47:36,445 - INFO - 1 change detected
+2025-01-23 14:47:36,809 - INFO - 1 change detected
+2025-01-23 14:47:37,169 - INFO - 1 change detected
+2025-01-23 14:47:37,527 - INFO - 1 change detected
+2025-01-23 14:47:37,885 - INFO - 1 change detected
+2025-01-23 14:47:38,242 - INFO - 1 change detected
+2025-01-23 14:47:38,598 - INFO - 1 change detected
+2025-01-23 14:47:38,957 - INFO - 1 change detected
+2025-01-23 14:47:39,326 - INFO - 1 change detected
+2025-01-23 14:47:39,708 - INFO - 1 change detected
+2025-01-23 14:47:40,061 - INFO - 1 change detected
+2025-01-23 14:47:40,421 - INFO - 1 change detected
+2025-01-23 14:47:40,788 - INFO - 1 change detected
+2025-01-23 14:47:41,205 - INFO - 1 change detected
+2025-01-23 14:47:41,566 - INFO - 1 change detected
+2025-01-23 14:47:41,921 - INFO - 1 change detected
+2025-01-23 14:47:42,279 - INFO - 1 change detected
+2025-01-23 14:47:42,639 - INFO - 1 change detected
+2025-01-23 14:47:42,996 - INFO - 1 change detected
+2025-01-23 14:47:43,369 - INFO - 1 change detected
+2025-01-23 14:47:43,741 - INFO - 1 change detected
+2025-01-23 14:47:44,096 - INFO - 1 change detected
+2025-01-23 14:47:44,454 - INFO - 1 change detected
+2025-01-23 14:47:44,817 - INFO - 1 change detected
+2025-01-23 14:47:45,189 - INFO - 1 change detected
+2025-01-23 14:47:45,657 - INFO - 1 change detected
+2025-01-23 14:47:46,455 - INFO - 1 change detected
+2025-01-23 14:47:46,902 - INFO - 2 changes detected
+2025-01-23 14:47:47,579 - INFO - 1 change detected
+2025-01-23 14:47:47,935 - INFO - 1 change detected
+2025-01-23 14:47:48,296 - INFO - 1 change detected
+2025-01-23 14:47:48,649 - INFO - 1 change detected
+2025-01-23 14:47:49,008 - INFO - 1 change detected
+2025-01-23 14:47:49,365 - INFO - 1 change detected
+2025-01-23 14:47:49,723 - INFO - 1 change detected
+2025-01-23 14:47:50,081 - INFO - 1 change detected
+2025-01-23 14:47:50,441 - INFO - 1 change detected
+2025-01-23 14:47:50,803 - INFO - 1 change detected
+2025-01-23 14:47:51,157 - INFO - 1 change detected
+2025-01-23 14:47:51,512 - INFO - 1 change detected
+2025-01-23 14:47:51,870 - INFO - 1 change detected
+2025-01-23 14:47:52,238 - INFO - 1 change detected
+2025-01-23 14:47:52,605 - INFO - 1 change detected
+2025-01-23 14:47:52,967 - INFO - 1 change detected
+2025-01-23 14:47:53,333 - INFO - 1 change detected
+2025-01-23 14:47:53,697 - INFO - 1 change detected
+2025-01-23 14:47:54,061 - INFO - 1 change detected
+2025-01-23 14:47:54,415 - INFO - 1 change detected
+2025-01-23 14:47:54,772 - INFO - 1 change detected
+2025-01-23 14:47:55,132 - INFO - 1 change detected
+2025-01-23 14:47:55,496 - INFO - 1 change detected
+2025-01-23 14:47:55,858 - INFO - 1 change detected
+2025-01-23 14:47:56,214 - INFO - 1 change detected
+2025-01-23 14:47:56,573 - INFO - 1 change detected
+2025-01-23 14:47:56,936 - INFO - 1 change detected
+2025-01-23 14:47:57,295 - INFO - 1 change detected
+2025-01-23 14:47:57,653 - INFO - 1 change detected
+2025-01-23 14:47:58,010 - INFO - 1 change detected
+2025-01-23 14:47:58,373 - INFO - 1 change detected
+2025-01-23 14:47:58,738 - INFO - 1 change detected
+2025-01-23 14:47:59,129 - INFO - 1 change detected
+2025-01-23 14:47:59,713 - INFO - 6 changes detected
+2025-01-23 14:48:00,131 - INFO - 1 change detected
+2025-01-23 14:48:00,553 - INFO - 1 change detected
+2025-01-23 14:48:00,956 - INFO - 1 change detected
+2025-01-23 14:48:01,314 - INFO - 1 change detected
+2025-01-23 14:48:01,693 - INFO - 1 change detected
+2025-01-23 14:48:02,059 - INFO - 1 change detected
+2025-01-23 14:48:02,420 - INFO - 1 change detected
+2025-01-23 14:48:02,783 - INFO - 1 change detected
+2025-01-23 14:48:03,142 - INFO - 1 change detected
+2025-01-23 14:48:03,501 - INFO - 1 change detected
+2025-01-23 14:48:03,861 - INFO - 1 change detected
+2025-01-23 14:48:04,228 - INFO - 1 change detected
+2025-01-23 14:48:04,687 - INFO - 1 change detected
+2025-01-23 14:48:05,131 - INFO - 1 change detected
+2025-01-23 14:48:05,527 - INFO - 6 changes detected
+2025-01-23 14:48:05,927 - INFO - 1 change detected
+2025-01-23 14:48:06,282 - INFO - 1 change detected
+2025-01-23 14:48:06,667 - INFO - 1 change detected
+2025-01-23 14:48:07,055 - INFO - 1 change detected
+2025-01-23 14:48:07,417 - INFO - 1 change detected
+2025-01-23 14:48:07,777 - INFO - 1 change detected
+2025-01-23 14:48:08,137 - INFO - 1 change detected
+2025-01-23 14:48:08,498 - INFO - 1 change detected
+2025-01-23 14:48:08,860 - INFO - 1 change detected
+2025-01-23 14:48:09,230 - INFO - 1 change detected
+2025-01-23 14:48:09,586 - INFO - 1 change detected
+2025-01-23 14:48:09,940 - INFO - 1 change detected
+2025-01-23 14:48:10,338 - INFO - 1 change detected
+2025-01-23 14:48:10,705 - INFO - 1 change detected
+2025-01-23 14:48:11,064 - INFO - 1 change detected
+2025-01-23 14:48:11,420 - INFO - 1 change detected
+2025-01-23 14:48:11,777 - INFO - 1 change detected
+2025-01-23 14:48:12,135 - INFO - 1 change detected
+2025-01-23 14:48:12,509 - INFO - 1 change detected
+2025-01-23 14:48:12,877 - INFO - 1 change detected
+2025-01-23 14:48:13,241 - INFO - 1 change detected
+2025-01-23 14:48:13,602 - INFO - 1 change detected
+2025-01-23 14:48:13,962 - INFO - 1 change detected
+2025-01-23 14:48:14,322 - INFO - 1 change detected
+2025-01-23 14:48:14,681 - INFO - 1 change detected
+2025-01-23 14:48:15,043 - INFO - 1 change detected
+2025-01-23 14:48:15,403 - INFO - 1 change detected
+2025-01-23 14:48:15,766 - INFO - 1 change detected
+2025-01-23 14:48:16,123 - INFO - 1 change detected
+2025-01-23 14:48:16,475 - INFO - 1 change detected
+2025-01-23 14:48:16,830 - INFO - 1 change detected
+2025-01-23 14:48:17,185 - INFO - 1 change detected
+2025-01-23 14:48:17,543 - INFO - 1 change detected
+2025-01-23 14:48:17,907 - INFO - 1 change detected
+2025-01-23 14:48:18,263 - INFO - 1 change detected
+2025-01-23 14:48:18,625 - INFO - 1 change detected
+2025-01-23 14:48:18,979 - INFO - 1 change detected
+2025-01-23 14:48:19,346 - INFO - 1 change detected
+2025-01-23 14:48:19,711 - INFO - 1 change detected
+2025-01-23 14:48:20,070 - INFO - 1 change detected
+2025-01-23 14:48:20,466 - INFO - 1 change detected
+2025-01-23 14:48:20,827 - INFO - 1 change detected
+2025-01-23 14:48:21,183 - INFO - 1 change detected
+2025-01-23 14:48:21,547 - INFO - 1 change detected
+2025-01-23 14:48:21,908 - INFO - 1 change detected
+2025-01-23 14:48:22,284 - INFO - 1 change detected
+2025-01-23 14:48:22,653 - INFO - 1 change detected
+2025-01-23 14:48:23,010 - INFO - 1 change detected
+2025-01-23 14:48:23,372 - INFO - 1 change detected
+2025-01-23 14:48:23,732 - INFO - 1 change detected
+2025-01-23 14:48:24,098 - INFO - 1 change detected
+2025-01-23 14:48:24,461 - INFO - 1 change detected
+2025-01-23 14:48:24,822 - INFO - 1 change detected
+2025-01-23 14:48:25,180 - INFO - 1 change detected
+2025-01-23 14:48:25,593 - INFO - 1 change detected
+2025-01-23 14:48:25,955 - INFO - 1 change detected
+2025-01-23 14:48:26,318 - INFO - 1 change detected
+2025-01-23 14:48:26,671 - INFO - 1 change detected
+2025-01-23 14:48:27,026 - INFO - 1 change detected
+2025-01-23 14:48:27,384 - INFO - 1 change detected
+2025-01-23 14:48:27,743 - INFO - 1 change detected
+2025-01-23 14:48:28,138 - INFO - 1 change detected
+2025-01-23 14:48:28,502 - INFO - 1 change detected
+2025-01-23 14:48:28,859 - INFO - 1 change detected
+2025-01-23 14:48:29,231 - INFO - 1 change detected
+2025-01-23 14:48:29,611 - INFO - 1 change detected
+2025-01-23 14:48:29,977 - INFO - 1 change detected
+2025-01-23 14:48:30,335 - INFO - 1 change detected
+2025-01-23 14:48:30,697 - INFO - 1 change detected
+2025-01-23 14:48:31,054 - INFO - 1 change detected
+2025-01-23 14:48:31,423 - INFO - 1 change detected
+2025-01-23 14:48:31,790 - INFO - 1 change detected
+2025-01-23 14:48:32,147 - INFO - 1 change detected
+2025-01-23 14:48:32,508 - INFO - 1 change detected
+2025-01-23 14:48:32,863 - INFO - 1 change detected
+2025-01-23 14:48:33,220 - INFO - 1 change detected
+2025-01-23 14:48:33,575 - INFO - 1 change detected
+2025-01-23 14:48:33,933 - INFO - 1 change detected
+2025-01-23 14:48:34,286 - INFO - 1 change detected
+2025-01-23 14:48:34,649 - INFO - 1 change detected
+2025-01-23 14:48:35,023 - INFO - 1 change detected
+2025-01-23 14:48:35,382 - INFO - 1 change detected
+2025-01-23 14:48:35,737 - INFO - 1 change detected
+2025-01-23 14:48:36,105 - INFO - 1 change detected
+2025-01-23 14:48:36,457 - INFO - 1 change detected
+2025-01-23 14:48:36,815 - INFO - 1 change detected
+2025-01-23 14:48:37,173 - INFO - 1 change detected
+2025-01-23 14:48:37,529 - INFO - 1 change detected
+2025-01-23 14:48:37,888 - INFO - 1 change detected
+2025-01-23 14:48:38,244 - INFO - 1 change detected
+2025-01-23 14:48:38,599 - INFO - 1 change detected
+2025-01-23 14:48:38,953 - INFO - 1 change detected
+2025-01-23 14:48:39,308 - INFO - 1 change detected
+2025-01-23 14:48:39,675 - INFO - 1 change detected
+2025-01-23 14:48:40,062 - INFO - 1 change detected
+2025-01-23 14:48:40,483 - INFO - 1 change detected
+2025-01-23 14:48:40,885 - INFO - 1 change detected
+2025-01-23 14:48:41,252 - INFO - 1 change detected
+2025-01-23 14:48:41,607 - INFO - 1 change detected
+2025-01-23 14:48:41,969 - INFO - 1 change detected
+2025-01-23 14:48:42,329 - INFO - 1 change detected
+2025-01-23 14:48:42,692 - INFO - 1 change detected
+2025-01-23 14:48:43,044 - INFO - 1 change detected
+2025-01-23 14:48:43,404 - INFO - 1 change detected
+2025-01-23 14:48:43,757 - INFO - 1 change detected
+2025-01-23 14:48:44,119 - INFO - 1 change detected
+2025-01-23 14:48:44,478 - INFO - 1 change detected
+2025-01-23 14:48:44,840 - INFO - 1 change detected
+2025-01-23 14:48:45,203 - INFO - 1 change detected
+2025-01-23 14:48:45,583 - INFO - 1 change detected
+2025-01-23 14:48:45,935 - INFO - 1 change detected
+2025-01-23 14:48:46,297 - INFO - 1 change detected
+2025-01-23 14:48:46,660 - INFO - 1 change detected
+2025-01-23 14:48:47,017 - INFO - 1 change detected
+2025-01-23 14:48:47,376 - INFO - 1 change detected
+2025-01-23 14:48:47,729 - INFO - 1 change detected
+2025-01-23 14:48:48,087 - INFO - 1 change detected
+2025-01-23 14:48:48,443 - INFO - 1 change detected
+2025-01-23 14:48:48,800 - INFO - 1 change detected
+2025-01-23 14:48:49,157 - INFO - 1 change detected
+2025-01-23 14:48:49,522 - INFO - 1 change detected
+2025-01-23 14:48:49,885 - INFO - 1 change detected
+2025-01-23 14:48:50,249 - INFO - 1 change detected
+2025-01-23 14:48:50,609 - INFO - 1 change detected
+2025-01-23 14:48:50,982 - INFO - 1 change detected
+2025-01-23 14:48:51,349 - INFO - 1 change detected
+2025-01-23 14:48:51,708 - INFO - 1 change detected
+2025-01-23 14:48:52,066 - INFO - 1 change detected
+2025-01-23 14:48:52,425 - INFO - 1 change detected
+2025-01-23 14:48:52,785 - INFO - 1 change detected
+2025-01-23 14:48:53,142 - INFO - 1 change detected
+2025-01-23 14:48:53,231 - INFO - Running job "send_emails_periodically (trigger: interval[0:03:00], next run at: 2025-01-23 14:48:53 CET)" (scheduled at 2025-01-23 14:48:53.214565+01:00)
+2025-01-23 14:48:53,509 - INFO - 1 change detected
+2025-01-23 14:48:53,863 - INFO - 1 change detected
+2025-01-23 14:48:54,218 - INFO - 1 change detected
+2025-01-23 14:48:54,579 - INFO - 1 change detected
+2025-01-23 14:48:54,936 - INFO - 2 changes detected
+2025-01-23 14:48:55,298 - INFO - 1 change detected
+2025-01-23 14:48:55,661 - INFO - 1 change detected
+2025-01-23 14:48:56,017 - INFO - 1 change detected
+2025-01-23 14:48:56,373 - INFO - 1 change detected
+2025-01-23 14:48:56,727 - INFO - 1 change detected
+2025-01-23 14:48:57,083 - INFO - 1 change detected
+2025-01-23 14:48:57,442 - INFO - 1 change detected
+2025-01-23 14:48:57,805 - INFO - 1 change detected
+2025-01-23 14:48:58,163 - INFO - 1 change detected
+2025-01-23 14:48:58,396 - INFO - Email sent to devmail.kvnpotter@gmail.com successfully!
+2025-01-23 14:48:58,419 - INFO - Job "send_emails_periodically (trigger: interval[0:03:00], next run at: 2025-01-23 14:51:53 CET)" executed successfully
+2025-01-23 14:48:58,523 - INFO - 1 change detected
+2025-01-23 14:48:58,881 - INFO - 1 change detected
+2025-01-23 14:48:59,248 - INFO - 1 change detected
+2025-01-23 14:48:59,612 - INFO - 1 change detected
+2025-01-23 14:48:59,974 - INFO - 1 change detected
+2025-01-23 14:49:00,332 - INFO - 1 change detected
+2025-01-23 14:49:00,684 - INFO - 1 change detected
+2025-01-23 14:49:01,042 - INFO - 1 change detected
+2025-01-23 14:49:01,408 - INFO - 1 change detected
+2025-01-23 14:49:01,763 - INFO - 1 change detected
+2025-01-23 14:49:02,123 - INFO - 1 change detected
+2025-01-23 14:49:02,486 - INFO - 1 change detected
+2025-01-23 14:49:02,845 - INFO - 1 change detected
+2025-01-23 14:49:03,208 - INFO - 1 change detected
+2025-01-23 14:49:03,569 - INFO - 1 change detected
+2025-01-23 14:49:03,928 - INFO - 1 change detected
+2025-01-23 14:49:04,289 - INFO - 1 change detected
+2025-01-23 14:49:04,648 - INFO - 1 change detected
+2025-01-23 14:49:05,006 - INFO - 1 change detected
+2025-01-23 14:49:05,366 - INFO - 1 change detected
+2025-01-23 14:49:05,724 - INFO - 1 change detected
+2025-01-23 14:49:06,077 - INFO - 1 change detected
+2025-01-23 14:49:06,434 - INFO - 1 change detected
+2025-01-23 14:49:06,789 - INFO - 1 change detected
+2025-01-23 14:49:07,168 - INFO - 1 change detected
+2025-01-23 14:49:07,522 - INFO - 1 change detected
+2025-01-23 14:49:07,885 - INFO - 1 change detected
+2025-01-23 14:49:08,244 - INFO - 1 change detected
+2025-01-23 14:49:08,608 - INFO - 1 change detected
+2025-01-23 14:49:08,973 - INFO - 1 change detected
+2025-01-23 14:49:09,335 - INFO - 1 change detected
+2025-01-23 14:49:09,690 - INFO - 1 change detected
+2025-01-23 14:49:10,055 - INFO - 1 change detected
+2025-01-23 14:49:10,416 - INFO - 1 change detected
+2025-01-23 14:49:10,779 - INFO - 1 change detected
+2025-01-23 14:49:11,141 - INFO - 1 change detected
+2025-01-23 14:49:11,508 - INFO - 1 change detected
+2025-01-23 14:49:11,865 - INFO - 1 change detected
+2025-01-23 14:49:12,227 - INFO - 1 change detected
+2025-01-23 14:49:12,591 - INFO - 1 change detected
+2025-01-23 14:49:12,961 - INFO - 1 change detected
+2025-01-23 14:49:13,317 - INFO - 1 change detected
+2025-01-23 14:49:13,679 - INFO - 1 change detected
+2025-01-23 14:49:14,044 - INFO - 1 change detected
+2025-01-23 14:49:14,401 - INFO - 1 change detected
+2025-01-23 14:49:14,755 - INFO - 1 change detected
+2025-01-23 14:49:15,114 - INFO - 1 change detected
+2025-01-23 14:49:15,476 - INFO - 1 change detected
+2025-01-23 14:49:15,839 - INFO - 1 change detected
+2025-01-23 14:49:16,202 - INFO - 1 change detected
+2025-01-23 14:49:16,562 - INFO - 1 change detected
+2025-01-23 14:49:17,041 - INFO - 1 change detected
+2025-01-23 14:49:17,405 - INFO - 1 change detected
+2025-01-23 14:49:17,782 - INFO - 1 change detected
+2025-01-23 14:49:18,156 - INFO - 1 change detected
+2025-01-23 14:49:18,571 - INFO - 1 change detected
+2025-01-23 14:49:18,969 - INFO - 1 change detected
+2025-01-23 14:49:19,375 - INFO - 1 change detected
+2025-01-23 14:49:19,781 - INFO - 1 change detected
+2025-01-23 14:49:20,165 - INFO - 1 change detected
+2025-01-23 14:49:20,539 - INFO - 1 change detected
+2025-01-23 14:49:20,942 - INFO - 1 change detected
+2025-01-23 14:49:21,431 - INFO - 1 change detected
+2025-01-23 14:49:21,801 - INFO - 1 change detected
+2025-01-23 14:49:22,183 - INFO - 1 change detected
+2025-01-23 14:49:22,557 - INFO - 1 change detected
+2025-01-23 14:49:22,911 - INFO - 1 change detected
+2025-01-23 14:49:23,266 - INFO - 1 change detected
+2025-01-23 14:49:23,675 - INFO - 1 change detected
+2025-01-23 14:49:24,042 - INFO - 1 change detected
+2025-01-23 14:49:24,403 - INFO - 1 change detected
+2025-01-23 14:49:24,761 - INFO - 1 change detected
+2025-01-23 14:49:25,125 - INFO - 1 change detected
+2025-01-23 14:49:25,489 - INFO - 1 change detected
+2025-01-23 14:49:25,854 - INFO - 1 change detected
+2025-01-23 14:49:26,234 - INFO - 1 change detected
+2025-01-23 14:49:26,627 - INFO - 1 change detected
+2025-01-23 14:49:26,997 - INFO - 1 change detected
+2025-01-23 14:49:27,355 - INFO - 1 change detected
+2025-01-23 14:49:27,717 - INFO - 1 change detected
+2025-01-23 14:49:28,078 - INFO - 1 change detected
+2025-01-23 14:49:28,446 - INFO - 1 change detected
+2025-01-23 14:49:28,806 - INFO - 1 change detected
+2025-01-23 14:49:29,159 - INFO - 1 change detected
+2025-01-23 14:49:29,532 - INFO - 1 change detected
+2025-01-23 14:49:29,892 - INFO - 1 change detected
+2025-01-23 14:49:30,252 - INFO - 1 change detected
+2025-01-23 14:49:30,615 - INFO - 1 change detected
+2025-01-23 14:49:30,979 - INFO - 1 change detected
+2025-01-23 14:49:31,334 - INFO - 1 change detected
+2025-01-23 14:49:31,688 - INFO - 1 change detected
+2025-01-23 14:49:32,047 - INFO - 1 change detected
+2025-01-23 14:49:32,412 - INFO - 1 change detected
+2025-01-23 14:49:32,775 - INFO - 1 change detected
+2025-01-23 14:49:33,140 - INFO - 1 change detected
+2025-01-23 14:49:33,497 - INFO - 1 change detected
+2025-01-23 14:49:33,866 - INFO - 1 change detected
+2025-01-23 14:49:34,220 - INFO - 1 change detected
+2025-01-23 14:49:34,591 - INFO - 1 change detected
+2025-01-23 14:49:34,945 - INFO - 1 change detected
+2025-01-23 14:49:35,304 - INFO - 1 change detected
+2025-01-23 14:49:35,664 - INFO - 1 change detected
+2025-01-23 14:49:36,024 - INFO - 1 change detected
+2025-01-23 14:49:36,380 - INFO - 1 change detected
+2025-01-23 14:49:36,737 - INFO - 1 change detected
+2025-01-23 14:49:36,799 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\anyio\_backends\_asyncio.py", line 2364, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\anyio\_backends\_asyncio.py", line 864, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\main.py", line 154, in launch_campaign
+    campaign = PhishingCampaign(topics=topics,
+                                       ^^^^^^
+NameError: name 'topics' is not defined
+2025-01-23 14:49:37,095 - INFO - 1 change detected
+2025-01-23 14:49:37,452 - INFO - 1 change detected
+2025-01-23 14:49:37,813 - INFO - 1 change detected
+2025-01-23 14:49:38,197 - INFO - 1 change detected
+2025-01-23 14:49:38,579 - INFO - 1 change detected
+2025-01-23 14:49:38,947 - INFO - 1 change detected
+2025-01-23 14:49:39,305 - INFO - 1 change detected
+2025-01-23 14:49:39,666 - INFO - 1 change detected
+2025-01-23 14:49:40,023 - INFO - 1 change detected
+2025-01-23 14:49:40,390 - INFO - 1 change detected
+2025-01-23 14:49:40,747 - INFO - 1 change detected
+2025-01-23 14:49:41,105 - INFO - 1 change detected
+2025-01-23 14:49:41,462 - INFO - 1 change detected
+2025-01-23 14:49:41,816 - INFO - 1 change detected
+2025-01-23 14:49:42,172 - INFO - 1 change detected
+2025-01-23 14:49:42,526 - INFO - 1 change detected
+2025-01-23 14:49:42,885 - INFO - 1 change detected
+2025-01-23 14:49:43,241 - INFO - 1 change detected
+2025-01-23 14:49:43,617 - INFO - 1 change detected
+2025-01-23 14:49:43,977 - INFO - 1 change detected
+2025-01-23 14:49:44,353 - INFO - 1 change detected
+2025-01-23 14:49:44,728 - INFO - 1 change detected
+2025-01-23 14:49:45,092 - INFO - 1 change detected
+2025-01-23 14:49:45,464 - INFO - 1 change detected
+2025-01-23 14:49:45,824 - INFO - 1 change detected
+2025-01-23 14:49:46,182 - INFO - 1 change detected
+2025-01-23 14:49:46,536 - INFO - 1 change detected
+2025-01-23 14:49:46,889 - INFO - 1 change detected
+2025-01-23 14:49:47,248 - INFO - 1 change detected
+2025-01-23 14:49:47,605 - INFO - 1 change detected
+2025-01-23 14:49:47,958 - INFO - 1 change detected
+2025-01-23 14:49:48,315 - INFO - 1 change detected
+2025-01-23 14:49:48,669 - INFO - 1 change detected
+2025-01-23 14:49:49,025 - INFO - 1 change detected
+2025-01-23 14:49:49,406 - INFO - 1 change detected
+2025-01-23 14:49:49,767 - INFO - 1 change detected
+2025-01-23 14:49:50,127 - INFO - 1 change detected
+2025-01-23 14:49:50,491 - INFO - 1 change detected
+2025-01-23 14:49:50,860 - INFO - 1 change detected
+2025-01-23 14:49:51,219 - INFO - 1 change detected
+2025-01-23 14:49:51,574 - INFO - 1 change detected
+2025-01-23 14:49:51,930 - INFO - 1 change detected
+2025-01-23 14:49:52,287 - INFO - 1 change detected
+2025-01-23 14:49:52,642 - INFO - 1 change detected
+2025-01-23 14:49:52,999 - INFO - 1 change detected
+2025-01-23 14:49:53,358 - INFO - 1 change detected
+2025-01-23 14:49:53,714 - INFO - 1 change detected
+2025-01-23 14:49:54,068 - INFO - 1 change detected
+2025-01-23 14:49:54,429 - INFO - 1 change detected
+2025-01-23 14:49:54,800 - INFO - 1 change detected
+2025-01-23 14:49:55,189 - INFO - 1 change detected
+2025-01-23 14:49:55,556 - INFO - 1 change detected
+2025-01-23 14:49:55,914 - INFO - 1 change detected
+2025-01-23 14:49:56,270 - INFO - 1 change detected
+2025-01-23 14:49:56,626 - INFO - 1 change detected
+2025-01-23 14:49:56,993 - INFO - 1 change detected
+2025-01-23 14:49:57,378 - INFO - 1 change detected
+2025-01-23 14:49:57,744 - INFO - 1 change detected
+2025-01-23 14:49:58,098 - INFO - 1 change detected
+2025-01-23 14:49:58,458 - INFO - 1 change detected
+2025-01-23 14:49:58,818 - INFO - 1 change detected
+2025-01-23 14:49:59,177 - INFO - 1 change detected
+2025-01-23 14:49:59,543 - INFO - 1 change detected
+2025-01-23 14:49:59,901 - INFO - 1 change detected
+2025-01-23 14:50:00,281 - INFO - 1 change detected
+2025-01-23 14:50:00,637 - INFO - 1 change detected
+2025-01-23 14:50:01,052 - INFO - 1 change detected
+2025-01-23 14:50:01,409 - INFO - 1 change detected
+2025-01-23 14:50:01,767 - INFO - 1 change detected
+2025-01-23 14:50:02,131 - INFO - 1 change detected
+2025-01-23 14:50:02,492 - INFO - 1 change detected
+2025-01-23 14:50:02,854 - INFO - 1 change detected
+2025-01-23 14:50:03,210 - INFO - 1 change detected
+2025-01-23 14:50:03,565 - INFO - 1 change detected
+2025-01-23 14:50:03,921 - INFO - 1 change detected
+2025-01-23 14:50:04,277 - INFO - 1 change detected
+2025-01-23 14:50:04,635 - INFO - 1 change detected
+2025-01-23 14:50:05,002 - INFO - 1 change detected
+2025-01-23 14:50:05,362 - INFO - 1 change detected
+2025-01-23 14:50:05,725 - INFO - 1 change detected
+2025-01-23 14:50:06,087 - INFO - 1 change detected
+2025-01-23 14:50:06,457 - INFO - 1 change detected
+2025-01-23 14:50:06,818 - INFO - 1 change detected
+2025-01-23 14:50:07,178 - INFO - 1 change detected
+2025-01-23 14:50:07,537 - INFO - 1 change detected
+2025-01-23 14:50:07,896 - INFO - 1 change detected
+2025-01-23 14:50:08,254 - INFO - 1 change detected
+2025-01-23 14:50:08,615 - INFO - 1 change detected
+2025-01-23 14:50:08,975 - INFO - 1 change detected
+2025-01-23 14:50:09,373 - INFO - 1 change detected
+2025-01-23 14:50:09,736 - INFO - 1 change detected
+2025-01-23 14:50:10,104 - INFO - 1 change detected
+2025-01-23 14:50:10,460 - INFO - 1 change detected
+2025-01-23 14:50:10,818 - INFO - 1 change detected
+2025-01-23 14:50:11,178 - INFO - 1 change detected
+2025-01-23 14:50:11,553 - INFO - 1 change detected
+2025-01-23 14:50:11,914 - INFO - 1 change detected
+2025-01-23 14:50:12,279 - INFO - 1 change detected
+2025-01-23 14:50:12,640 - INFO - 1 change detected
+2025-01-23 14:50:13,004 - INFO - 1 change detected
+2025-01-23 14:50:13,365 - INFO - 1 change detected
+2025-01-23 14:50:13,724 - INFO - 1 change detected
+2025-01-23 14:50:14,080 - INFO - 1 change detected
+2025-01-23 14:50:14,444 - INFO - 1 change detected
+2025-01-23 14:50:14,804 - INFO - 1 change detected
+2025-01-23 14:50:15,162 - INFO - 1 change detected
+2025-01-23 14:50:15,527 - INFO - 1 change detected
+2025-01-23 14:50:15,909 - INFO - 1 change detected
+2025-01-23 14:50:16,262 - INFO - 1 change detected
+2025-01-23 14:50:16,624 - INFO - 1 change detected
+2025-01-23 14:50:16,980 - INFO - 1 change detected
+2025-01-23 14:50:17,334 - INFO - 1 change detected
+2025-01-23 14:50:17,695 - INFO - 1 change detected
+2025-01-23 14:50:18,054 - INFO - 1 change detected
+2025-01-23 14:50:18,416 - INFO - 1 change detected
+2025-01-23 14:50:18,778 - INFO - 1 change detected
+2025-01-23 14:50:19,137 - INFO - 1 change detected
+2025-01-23 14:50:19,499 - INFO - 1 change detected
+2025-01-23 14:50:19,859 - INFO - 1 change detected
+2025-01-23 14:50:20,217 - INFO - 1 change detected
+2025-01-23 14:50:20,578 - INFO - 1 change detected
+2025-01-23 14:50:20,937 - INFO - 1 change detected
+2025-01-23 14:50:21,291 - INFO - 1 change detected
+2025-01-23 14:50:21,659 - INFO - 1 change detected
+2025-01-23 14:50:22,024 - INFO - 1 change detected
+2025-01-23 14:50:22,387 - INFO - 1 change detected
+2025-01-23 14:50:22,751 - INFO - 1 change detected
+2025-01-23 14:50:23,114 - INFO - 1 change detected
+2025-01-23 14:50:23,516 - INFO - 1 change detected
+2025-01-23 14:50:23,886 - INFO - 1 change detected
+2025-01-23 14:50:24,239 - INFO - 1 change detected
+2025-01-23 14:50:24,605 - INFO - 1 change detected
+2025-01-23 14:50:24,969 - INFO - 1 change detected
+2025-01-23 14:50:25,326 - INFO - 1 change detected
+2025-01-23 14:50:25,685 - INFO - 1 change detected
+2025-01-23 14:50:26,042 - INFO - 1 change detected
+2025-01-23 14:50:26,400 - INFO - 1 change detected
+2025-01-23 14:50:26,762 - INFO - 1 change detected
+2025-01-23 14:50:27,122 - INFO - 1 change detected
+2025-01-23 14:50:27,481 - INFO - 1 change detected
+2025-01-23 14:50:27,839 - INFO - 1 change detected
+2025-01-23 14:50:28,198 - INFO - 1 change detected
+2025-01-23 14:50:28,599 - INFO - 1 change detected
+2025-01-23 14:50:28,964 - INFO - 1 change detected
+2025-01-23 14:50:29,322 - INFO - 1 change detected
+2025-01-23 14:50:29,681 - INFO - 1 change detected
+2025-01-23 14:50:30,038 - INFO - 1 change detected
+2025-01-23 14:50:30,399 - INFO - 1 change detected
+2025-01-23 14:50:30,756 - INFO - 1 change detected
+2025-01-23 14:50:31,114 - INFO - 1 change detected
+2025-01-23 14:50:31,473 - INFO - 1 change detected
+2025-01-23 14:50:31,827 - INFO - 1 change detected
+2025-01-23 14:50:32,190 - INFO - 1 change detected
+2025-01-23 14:50:32,556 - INFO - 1 change detected
+2025-01-23 14:50:32,920 - INFO - 1 change detected
+2025-01-23 14:50:33,285 - INFO - 1 change detected
+2025-01-23 14:50:33,651 - INFO - 1 change detected
+2025-01-23 14:50:34,014 - INFO - 1 change detected
+2025-01-23 14:50:34,376 - INFO - 1 change detected
+2025-01-23 14:50:34,736 - INFO - 1 change detected
+2025-01-23 14:50:35,100 - INFO - 1 change detected
+2025-01-23 14:50:35,465 - INFO - 1 change detected
+2025-01-23 14:50:35,824 - INFO - 1 change detected
+2025-01-23 14:50:36,178 - INFO - 1 change detected
+2025-01-23 14:50:36,533 - INFO - 1 change detected
+2025-01-23 14:50:36,891 - INFO - 1 change detected
+2025-01-23 14:50:37,253 - INFO - 1 change detected
+2025-01-23 14:50:37,613 - INFO - 1 change detected
+2025-01-23 14:50:37,979 - INFO - 1 change detected
+2025-01-23 14:50:38,363 - INFO - 1 change detected
+2025-01-23 14:50:38,723 - INFO - 1 change detected
+2025-01-23 14:50:39,089 - INFO - 1 change detected
+2025-01-23 14:50:39,464 - INFO - 1 change detected
+2025-01-23 14:50:39,825 - INFO - 1 change detected
+2025-01-23 14:50:40,183 - INFO - 1 change detected
+2025-01-23 14:50:40,549 - INFO - 1 change detected
+2025-01-23 14:50:40,911 - INFO - 1 change detected
+2025-01-23 14:50:41,268 - INFO - 1 change detected
+2025-01-23 14:50:41,623 - INFO - 1 change detected
+2025-01-23 14:50:41,980 - INFO - 1 change detected
+2025-01-23 14:50:42,340 - INFO - 1 change detected
+2025-01-23 14:50:42,703 - INFO - 1 change detected
+2025-01-23 14:50:43,068 - INFO - 1 change detected
+2025-01-23 14:50:43,422 - INFO - 1 change detected
+2025-01-23 14:50:43,783 - INFO - 1 change detected
+2025-01-23 14:50:44,144 - INFO - 1 change detected
+2025-01-23 14:50:44,517 - INFO - 1 change detected
+2025-01-23 14:50:44,877 - INFO - 1 change detected
+2025-01-23 14:50:45,235 - INFO - 1 change detected
+2025-01-23 14:50:45,599 - INFO - 1 change detected
+2025-01-23 14:50:45,957 - INFO - 1 change detected
+2025-01-23 14:50:46,310 - INFO - 1 change detected
+2025-01-23 14:50:46,668 - INFO - 1 change detected
+2025-01-23 14:50:47,023 - INFO - 1 change detected
+2025-01-23 14:50:47,391 - INFO - 1 change detected
+2025-01-23 14:50:47,753 - INFO - 1 change detected
+2025-01-23 14:50:48,128 - INFO - 1 change detected
+2025-01-23 14:50:48,484 - INFO - 1 change detected
+2025-01-23 14:50:48,840 - INFO - 1 change detected
+2025-01-23 14:50:49,202 - INFO - 1 change detected
+2025-01-23 14:50:49,593 - INFO - 1 change detected
+2025-01-23 14:50:49,971 - INFO - 1 change detected
+2025-01-23 14:50:50,335 - INFO - 1 change detected
+2025-01-23 14:50:50,692 - INFO - 1 change detected
+2025-01-23 14:50:51,056 - INFO - 1 change detected
+2025-01-23 14:50:51,423 - INFO - 1 change detected
+2025-01-23 14:50:51,793 - INFO - 1 change detected
+2025-01-23 14:50:52,154 - INFO - 1 change detected
+2025-01-23 14:50:52,519 - INFO - 1 change detected
+2025-01-23 14:50:52,888 - INFO - 1 change detected
+2025-01-23 14:50:53,246 - INFO - 1 change detected
+2025-01-23 14:50:53,606 - INFO - 1 change detected
+2025-01-23 14:50:53,962 - INFO - 1 change detected
+2025-01-23 14:50:54,332 - INFO - 1 change detected
+2025-01-23 14:50:54,707 - INFO - Shutting down
+2025-01-23 14:50:54,816 - INFO - Waiting for application shutdown.
+2025-01-23 14:50:54,817 - INFO - FastAPI app is shutting down...
+2025-01-23 14:50:54,818 - INFO - Application shutdown complete.
+2025-01-23 14:50:54,820 - INFO - Finished server process [4796]
+2025-01-23 14:50:55,344 - INFO - Stopping reloader process [14520]
+2025-01-23 14:51:53,377 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 14:51:53,383 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 14:51:53,385 - INFO - Started reloader process [12588] using WatchFiles
+2025-01-23 14:52:06,451 - INFO - 5 changes detected
+2025-01-23 14:52:06,701 - INFO - Started server process [17288]
+2025-01-23 14:52:06,707 - INFO - Waiting for application startup.
+2025-01-23 14:52:06,720 - INFO - Email scheduler started successfully in the background.
+2025-01-23 14:52:06,720 - INFO - Application startup complete.
+2025-01-23 14:52:06,723 - INFO - Email scheduler started at 2025-01-23 14:52:06
+2025-01-23 14:52:06,723 - INFO - Scheduler started
+2025-01-23 14:52:06,729 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 14:52:20,626 - INFO - 5 changes detected
+2025-01-23 14:52:34,183 - INFO - 5 changes detected
+2025-01-23 14:53:24,129 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\anyio\_backends\_asyncio.py", line 2364, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\anyio\_backends\_asyncio.py", line 864, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\main.py", line 163, in launch_campaign
+    gp_post_campaign(campaign=campaign, gp_api=gp_api)
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\GoPhishConnector\gp_connector.py", line 29, in gp_post_campaign
+    gp_api.smtp.post(gp_campaign.smtp)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\gophish\api\smtp.py", line 17, in post
+    return super(API, self).post(smtp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\gophish\api\api.py", line 106, in post
+    raise Error.parse(response.json())
+gophish.models.Error: SMTP name already in use
+2025-01-23 14:55:06,745 - INFO - Running job "send_emails_periodically (trigger: interval[0:03:00], next run at: 2025-01-23 14:55:06 CET)" (scheduled at 2025-01-23 14:55:06.729292+01:00)
+2025-01-23 14:55:08,197 - INFO - No users to email (no one clicked the phishing link).
+2025-01-23 14:55:08,197 - INFO - Job "send_emails_periodically (trigger: interval[0:03:00], next run at: 2025-01-23 14:58:06 CET)" executed successfully
+2025-01-23 14:55:08,264 - INFO - 1 change detected
+2025-01-23 14:58:06,743 - INFO - Running job "send_emails_periodically (trigger: interval[0:03:00], next run at: 2025-01-23 15:01:06 CET)" (scheduled at 2025-01-23 14:58:06.729292+01:00)
+2025-01-23 14:58:08,433 - INFO - 1 change detected
+2025-01-23 14:58:11,911 - INFO - Email sent to devmail.kvnpotter@gmail.com successfully!
+2025-01-23 14:58:11,935 - INFO - Job "send_emails_periodically (trigger: interval[0:03:00], next run at: 2025-01-23 15:01:06 CET)" executed successfully
+2025-01-23 14:58:45,641 - INFO - Shutting down
+2025-01-23 14:58:45,752 - INFO - Waiting for application shutdown.
+2025-01-23 14:58:45,754 - INFO - FastAPI app is shutting down...
+2025-01-23 14:58:45,754 - INFO - Application shutdown complete.
+2025-01-23 14:58:45,756 - INFO - Finished server process [17288]
+2025-01-23 14:58:48,242 - INFO - Stopping reloader process [12588]
+2025-01-23 15:29:36,338 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 15:29:36,347 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 15:29:36,351 - INFO - Started reloader process [12464] using WatchFiles
+2025-01-23 15:29:48,840 - INFO - 5 changes detected
+2025-01-23 15:29:53,674 - INFO - Started server process [7896]
+2025-01-23 15:29:53,731 - INFO - Waiting for application startup.
+2025-01-23 15:29:53,765 - INFO - Email scheduler started successfully in the background.
+2025-01-23 15:29:53,774 - INFO - Email scheduler started at 2025-01-23 15:29:53
+2025-01-23 15:29:53,775 - INFO - Scheduler started
+2025-01-23 15:29:53,782 - INFO - Campaign scheduler started successfully in the background.
+2025-01-23 15:29:53,829 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 15:29:53,798 - INFO - Application startup complete.
+2025-01-23 15:30:02,544 - INFO - 5 changes detected
+2025-01-23 15:30:17,194 - INFO - 5 changes detected
+2025-01-23 15:30:23,255 - INFO - Shutting down
+2025-01-23 15:30:23,362 - INFO - Waiting for application shutdown.
+2025-01-23 15:30:23,363 - INFO - FastAPI app is shutting down...
+2025-01-23 15:30:23,364 - INFO - Application shutdown complete.
+2025-01-23 15:30:23,366 - INFO - Finished server process [7896]
+2025-01-23 15:30:23,994 - INFO - Stopping reloader process [12464]
+2025-01-23 15:36:23,909 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 15:36:23,915 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 15:36:23,918 - INFO - Started reloader process [9704] using WatchFiles
+2025-01-23 15:36:39,053 - INFO - Started server process [7392]
+2025-01-23 15:36:39,061 - INFO - Waiting for application startup.
+2025-01-23 15:36:39,076 - INFO - Email scheduler started successfully in the background.
+2025-01-23 15:36:39,085 - INFO - Campaign scheduler started successfully in the background.
+2025-01-23 15:36:39,086 - INFO - Email scheduler started at 2025-01-23 15:36:39
+2025-01-23 15:36:39,088 - INFO - Scheduler started
+2025-01-23 15:36:39,086 - INFO - Application startup complete.
+2025-01-23 15:36:39,099 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 15:36:40,325 - INFO - 5 changes detected
+2025-01-23 15:36:55,051 - INFO - 5 changes detected
+2025-01-23 15:37:09,097 - INFO - 5 changes detected
+2025-01-23 15:37:21,869 - INFO - 1 change detected
+2025-01-23 15:37:21,870 - WARNING - WatchFiles detected changes in 'CampaignScheduler\scheduler_campaigns.py'. Reloading...
+2025-01-23 15:37:36,790 - INFO - Shutting down
+2025-01-23 15:37:36,912 - INFO - Waiting for application shutdown.
+2025-01-23 15:37:36,915 - INFO - FastAPI app is shutting down...
+2025-01-23 15:37:36,916 - INFO - Application shutdown complete.
+2025-01-23 15:37:36,918 - INFO - Finished server process [7392]
+2025-01-23 15:37:40,429 - INFO - 7 changes detected
+2025-01-23 15:37:40,430 - WARNING - WatchFiles detected changes in 'CampaignScheduler\scheduler_campaigns.py'. Reloading...
+2025-01-23 15:37:48,769 - INFO - Started server process [16216]
+2025-01-23 15:37:48,789 - INFO - Waiting for application startup.
+2025-01-23 15:37:48,801 - INFO - Email scheduler started successfully in the background.
+2025-01-23 15:37:48,811 - INFO - Email scheduler started at 2025-01-23 15:37:48
+2025-01-23 15:37:48,812 - INFO - Scheduler started
+2025-01-23 15:37:48,817 - INFO - Campaign scheduler started successfully in the background.
+2025-01-23 15:37:48,817 - INFO - Application startup complete.
+2025-01-23 15:37:48,820 - INFO - Scheduler started
+2025-01-23 15:37:48,825 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 15:37:48,869 - ERROR - Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\uvicorn\server.py", line 69, in serve
+    with self.capture_signals():
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\contextlib.py", line 144, in __exit__
+    next(self.gen)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\uvicorn\server.py", line 330, in capture_signals
+    signal.raise_signal(captured_signal)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\asyncio\runners.py", line 157, in _on_sigint
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\starlette\routing.py", line 700, in lifespan
+    await receive()
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\uvicorn\lifespan\on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\asyncio\queues.py", line 158, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-01-23 15:37:49,508 - INFO - Stopping reloader process [9704]
+2025-01-23 15:38:09,149 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 15:38:09,155 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 15:38:09,158 - INFO - Started reloader process [11920] using WatchFiles
+2025-01-23 15:38:17,491 - INFO - 5 changes detected
+2025-01-23 15:38:31,275 - INFO - Started server process [4108]
+2025-01-23 15:38:31,283 - INFO - Waiting for application startup.
+2025-01-23 15:38:31,294 - INFO - Email scheduler started successfully in the background.
+2025-01-23 15:38:31,303 - INFO - Campaign scheduler started successfully in the background.
+2025-01-23 15:38:31,305 - INFO - Email scheduler started at 2025-01-23 15:38:31
+2025-01-23 15:38:31,303 - INFO - Application startup complete.
+2025-01-23 15:38:31,306 - INFO - Scheduler started
+2025-01-23 15:38:31,310 - INFO - Scheduler started
+2025-01-23 15:38:31,317 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 15:38:33,154 - INFO - 5 changes detected
+2025-01-23 15:41:30,931 - INFO - 1 change detected
+2025-01-23 15:41:31,375 - INFO - Running job "send_emails_periodically (trigger: interval[0:03:00], next run at: 2025-01-23 15:41:31 CET)" (scheduled at 2025-01-23 15:41:31.317224+01:00)
+2025-01-23 15:41:30,933 - WARNING - WatchFiles detected changes in 'CampaignScheduler\scheduler_campaigns.py'. Reloading...
+2025-01-23 15:43:33,021 - INFO - Shutting down
+2025-01-23 15:43:33,128 - INFO - Waiting for application shutdown.
+2025-01-23 15:43:33,130 - INFO - FastAPI app is shutting down...
+2025-01-23 15:43:33,130 - INFO - Application shutdown complete.
+2025-01-23 15:43:33,135 - INFO - Finished server process [4108]
+2025-01-23 15:43:39,172 - INFO - Email sent to devmail.kvnpotter@gmail.com successfully!
+2025-01-23 15:43:39,205 - INFO - Job "send_emails_periodically (trigger: interval[0:03:00], next run at: 2025-01-23 15:44:31 CET)" executed successfully
+2025-01-23 15:43:42,885 - INFO - Stopping reloader process [11920]
+2025-01-23 15:43:54,117 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 15:43:54,123 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 15:43:54,129 - INFO - Started reloader process [9068] using WatchFiles
+2025-01-23 15:43:58,153 - INFO - 5 changes detected
+2025-01-23 15:44:14,002 - INFO - 5 changes detected
+2025-01-23 15:44:14,544 - INFO - Started server process [6548]
+2025-01-23 15:44:14,618 - INFO - Waiting for application startup.
+2025-01-23 15:44:14,680 - INFO - Email scheduler started successfully in the background.
+2025-01-23 15:44:14,689 - INFO - Email scheduler started at 2025-01-23 15:44:14
+2025-01-23 15:44:14,689 - INFO - Scheduler started
+2025-01-23 15:44:14,700 - INFO - Campaign scheduler started successfully in the background.
+2025-01-23 15:44:14,700 - INFO - Application startup complete.
+2025-01-23 15:44:14,717 - INFO - Scheduler started
+2025-01-23 15:44:14,724 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 15:44:14,738 - INFO - Added job "create_and_launch_campaign" to job store "default"
+2025-01-23 15:44:28,157 - INFO - 5 changes detected
+2025-01-23 15:44:44,747 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:44:44 CET)" (scheduled at 2025-01-23 15:44:44.738465+01:00)
+2025-01-23 15:44:44,749 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:45:14 CET)" executed successfully
+2025-01-23 15:45:14,741 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:45:44 CET)" (scheduled at 2025-01-23 15:45:14.738465+01:00)
+2025-01-23 15:45:14,742 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:45:44 CET)" executed successfully
+2025-01-23 15:45:44,758 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:46:14 CET)" (scheduled at 2025-01-23 15:45:44.738465+01:00)
+2025-01-23 15:45:44,799 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:46:14 CET)" executed successfully
+2025-01-23 15:46:14,749 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:46:44 CET)" (scheduled at 2025-01-23 15:46:14.738465+01:00)
+2025-01-23 15:46:14,750 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:46:44 CET)" executed successfully
+2025-01-23 15:46:44,749 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:47:14 CET)" (scheduled at 2025-01-23 15:46:44.738465+01:00)
+2025-01-23 15:46:44,750 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:47:14 CET)" executed successfully
+2025-01-23 15:47:03,737 - INFO - Shutting down
+2025-01-23 15:47:03,848 - INFO - Waiting for application shutdown.
+2025-01-23 15:47:03,850 - INFO - FastAPI app is shutting down...
+2025-01-23 15:47:03,850 - INFO - Application shutdown complete.
+2025-01-23 15:47:03,852 - INFO - Finished server process [6548]
+2025-01-23 15:47:04,309 - INFO - Stopping reloader process [9068]
+2025-01-23 15:47:54,130 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 15:47:54,139 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 15:47:54,143 - INFO - Started reloader process [2084] using WatchFiles
+2025-01-23 15:48:06,203 - INFO - 5 changes detected
+2025-01-23 15:48:15,486 - INFO - Started server process [13344]
+2025-01-23 15:48:15,499 - INFO - Waiting for application startup.
+2025-01-23 15:48:15,513 - INFO - Email scheduler started successfully in the background.
+2025-01-23 15:48:15,521 - INFO - Email scheduler started at 2025-01-23 15:48:15
+2025-01-23 15:48:15,521 - INFO - Scheduler started
+2025-01-23 15:48:15,526 - INFO - Campaign scheduler started successfully in the background.
+2025-01-23 15:48:15,526 - INFO - Application startup complete.
+2025-01-23 15:48:15,531 - INFO - Scheduler started
+2025-01-23 15:48:15,535 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 15:48:15,538 - INFO - Added job "create_and_launch_campaign" to job store "default"
+2025-01-23 15:48:21,136 - INFO - 5 changes detected
+2025-01-23 15:48:35,253 - INFO - 5 changes detected
+2025-01-23 15:48:45,555 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:48:45 CET)" (scheduled at 2025-01-23 15:48:45.537986+01:00)
+2025-01-23 15:48:45,565 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:49:15 CET)" executed successfully
+2025-01-23 15:48:59,814 - INFO - Shutting down
+2025-01-23 15:48:59,922 - INFO - Waiting for application shutdown.
+2025-01-23 15:48:59,924 - INFO - FastAPI app is shutting down...
+2025-01-23 15:48:59,925 - INFO - Application shutdown complete.
+2025-01-23 15:48:59,927 - INFO - Finished server process [13344]
+2025-01-23 15:49:00,496 - INFO - Stopping reloader process [2084]
+2025-01-23 15:49:28,963 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 15:49:28,970 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 15:49:28,975 - INFO - Started reloader process [16356] using WatchFiles
+2025-01-23 15:49:42,160 - INFO - 5 changes detected
+2025-01-23 15:49:44,258 - INFO - Started server process [11520]
+2025-01-23 15:49:44,273 - INFO - Waiting for application startup.
+2025-01-23 15:49:44,420 - INFO - Email scheduler started successfully in the background.
+2025-01-23 15:49:44,430 - INFO - Email scheduler started at 2025-01-23 15:49:44
+2025-01-23 15:49:44,430 - INFO - Scheduler started
+2025-01-23 15:49:44,485 - INFO - Campaign scheduler started successfully in the background.
+2025-01-23 15:49:44,485 - INFO - Application startup complete.
+2025-01-23 15:49:44,492 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 15:49:44,492 - INFO - Scheduler started
+2025-01-23 15:49:44,527 - INFO - Added job "create_and_launch_campaign" to job store "default"
+2025-01-23 15:49:58,691 - INFO - 5 changes detected
+2025-01-23 15:50:12,952 - INFO - 5 changes detected
+2025-01-23 15:50:14,539 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:50:14 CET)" (scheduled at 2025-01-23 15:50:14.527465+01:00)
+2025-01-23 15:50:14,541 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:50:44 CET)" executed successfully
+2025-01-23 15:50:44,542 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:51:14 CET)" (scheduled at 2025-01-23 15:50:44.527465+01:00)
+2025-01-23 15:50:44,545 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:51:14 CET)" executed successfully
+2025-01-23 15:50:54,413 - INFO - Shutting down
+2025-01-23 15:50:54,519 - INFO - Waiting for application shutdown.
+2025-01-23 15:50:54,521 - INFO - FastAPI app is shutting down...
+2025-01-23 15:50:54,521 - INFO - Application shutdown complete.
+2025-01-23 15:50:54,524 - INFO - Finished server process [11520]
+2025-01-23 15:50:54,986 - INFO - Stopping reloader process [16356]
+2025-01-23 15:52:34,015 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 15:52:34,026 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 15:52:34,031 - INFO - Started reloader process [13116] using WatchFiles
+2025-01-23 15:52:50,941 - INFO - 5 changes detected
+2025-01-23 15:52:51,174 - INFO - Started server process [11000]
+2025-01-23 15:52:51,184 - INFO - Waiting for application startup.
+2025-01-23 15:52:51,203 - INFO - Email scheduler started successfully in the background.
+2025-01-23 15:52:51,210 - INFO - Email scheduler started at 2025-01-23 15:52:51
+2025-01-23 15:52:51,210 - INFO - Scheduler started
+2025-01-23 15:52:51,215 - INFO - Campaign scheduler started successfully in the background.
+2025-01-23 15:52:51,215 - INFO - Application startup complete.
+2025-01-23 15:52:51,218 - INFO - Scheduler started
+2025-01-23 15:52:51,225 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 15:52:51,228 - INFO - Added job "create_and_launch_campaign" to job store "default"
+2025-01-23 15:53:07,321 - INFO - 5 changes detected
+2025-01-23 15:53:21,159 - INFO - 5 changes detected
+2025-01-23 15:53:21,248 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:53:21 CET)" (scheduled at 2025-01-23 15:53:21.227977+01:00)
+2025-01-23 15:53:21,257 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:53:51 CET)" executed successfully
+2025-01-23 15:53:36,163 - INFO - 5 changes detected
+2025-01-23 15:53:51,240 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:54:21 CET)" (scheduled at 2025-01-23 15:53:51.227977+01:00)
+2025-01-23 15:53:55,413 - INFO - 5 changes detected
+2025-01-23 15:54:12,847 - INFO - 5 changes detected
+2025-01-23 15:54:21,231 - WARNING - Execution of job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:54:21 CET)" skipped: maximum number of running instances reached (1)
+2025-01-23 15:54:26,930 - INFO - 5 changes detected
+2025-01-23 15:54:43,279 - INFO - 5 changes detected
+2025-01-23 15:54:51,238 - WARNING - Execution of job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:54:51 CET)" skipped: maximum number of running instances reached (1)
+2025-01-23 15:55:21,232 - WARNING - Execution of job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:55:21 CET)" skipped: maximum number of running instances reached (1)
+2025-01-23 15:55:51,240 - WARNING - Execution of job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:55:51 CET)" skipped: maximum number of running instances reached (1)
+2025-01-23 15:55:51,246 - INFO - Running job "send_emails_periodically (trigger: interval[0:03:00], next run at: 2025-01-23 15:55:51 CET)" (scheduled at 2025-01-23 15:55:51.224974+01:00)
+2025-01-23 15:56:12,541 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 15:56:21 CET)" executed successfully
+2025-01-23 15:56:14,104 - INFO - 1 change detected
+2025-01-23 15:56:14,247 - INFO - Shutting down
+2025-01-23 15:56:14,357 - INFO - Waiting for application shutdown.
+2025-01-23 15:56:14,359 - INFO - FastAPI app is shutting down...
+2025-01-23 15:56:14,359 - INFO - Application shutdown complete.
+2025-01-23 15:56:14,363 - INFO - Finished server process [11000]
+2025-01-23 15:56:17,675 - INFO - Email sent to devmail.kvnpotter@gmail.com successfully!
+2025-01-23 15:56:17,699 - INFO - Job "send_emails_periodically (trigger: interval[0:03:00], next run at: 2025-01-23 15:58:51 CET)" executed successfully
+2025-01-23 15:56:18,166 - INFO - Stopping reloader process [13116]
+2025-01-23 16:21:13,080 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 16:21:13,091 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 16:21:13,099 - INFO - Started reloader process [16696] using WatchFiles
+2025-01-23 16:21:33,291 - INFO - Started server process [4168]
+2025-01-23 16:21:33,298 - INFO - Waiting for application startup.
+2025-01-23 16:21:33,308 - INFO - Email scheduler started successfully in the background.
+2025-01-23 16:21:33,308 - ERROR - Failed to start campaign scheduler: run_campaign_scheduler_in_background() missing 1 required positional argument: 'recipient_database'
+2025-01-23 16:21:33,308 - INFO - Application startup complete.
+2025-01-23 16:21:33,311 - INFO - Email scheduler started at 2025-01-23 16:21:33
+2025-01-23 16:21:33,312 - INFO - Scheduler started
+2025-01-23 16:21:33,318 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 16:22:24,340 - INFO - Shutting down
+2025-01-23 16:22:24,452 - INFO - Waiting for application shutdown.
+2025-01-23 16:22:24,453 - INFO - FastAPI app is shutting down...
+2025-01-23 16:22:24,454 - INFO - Application shutdown complete.
+2025-01-23 16:22:24,456 - INFO - Finished server process [4168]
+2025-01-23 16:22:24,912 - INFO - Stopping reloader process [16696]
+2025-01-23 16:27:17,739 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 16:27:17,770 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 16:27:17,771 - INFO - Started reloader process [1132] using WatchFiles
+2025-01-23 16:27:32,698 - INFO - Started server process [17684]
+2025-01-23 16:27:32,702 - INFO - Waiting for application startup.
+2025-01-23 16:27:32,715 - INFO - Email scheduler started successfully in the background.
+2025-01-23 16:27:32,724 - INFO - Email scheduler started at 2025-01-23 16:27:32
+2025-01-23 16:27:32,724 - INFO - Campaign scheduler started successfully in the background.
+2025-01-23 16:27:32,724 - INFO - Scheduler started
+2025-01-23 16:27:32,724 - INFO - Application startup complete.
+2025-01-23 16:27:32,730 - INFO - Scheduler started
+2025-01-23 16:27:32,737 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 16:27:32,737 - INFO - Added job "create_and_launch_campaign" to job store "default"
+2025-01-23 16:27:36,464 - INFO - 6 changes detected
+2025-01-23 16:27:51,416 - INFO - 6 changes detected
+2025-01-23 16:28:02,810 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:28:02 CET)" (scheduled at 2025-01-23 16:28:02.737874+01:00)
+2025-01-23 16:28:02,893 - ERROR - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:28:32 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\CampaignScheduler\scheduler_campaigns.py", line 38, in create_and_launch_campaign
+    recipient_database = response["recipients"]
+                         ~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'recipients'
+2025-01-23 16:28:08,301 - INFO - 6 changes detected
+2025-01-23 16:28:22,663 - INFO - 6 changes detected
+2025-01-23 16:28:32,751 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:29:02 CET)" (scheduled at 2025-01-23 16:28:32.737874+01:00)
+2025-01-23 16:28:36,521 - INFO - 6 changes detected
+2025-01-23 16:28:50,770 - INFO - 6 changes detected
+2025-01-23 16:29:02,750 - WARNING - Execution of job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:29:02 CET)" skipped: maximum number of running instances reached (1)
+2025-01-23 16:29:09,395 - INFO - 6 changes detected
+2025-01-23 16:29:21,117 - ERROR - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:29:32 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\CampaignScheduler\scheduler_campaigns.py", line 38, in create_and_launch_campaign
+    recipient_database = response["recipients"]
+                         ~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'recipients'
+2025-01-23 16:29:23,924 - INFO - 6 changes detected
+2025-01-23 16:29:32,747 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:30:02 CET)" (scheduled at 2025-01-23 16:29:32.737874+01:00)
+2025-01-23 16:29:39,733 - INFO - 6 changes detected
+2025-01-23 16:29:43,968 - ERROR - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:30:02 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\CampaignScheduler\scheduler_campaigns.py", line 52, in create_and_launch_campaign
+    gp_post_campaign(campaign=campaign, gp_api=gp_api)
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\GoPhishConnector\gp_connector.py", line 33, in gp_post_campaign
+    gp_api.templates.post(gp_campaign.template)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\gophish\api\templates.py", line 17, in post
+    return super(API, self).post(template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\gophish\api\api.py", line 106, in post
+    raise Error.parse(response.json())
+gophish.models.Error: Error inserting template into database
+2025-01-23 16:29:57,032 - INFO - 6 changes detected
+2025-01-23 16:30:02,744 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:30:32 CET)" (scheduled at 2025-01-23 16:30:02.737874+01:00)
+2025-01-23 16:30:07,064 - INFO - Shutting down
+2025-01-23 16:30:07,174 - INFO - Waiting for application shutdown.
+2025-01-23 16:30:07,176 - INFO - FastAPI app is shutting down...
+2025-01-23 16:30:07,176 - INFO - Application shutdown complete.
+2025-01-23 16:30:07,178 - INFO - Finished server process [17684]
+2025-01-23 16:30:10,955 - ERROR - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:30:32 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\CampaignScheduler\scheduler_campaigns.py", line 52, in create_and_launch_campaign
+    gp_post_campaign(campaign=campaign, gp_api=gp_api)
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\GoPhishConnector\gp_connector.py", line 29, in gp_post_campaign
+    gp_api.smtp.post(gp_campaign.smtp)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\gophish\api\smtp.py", line 17, in post
+    return super(API, self).post(smtp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\gophish\api\api.py", line 106, in post
+    raise Error.parse(response.json())
+gophish.models.Error: SMTP name already in use
+2025-01-23 16:30:13,537 - INFO - Stopping reloader process [1132]
+2025-01-23 16:33:35,175 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 16:33:35,182 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 16:33:35,187 - INFO - Started reloader process [392] using WatchFiles
+2025-01-23 16:33:39,978 - INFO - 6 changes detected
+2025-01-23 16:33:50,644 - INFO - Started server process [17508]
+2025-01-23 16:33:50,656 - INFO - Waiting for application startup.
+2025-01-23 16:33:50,672 - INFO - Email scheduler started successfully in the background.
+2025-01-23 16:33:50,681 - INFO - Email scheduler started at 2025-01-23 16:33:50
+2025-01-23 16:33:50,681 - INFO - Scheduler started
+2025-01-23 16:33:50,687 - INFO - Campaign scheduler started successfully in the background.
+2025-01-23 16:33:50,690 - INFO - Application startup complete.
+2025-01-23 16:33:50,696 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 16:33:50,696 - INFO - Scheduler started
+2025-01-23 16:33:50,704 - INFO - Added job "create_and_launch_campaign" to job store "default"
+2025-01-23 16:33:58,849 - INFO - 6 changes detected
+2025-01-23 16:34:20,715 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:34:20 CET)" (scheduled at 2025-01-23 16:34:20.704846+01:00)
+2025-01-23 16:34:21,157 - ERROR - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:34:50 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\CampaignScheduler\scheduler_campaigns.py", line 50, in create_and_launch_campaign
+    print(f"recipient_database: {recipient_database}")
+                                 ^^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'recipient_database' where it is not associated with a value
+2025-01-23 16:34:50,722 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:35:20 CET)" (scheduled at 2025-01-23 16:34:50.704846+01:00)
+2025-01-23 16:34:50,778 - ERROR - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:35:20 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\CampaignScheduler\scheduler_campaigns.py", line 50, in create_and_launch_campaign
+    print(f"recipient_database: {recipient_database}")
+                                 ^^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'recipient_database' where it is not associated with a value
+2025-01-23 16:35:09,227 - INFO - Shutting down
+2025-01-23 16:35:09,335 - INFO - Waiting for application shutdown.
+2025-01-23 16:35:09,340 - INFO - FastAPI app is shutting down...
+2025-01-23 16:35:09,341 - INFO - Application shutdown complete.
+2025-01-23 16:35:09,343 - INFO - Finished server process [17508]
+2025-01-23 16:35:09,823 - INFO - Stopping reloader process [392]
+2025-01-23 16:35:37,738 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 16:35:37,753 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 16:35:37,759 - INFO - Started reloader process [15328] using WatchFiles
+2025-01-23 16:35:53,001 - INFO - 6 changes detected
+2025-01-23 16:35:56,667 - INFO - Started server process [1460]
+2025-01-23 16:35:56,678 - INFO - Waiting for application startup.
+2025-01-23 16:35:56,691 - INFO - Email scheduler started successfully in the background.
+2025-01-23 16:35:56,700 - INFO - Campaign scheduler started successfully in the background.
+2025-01-23 16:35:56,700 - INFO - Email scheduler started at 2025-01-23 16:35:56
+2025-01-23 16:35:56,704 - INFO - Scheduler started
+2025-01-23 16:35:56,700 - INFO - Application startup complete.
+2025-01-23 16:35:56,709 - INFO - Scheduler started
+2025-01-23 16:35:56,715 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 16:35:56,716 - INFO - Added job "create_and_launch_campaign" to job store "default"
+2025-01-23 16:36:26,727 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:36:26 CET)" (scheduled at 2025-01-23 16:36:26.715603+01:00)
+2025-01-23 16:36:26,800 - ERROR - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:36:56 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\CampaignScheduler\scheduler_campaigns.py", line 49, in create_and_launch_campaign
+    recipient_database = response["recipients"]
+                         ~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'recipients'
+2025-01-23 16:36:56,722 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:37:26 CET)" (scheduled at 2025-01-23 16:36:56.715603+01:00)
+2025-01-23 16:37:08,243 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:37:26 CET)" executed successfully
+2025-01-23 16:37:26,718 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:37:56 CET)" (scheduled at 2025-01-23 16:37:26.715603+01:00)
+2025-01-23 16:37:35,044 - ERROR - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:37:56 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\CampaignScheduler\scheduler_campaigns.py", line 63, in create_and_launch_campaign
+    gp_post_campaign(campaign=campaign, gp_api=gp_api)
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\GoPhishConnector\gp_connector.py", line 29, in gp_post_campaign
+    gp_api.smtp.post(gp_campaign.smtp)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\gophish\api\smtp.py", line 17, in post
+    return super(API, self).post(smtp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\gophish\api\api.py", line 106, in post
+    raise Error.parse(response.json())
+gophish.models.Error: SMTP name already in use
+2025-01-23 16:37:56,737 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:38:26 CET)" (scheduled at 2025-01-23 16:37:56.715603+01:00)
+2025-01-23 16:38:04,771 - ERROR - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:38:26 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\CampaignScheduler\scheduler_campaigns.py", line 63, in create_and_launch_campaign
+    gp_post_campaign(campaign=campaign, gp_api=gp_api)
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\GoPhishConnector\gp_connector.py", line 29, in gp_post_campaign
+    gp_api.smtp.post(gp_campaign.smtp)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\gophish\api\smtp.py", line 17, in post
+    return super(API, self).post(smtp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\gophish\api\api.py", line 106, in post
+    raise Error.parse(response.json())
+gophish.models.Error: SMTP name already in use
+2025-01-23 16:38:24,386 - INFO - Shutting down
+2025-01-23 16:38:24,494 - INFO - Waiting for application shutdown.
+2025-01-23 16:38:24,496 - INFO - FastAPI app is shutting down...
+2025-01-23 16:38:24,496 - INFO - Application shutdown complete.
+2025-01-23 16:38:24,499 - INFO - Finished server process [1460]
+2025-01-23 16:38:26,986 - INFO - Stopping reloader process [15328]
+2025-01-23 16:43:19,410 - INFO - Will watch for changes in these directories: ['C:\\Users\\kvnpo\\Desktop\\DataScience\\BeCode\\Projects\\8-phishing-analysis']
+2025-01-23 16:43:19,421 - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-01-23 16:43:19,429 - INFO - Started reloader process [4252] using WatchFiles
+2025-01-23 16:43:23,456 - INFO - 5 changes detected
+2025-01-23 16:43:33,703 - INFO - Started server process [10904]
+2025-01-23 16:43:33,709 - INFO - Waiting for application startup.
+2025-01-23 16:43:33,717 - INFO - Email scheduler started successfully in the background.
+2025-01-23 16:43:33,724 - INFO - Campaign scheduler started successfully in the background.
+2025-01-23 16:43:33,726 - INFO - Email scheduler started at 2025-01-23 16:43:33
+2025-01-23 16:43:33,727 - INFO - Scheduler started
+2025-01-23 16:43:33,732 - INFO - Application startup complete.
+2025-01-23 16:43:33,738 - INFO - Added job "send_emails_periodically" to job store "default"
+2025-01-23 16:43:33,739 - INFO - Scheduler started
+2025-01-23 16:43:33,743 - INFO - Added job "create_and_launch_campaign" to job store "default"
+2025-01-23 16:44:03,761 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:44:03 CET)" (scheduled at 2025-01-23 16:44:03.743207+01:00)
+2025-01-23 16:44:13,088 - ERROR - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:44:33 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\CampaignScheduler\scheduler_campaigns.py", line 63, in create_and_launch_campaign
+    gp_post_campaign(campaign=campaign, gp_api=gp_api)
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\GoPhishConnector\gp_connector.py", line 33, in gp_post_campaign
+    gp_api.templates.post(gp_campaign.template)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\gophish\api\templates.py", line 17, in post
+    return super(API, self).post(template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\gophish\api\api.py", line 106, in post
+    raise Error.parse(response.json())
+gophish.models.Error: Error inserting template into database
+2025-01-23 16:44:33,744 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:45:03 CET)" (scheduled at 2025-01-23 16:44:33.743207+01:00)
+2025-01-23 16:44:45,565 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:45:03 CET)" executed successfully
+2025-01-23 16:45:03,773 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:45:33 CET)" (scheduled at 2025-01-23 16:45:03.743207+01:00)
+2025-01-23 16:45:14,126 - ERROR - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:45:33 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\CampaignScheduler\scheduler_campaigns.py", line 63, in create_and_launch_campaign
+    gp_post_campaign(campaign=campaign, gp_api=gp_api)
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\GoPhishConnector\gp_connector.py", line 33, in gp_post_campaign
+    gp_api.templates.post(gp_campaign.template)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\gophish\api\templates.py", line 17, in post
+    return super(API, self).post(template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\gophish\api\api.py", line 106, in post
+    raise Error.parse(response.json())
+gophish.models.Error: Error inserting template into database
+2025-01-23 16:45:33,748 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:46:03 CET)" (scheduled at 2025-01-23 16:45:33.743207+01:00)
+2025-01-23 16:45:45,820 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:46:03 CET)" executed successfully
+2025-01-23 16:46:03,752 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:46:33 CET)" (scheduled at 2025-01-23 16:46:03.743207+01:00)
+2025-01-23 16:46:16,749 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:46:33 CET)" executed successfully
+2025-01-23 16:46:33,751 - INFO - Running job "send_emails_periodically (trigger: interval[0:03:00], next run at: 2025-01-23 16:46:33 CET)" (scheduled at 2025-01-23 16:46:33.738225+01:00)
+2025-01-23 16:46:33,760 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:47:03 CET)" (scheduled at 2025-01-23 16:46:33.743207+01:00)
+2025-01-23 16:46:36,889 - INFO - No users to email (no one clicked the phishing link).
+2025-01-23 16:46:36,889 - INFO - Job "send_emails_periodically (trigger: interval[0:03:00], next run at: 2025-01-23 16:49:33 CET)" executed successfully
+2025-01-23 16:46:36,972 - INFO - 1 change detected
+2025-01-23 16:46:45,308 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:47:03 CET)" executed successfully
+2025-01-23 16:47:03,755 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:47:33 CET)" (scheduled at 2025-01-23 16:47:03.743207+01:00)
+2025-01-23 16:47:14,862 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:47:33 CET)" executed successfully
+2025-01-23 16:47:33,745 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:48:03 CET)" (scheduled at 2025-01-23 16:47:33.743207+01:00)
+2025-01-23 16:47:44,633 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:48:03 CET)" executed successfully
+2025-01-23 16:48:03,756 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:48:33 CET)" (scheduled at 2025-01-23 16:48:03.743207+01:00)
+2025-01-23 16:48:14,741 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:48:33 CET)" executed successfully
+2025-01-23 16:48:33,774 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:49:03 CET)" (scheduled at 2025-01-23 16:48:33.743207+01:00)
+2025-01-23 16:48:45,776 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:49:03 CET)" executed successfully
+2025-01-23 16:49:03,746 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:49:33 CET)" (scheduled at 2025-01-23 16:49:03.743207+01:00)
+2025-01-23 16:49:12,474 - ERROR - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:49:33 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\CampaignScheduler\scheduler_campaigns.py", line 63, in create_and_launch_campaign
+    gp_post_campaign(campaign=campaign, gp_api=gp_api)
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\GoPhishConnector\gp_connector.py", line 33, in gp_post_campaign
+    gp_api.templates.post(gp_campaign.template)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\gophish\api\templates.py", line 17, in post
+    return super(API, self).post(template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\gophish\api\api.py", line 106, in post
+    raise Error.parse(response.json())
+gophish.models.Error: Error inserting template into database
+2025-01-23 16:49:33,754 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:50:03 CET)" (scheduled at 2025-01-23 16:49:33.743207+01:00)
+2025-01-23 16:49:33,754 - INFO - Running job "send_emails_periodically (trigger: interval[0:03:00], next run at: 2025-01-23 16:52:33 CET)" (scheduled at 2025-01-23 16:49:33.738225+01:00)
+2025-01-23 16:49:46,558 - INFO - No users to email (no one clicked the phishing link).
+2025-01-23 16:49:46,558 - INFO - Job "send_emails_periodically (trigger: interval[0:03:00], next run at: 2025-01-23 16:52:33 CET)" executed successfully
+2025-01-23 16:49:46,628 - INFO - 1 change detected
+2025-01-23 16:49:48,093 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:50:03 CET)" executed successfully
+2025-01-23 16:50:03,759 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:50:33 CET)" (scheduled at 2025-01-23 16:50:03.743207+01:00)
+2025-01-23 16:50:15,864 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:50:33 CET)" executed successfully
+2025-01-23 16:50:33,758 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:51:03 CET)" (scheduled at 2025-01-23 16:50:33.743207+01:00)
+2025-01-23 16:50:43,606 - ERROR - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:51:03 CET)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\CampaignScheduler\scheduler_campaigns.py", line 63, in create_and_launch_campaign
+    gp_post_campaign(campaign=campaign, gp_api=gp_api)
+  File "C:\Users\kvnpo\Desktop\DataScience\BeCode\Projects\8-phishing-analysis\GoPhishConnector\gp_connector.py", line 33, in gp_post_campaign
+    gp_api.templates.post(gp_campaign.template)
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\gophish\api\templates.py", line 17, in post
+    return super(API, self).post(template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kvnpo\anaconda3\envs\phishing-analysis-env\Lib\site-packages\gophish\api\api.py", line 106, in post
+    raise Error.parse(response.json())
+gophish.models.Error: Error inserting template into database
+2025-01-23 16:51:03,762 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:51:33 CET)" (scheduled at 2025-01-23 16:51:03.743207+01:00)
+2025-01-23 16:51:14,748 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:51:33 CET)" executed successfully
+2025-01-23 16:51:33,753 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:52:03 CET)" (scheduled at 2025-01-23 16:51:33.743207+01:00)
+2025-01-23 16:51:45,338 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:52:03 CET)" executed successfully
+2025-01-23 16:52:03,755 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:52:33 CET)" (scheduled at 2025-01-23 16:52:03.743207+01:00)
+2025-01-23 16:52:15,158 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:52:33 CET)" executed successfully
+2025-01-23 16:52:33,749 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:53:03 CET)" (scheduled at 2025-01-23 16:52:33.743207+01:00)
+2025-01-23 16:52:33,749 - INFO - Running job "send_emails_periodically (trigger: interval[0:03:00], next run at: 2025-01-23 16:55:33 CET)" (scheduled at 2025-01-23 16:52:33.738225+01:00)
+2025-01-23 16:52:47,680 - INFO - 25 changes detected
+2025-01-23 16:52:48,276 - INFO - 29 changes detected
+2025-01-23 16:52:48,841 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:53:03 CET)" executed successfully
+2025-01-23 16:52:50,128 - INFO - No users to email (no one clicked the phishing link).
+2025-01-23 16:52:50,128 - INFO - Job "send_emails_periodically (trigger: interval[0:03:00], next run at: 2025-01-23 16:55:33 CET)" executed successfully
+2025-01-23 16:52:50,189 - INFO - 1 change detected
+2025-01-23 16:53:03,753 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:53:33 CET)" (scheduled at 2025-01-23 16:53:03.743207+01:00)
+2025-01-23 16:53:15,819 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:53:33 CET)" executed successfully
+2025-01-23 16:53:33,755 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:54:03 CET)" (scheduled at 2025-01-23 16:53:33.743207+01:00)
+2025-01-23 16:53:44,198 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:54:03 CET)" executed successfully
+2025-01-23 16:54:03,751 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:54:33 CET)" (scheduled at 2025-01-23 16:54:03.743207+01:00)
+2025-01-23 16:54:17,871 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:54:33 CET)" executed successfully
+2025-01-23 16:54:33,759 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:55:03 CET)" (scheduled at 2025-01-23 16:54:33.743207+01:00)
+2025-01-23 16:54:44,098 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:55:03 CET)" executed successfully
+2025-01-23 16:54:57,725 - INFO - 1 change detected
+2025-01-23 16:55:03,754 - INFO - Running job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:55:33 CET)" (scheduled at 2025-01-23 16:55:03.743207+01:00)
+2025-01-23 16:55:14,417 - INFO - Job "create_and_launch_campaign (trigger: interval[0:00:30], next run at: 2025-01-23 16:55:33 CET)" executed successfully
+2025-01-23 16:55:21,098 - INFO - Shutting down
+2025-01-23 16:55:21,207 - INFO - Waiting for application shutdown.
+2025-01-23 16:55:21,209 - INFO - FastAPI app is shutting down...
+2025-01-23 16:55:21,210 - INFO - Application shutdown complete.
+2025-01-23 16:55:21,213 - INFO - Finished server process [10904]
+2025-01-23 16:55:23,815 - INFO - Stopping reloader process [4252]

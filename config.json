@@ -3,5 +3,7 @@
     "topics_path": "input_data_prompts_topics/Emailtopics.json",
     "GoPhish_host": "https://127.0.0.1:3333/",
     "API_base_url": "http://127.0.0.1:8000",
-    "analysis_url": "https://gophish-analysis.streamlit.app/"
+    "analysis_url": "https://gophish-analysis.streamlit.app/",
+    "interval_phishing_feedback": 180,
+    "interval_campaign_launch": 30
 }
