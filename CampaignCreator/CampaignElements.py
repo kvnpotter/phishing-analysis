@@ -2,7 +2,7 @@
 
 import random
 import os
-from .genai_utils import generate_mail_body_gemini, generate_mail_body_openai, generate_landing_page_openAI, generate_landing_page_gemini
+from CampaignCreator.genai_utils import generate_mail_body_gemini, generate_mail_body_openai, generate_landing_page_openAI, generate_landing_page_gemini
 from datetime import datetime
 from gophish.models import User, Group, SMTP, Page, Campaign, Template
 
@@ -341,8 +341,8 @@ class GoPhishCampaign:
                            name=page_name, 
                            capture_credentials=True,
                            capture_passwords=True)
-#        page.random_select_model() # ISSUES WITH OPENAI RATE LIMIT...
-#        page.select_page_generator()
+        #page.random_select_model() # ISSUES WITH OPENAI RATE LIMIT...
+        #page.select_page_generator()
         page.generate_Gemini_page()
         page.generate_gp_page()
 
