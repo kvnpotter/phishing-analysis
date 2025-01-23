@@ -3,16 +3,23 @@
 import streamlit as st
 import requests
 import json
+import os
 
+from CampaignCreator import load_env
 
-BASE_URL = 'http://127.0.0.1:8000'
+# Set base URL for requests to API
 
-# Code
+result = load_env()
+BASE_URL = os.environ.get("API_BASE_URL") # from the .env
+
+# App Code
 
 st.title("Upload data and launch campaigns")
 
+# Multiline text input for JSON data
 input_data = st.text_area(label= "The input field for JSON recipients")
 
+#  Buttons to upload JSON data and add one user
 if st.button("Upload JSON recipients"):
     json_data = json.loads(input_data)
     response = requests.post(f"{BASE_URL}/recipients/upload-json/", json=json_data)
@@ -21,6 +28,7 @@ if st.button("Add one user"):
     json_data = json.loads(input_data)
     response = requests.post(f"{BASE_URL}/recipients/upload-recipient/", json=json_data)
 
+# Sidebar buttons to launch campaign and delete all data - link to result analysis page
 if st.sidebar.button("Launch campaign"):
     response = requests.get(f"{BASE_URL}/campaign/launch/")
 

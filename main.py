@@ -36,13 +36,13 @@ app = FastAPI(title="Phishing Campaign API",
 # Define User and UserList data models
 
 class User(BaseModel):
-    first_name: str =Field(description="The first name of the recipient.")
-    last_name: str =Field(description="The last name of the recipient.")
-    email: str =Field(description="The email address of the recipient.")
-    department: str =Field(description="The department of the recipient.")
+    first_name: str 
+    last_name: str 
+    email: str 
+    department: str 
 
 class UserList(BaseModel):
-    recipients: List[User] =Field(description="A list of User dictionaries.")
+    recipients: List[User] 
     
 # In-memory "database" to store user data (for simplicity)
 recipient_database: list[dict[str:str]] = []
