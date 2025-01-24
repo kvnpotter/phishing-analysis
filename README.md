@@ -97,7 +97,7 @@ Ensure you have the following installed:
 - **Frank** - (https://github.com/FraNnky96)
 - **Stef** - [https://github.com/StefVandekerckhove1]
 - **Olha** - [https://github.com/olhasl]
-- **Miria** - [https://github.com/Miriam-Stoehr]
+- **Miriam** - [https://github.com/Miriam-Stoehr]
 - **fatemeh** - [https://github.com/Fatemeh992]
 
 
