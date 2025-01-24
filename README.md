@@ -2,7 +2,7 @@
 # **Proximus ADA Phishing Awareness Campaign**
 
 
-[Introduction](#Introduction)     |     [Description](#Description)     |       [Installation-Environment setup](#Installation-Environment-setup)    |       [Usage](#Usage)    |[Contributors](#Contributors)    |      [Timeline](#Timeline)       |       [List of Improvements](#list-of-improvements)  
+[Introduction](#introduction)     |     [Description](#description)     |       [Installation-Environment setup](#installation-environment-setup)    |       [Usage](#usage)    |[Contributors](#contributors)    |      [Timeline](#timeline)       |       [List of Improvements](#list-of-improvements)  
 
 ## **Introduction**
 
@@ -23,7 +23,7 @@ The phishing campaign operates in a structured workflow:
 ### **Data Analysis:**
 - **Generate Emails:** Using GenAI to create phishing emails dynamically.
 - **Send Emails:** Testing and deployment through GoPhish.
-- **Dashboarding:** Visualization and monitoring of phishing campaigns.
+- [**Dashboarding:** Visualization and monitoring of phishing campaigns.](https://github.com/Miriam-Stoehr/phishing-campaign-analysis)
 - **Training Resource:** educational content is provided based on the output.
 - **Align with DE:** Ensure proper data format and API compatibility.
 - **Data Analysis & Insights:** Extract meaningful statistics on phishing responses.
@@ -84,6 +84,7 @@ Ensure you have the following installed:
    - Schedule automatic or manual campaigns.
 2. **Analyze responses:**
    - Run the AI model to assess phishing susceptibility.
+   - Set up the [phishing campaign analysis dashboard](https://github.com/Miriam-Stoehr/phishing-campaign-analysis).
    - Retrieve email interaction data from GoPhish.
 3. **Generate reports:**
    - Use the Streamlit dashboard to visualize employee engagement.
