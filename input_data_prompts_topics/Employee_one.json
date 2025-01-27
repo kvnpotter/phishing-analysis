@@ -1,7 +1,7 @@
 {"recipients": [{
             "first_name": "Clara",
             "last_name": "Fontaine",
-            "email": "devmail.kvnpotter@gmail.com",
+            "email": "RECIPIENT_EMAIL_HERE",
             "department": "Legal and Compliance"
         }
     ]

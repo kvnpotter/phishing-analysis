@@ -7,6 +7,7 @@ import urllib3
 # Disable SSL warnings for development environments
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+
 # Main function
 def main():
     from GoPhishConnector import gp_connect, gp_post_campaign
@@ -21,7 +22,7 @@ def main():
 
     campaign = create_campaign(recipients=recipients_list)
 
-    # Instantiate GoPhish 
+    # Instantiate GoPhish
 
     gp_api = gp_connect()
 
@@ -29,6 +30,6 @@ def main():
 
     gp_post_campaign(campaign=campaign, gp_api=gp_api)
 
+
 if __name__ == "__main__":
     main()
-

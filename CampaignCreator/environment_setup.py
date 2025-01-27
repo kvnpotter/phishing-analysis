@@ -6,7 +6,8 @@ import json
 
 # Loading API keys, prompts and topics
 
-def load_env() -> str|None:
+
+def load_env() -> str | None:
     """
     Load the API keys from the .env file.
 
@@ -22,21 +23,23 @@ def load_env() -> str|None:
         return (GOOGLE_API_KEY, gmail_username, gmail_app_password)
     else:
         raise FileNotFoundError(f"Environment file '{env_file}' not found.")
-    
+
+
 def load_config() -> str:
-    """ 
+    """
     Load the configuration from the config.json file.
     """
 
     config_file = "config.json"
     if os.path.exists(config_file):
-        with open(config_file, "r", encoding='utf-8') as file:
+        with open(config_file, "r", encoding="utf-8") as file:
             config = json.load(file)
             return config
     else:
         raise FileNotFoundError(f"Topics file '{config_file}' not found.")
-    
-def load_topics(path: str) -> str|None:
+
+
+def load_topics(path: str) -> str | None:
     """
     Load the topics from the topics.json file.
 
@@ -48,13 +51,14 @@ def load_topics(path: str) -> str|None:
     # Load the JSON file
     topics_file = path
     if os.path.exists(topics_file):
-        with open(topics_file, "r", encoding='utf-8') as file:
+        with open(topics_file, "r", encoding="utf-8") as file:
             topics = json.load(file)
             return topics
     else:
         raise FileNotFoundError(f"Topics file '{topics_file}' not found.")
-    
-def load_prompts(path: str) -> str|None:
+
+
+def load_prompts(path: str) -> str | None:
     """
     Load the prompts from the prompts.json file.
 
@@ -64,7 +68,7 @@ def load_prompts(path: str) -> str|None:
     """
 
     # Load the JSON file
-    prompts_file = path 
+    prompts_file = path
     if os.path.exists(prompts_file):
         with open(prompts_file, "r") as file:
             prompts = json.load(file)

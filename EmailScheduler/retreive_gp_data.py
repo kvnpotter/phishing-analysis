@@ -11,41 +11,19 @@ from GoPhishConnector import gp_connect
 # Disable SSL warnings for development environments
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-# def load_env() -> None:
-#     """
-#     Load the API keys from the .env file.
-#     """
-#     env_file = ".env"
-#     if os.path.exists(env_file):
-#         load_dotenv(env_file)
-#     else:
-#         raise FileNotFoundError(f"Environment file '{env_file}' not found.")
-
-# def gp_connect() -> Gophish:
-#     """
-#     Creates a connection with GoPhish via API.
-#
-#     RETURNS api: connection object
-#     """
-#     host = 'https://127.0.0.1:3333/'  # GoPhish API server
-#     api_key = os.environ.get("GOPHISH_API_KEY")  # API key from the .env file
-#     if not api_key:
-#         raise ValueError("API Key is missing in the environment variables.")
-#     try:
-#         api = Gophish(api_key, host=host, verify=False)
-#         return api
-#     except Exception as e:
-#         raise ConnectionError(f"Failed to connect to GoPhish API: {e}")
 
 def fetch_campaign_data(api: Gophish, output_file: str) -> None:
     """
     Fetches campaign data from GoPhish API and saves it to a JSON file.
+
+    :param api: The GoPhish API connection object
+    :param output_file: The output file path to save the campaign data
     """
-    
+
     try:
         campaigns = api.campaigns.get()  # Get all campaigns
         campaign_data = []  # This will hold our campaign data
-        
+
         # Fetch campaign results and stats
         for campaign in campaigns:
             # Iterate over campaign results and create structured data
@@ -84,31 +62,29 @@ def fetch_campaign_data(api: Gophish, output_file: str) -> None:
                 "Clicked": clicked,
                 "Submitted": submitted_data,
                 "first_name": first_name,
-                "last_name": last_name
+                "last_name": last_name,
             }
-            # Merge data and campaign_data
-            #merged_data = {**group_data, **data_campaign}
-            #print(data_campaign)
+
             campaign_data.append(data_campaign)
-        #print(campaign_data)
-        
+
         # Save the collected data to a JSON file
-        with open(output_file, 'w') as json_file:
+        with open(output_file, "w") as json_file:
             json.dump(campaign_data, json_file, indent=4)
-        
+
         print(f"Campaign data has been saved to {output_file}")
-    
+
     except Exception as e:
         print(f"Error fetching campaigns: {e}")
 
+
 def retreive_data():
     """Retrieve campaign data from GoPhish and save to a JSON file."""
-    # Load environment and establish API connection
-    #load_env()
+    # Establish API connection
+
     gp_api = gp_connect()
 
     # Define the output file for the campaign data
-    output_file = 'gophish_campaign_results.json'
+    output_file = "gophish_campaign_results.json"
 
     # Fetch campaign data and save to a JSON file
     fetch_campaign_data(gp_api, output_file)

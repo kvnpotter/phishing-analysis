@@ -14,35 +14,64 @@ from .retreive_gp_data import retreive_data
 load_dotenv()
 
 # Set up logging for better error tracking
-logging.basicConfig(filename='email_sending.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(
+    filename="email_sending.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+)
+
 
 class Feedback:
     def __init__(self):
+        """
+        Initialize the Feedback class to send emails to users who clicked on phishing links.
+        """
         # Use environment variables for email configuration
         self.email_config = {
             "smtp_server": os.getenv("smtp_reporting_mail"),
             "smtp_port": int(os.getenv("smtp_reporting_port", 587)),
             "sender_email": os.getenv("reporting_mail_username"),
             "password": os.getenv("reporting_mail_password"),
-            "subject": os.getenv("SUBJECT", "Phishing Simulation Campaign Results")
+            "subject": os.getenv("SUBJECT", "Phishing Simulation Campaign Results"),
         }
 
         # Check if all required environment variables are set
         if not all(self.email_config.values()):
-            raise ValueError("One or more email configuration values are missing in the environment variables.")
+            raise ValueError(
+                "One or more email configuration values are missing in the environment variables."
+            )
 
-    def send_email(self, sender_email, user_email, first_name, last_name, pdf_path="input_data_prompts_topics/training_phishing.pdf"):
+    def send_email(
+        self,
+        sender_email,
+        user_email,
+        first_name,
+        last_name,
+        pdf_path="input_data_prompts_topics/training_phishing.pdf",
+    ):
+        """Send an email to the user who clicked on the phishing link.
+
+        :param sender_email: The sender's email address
+        :param user_email: The recipient's email address
+        :param first_name: The recipient's first name
+        :param last_name: The recipient's last name
+        :param pdf_path: The path to the PDF attachment (default: training_phishing.pdf)
+        """
         try:
             # Set up the server
-            with smtplib.SMTP(self.email_config["smtp_server"], self.email_config["smtp_port"]) as s:
+            with smtplib.SMTP(
+                self.email_config["smtp_server"], self.email_config["smtp_port"]
+            ) as s:
                 s.starttls()
-                s.login(self.email_config["sender_email"], self.email_config["password"])
+                s.login(
+                    self.email_config["sender_email"], self.email_config["password"]
+                )
                 print(f"Logged in as {self.email_config['sender_email']}")
                 # Create the email
                 msg = MIMEMultipart()
-                msg['From'] = sender_email  # Dynamic sender email
-                msg['To'] = user_email
-                msg['Subject'] = self.email_config["subject"]
+                msg["From"] = sender_email  # Dynamic sender email
+                msg["To"] = user_email
+                msg["Subject"] = self.email_config["subject"]
 
                 # Dynamically generate email content using first name and last name
                 html_content = f"""
@@ -62,13 +91,19 @@ class Feedback:
                                     </body>
                                 </html>
                                 """
-                msg.attach(MIMEText(html_content, 'html'))
+                msg.attach(MIMEText(html_content, "html"))
 
                 # Adding the PDF attachment
                 if pdf_path:
                     with open(pdf_path, "rb") as pdf_file:
-                        pdf_attachment = MIMEApplication(pdf_file.read(), _subtype="pdf")
-                        pdf_attachment.add_header('Content-Disposition', 'attachment', filename="training_phishing.pdf")
+                        pdf_attachment = MIMEApplication(
+                            pdf_file.read(), _subtype="pdf"
+                        )
+                        pdf_attachment.add_header(
+                            "Content-Disposition",
+                            "attachment",
+                            filename="training_phishing.pdf",
+                        )
                         msg.attach(pdf_attachment)
 
                 # Send the email using msg.as_string() to get the MIME format
@@ -79,11 +114,16 @@ class Feedback:
             logging.error(f"SMTP error occurred while sending to {user_email}: {e}")
             print(f"SMTP error occurred: {e}")
         except Exception as e:
-            logging.error(f"Unexpected error occurred while sending to {user_email}: {e}")
+            logging.error(
+                f"Unexpected error occurred while sending to {user_email}: {e}"
+            )
             print(f"An unexpected error occurred: {e}")
 
+
 def load_campaign_data(json_file_path):
-    """Load the campaign data from a JSON file"""
+    """Load the campaign data from a JSON file
+
+    :param json_file_path: The path to the JSON file containing campaign data"""
     try:
         with open(json_file_path, "r") as file:
             return json.load(file)
@@ -92,19 +132,25 @@ def load_campaign_data(json_file_path):
         print(f"Error loading campaign data: {e}")
         return []
 
+
 def send_emails_to_users(Feedback, campaign_data, sender_email):
-    """Send emails to users who clicked on the phishing link"""
+    """Send emails to users who clicked on the phishing link
+
+    :param Feedback: An instance of the Feedback class
+    :param campaign_data: The campaign data containing user information
+    :param sender_email: The sender's email address"""
     # Track users who clicked on links
     users_to_email = defaultdict(int)
 
     # Loop through the campaign data and filter users who clicked
     for user_data in campaign_data:
-        if user_data.get('Clicked', 0) > 0:  # Check if the user clicked
-            user_email = user_data.get('Email')
-            first_name = user_data.get('first_name', 'User')  # Default to 'User' if no name
-            last_name = user_data.get('last_name', '')
+        if user_data.get("Clicked", 0) > 0:  # Check if the user clicked
+            user_email = user_data.get("Email")
+            first_name = user_data.get(
+                "first_name", "User"
+            )  # Default to 'User' if no name
+            last_name = user_data.get("last_name", "")
             users_to_email[user_email] = (first_name, last_name)
-
 
     # Check if there are users to email
     if not users_to_email:
@@ -133,7 +179,7 @@ def send_emails_periodically():
         print(f"Failed to retrieve GoPhish data: {e}")
         return
 
-    campaign_data_file = 'gophish_campaign_results.json'
+    campaign_data_file = "gophish_campaign_results.json"
 
     # Load campaign data from the JSON file
     campaign_data = load_campaign_data(campaign_data_file)
@@ -142,7 +188,6 @@ def send_emails_periodically():
         logging.warning("No campaign data found or failed to load.")
         print("No campaign data found or failed to load.")
         return
-
 
     if not campaign_data:
         print("No campaign data found or failed to load.")
@@ -161,4 +206,3 @@ def send_emails_periodically():
 
     # Send emails to users who clicked on the phishing link
     send_emails_to_users(feedback, campaign_data, sender_email)
-

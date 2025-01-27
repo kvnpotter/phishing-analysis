@@ -2,3 +2,5 @@
 Testing_redundant/
 .env
 .log
+
+email_sending.log

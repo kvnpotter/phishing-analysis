@@ -13,6 +13,7 @@ gmail_app_password = ""
 
 # Create campaign
 
+
 def create_campaign(recipients: list[dict[str, str]]) -> PhishingCampaign:
     """
     Create a phishing campaign
@@ -26,20 +27,18 @@ def create_campaign(recipients: list[dict[str, str]]) -> PhishingCampaign:
     topics = load_topics("input_data_prompts_topics/Emailtopics.json")
     prompts = load_prompts("input_data_prompts_topics/prompts.json")
 
-    # Create phishing campaign and load recipient data from CSV file with path specified in config.json
+    # Create phishing campaign and load recipient data
 
-    campaign = PhishingCampaign(topics=topics,
-                                prompts=prompts,
-                                username=gmail_username,
-                                password=gmail_app_password,
-                                recipients=recipients)
-#    campaign.load_data()
+    campaign = PhishingCampaign(
+        topics=topics,
+        prompts=prompts,
+        username=gmail_username,
+        password=gmail_app_password,
+        recipients=recipients,
+    )
 
     # Setup the phishing campaigns using the supplied data
 
     campaign.setup_campaigns()
 
     return campaign
-
-
-

@@ -9,22 +9,31 @@ from contextlib import asynccontextmanager
 import asyncio
 
 from GoPhishConnector import gp_connect, gp_post_campaign, gp_delete_campaign
-from CampaignCreator import PhishingCampaign, load_env, load_topics, load_prompts, load_config
+from CampaignCreator import (
+    PhishingCampaign,
+    load_env,
+    load_topics,
+    load_prompts,
+    load_config,
+)
 from EmailScheduler import run_email_scheduler_in_background
 from CampaignScheduler import run_campaign_scheduler_in_background
 
 # Disable SSL warnings for development environments
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+
 # Define User and UserList data models
 class User(BaseModel):
-    first_name: str 
-    last_name: str 
-    email: str 
-    department: str 
+    first_name: str
+    last_name: str
+    email: str
+    department: str
+
 
 class UserList(BaseModel):
-    recipients: List[User] 
+    recipients: List[User]
+
 
 # In-memory "database" to store user data (for simplicity)
 recipient_database: list[dict[str:str]] = []
@@ -37,6 +46,7 @@ GEMINI_API_KEY, gmail_username, gmail_app_password = load_env()
 gp_api = gp_connect()
 
 # Define the lifespan function to handle startup and shutdown events
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -53,11 +63,15 @@ async def lifespan(app: FastAPI):
 
     # Setup and start the campaign scheduler in the background
     try:
-        campaign_scheduler_task = asyncio.create_task(run_campaign_scheduler_in_background(gp_api=gp_api,
-                                             topics=topics,
-                                             prompts=prompts,
-                                             gmail_username=gmail_username,
-                                             gmail_app_password=gmail_app_password))
+        campaign_scheduler_task = asyncio.create_task(
+            run_campaign_scheduler_in_background(
+                gp_api=gp_api,
+                topics=topics,
+                prompts=prompts,
+                gmail_username=gmail_username,
+                gmail_app_password=gmail_app_password,
+            )
+        )
         logging.info("Campaign scheduler started successfully in the background.")
     except Exception as e:
         logging.error(f"Failed to start campaign scheduler: {e}")
@@ -68,8 +82,10 @@ async def lifespan(app: FastAPI):
     # Shutdown logic
     logging.info("FastAPI app is shutting down...")
 
+
 # Create the FastAPI app
-app = FastAPI(title="Phishing Campaign API",
+app = FastAPI(
+    title="Phishing Campaign API",
     description="This API allows you to upload recipients, launch phishing campaigns, and delete campaign data from GoPhish.",
     version="1.0.0",
     contact={
@@ -81,18 +97,9 @@ app = FastAPI(title="Phishing Campaign API",
         "name": "MIT",
         "url": "https://opensource.org/licenses/MIT",
     },
-    lifespan=lifespan
+    lifespan=lifespan,
 )
 
-# @app.on_event("startup")
-# async def startup_event():
-#     """Start the email scheduler in the background when the FastAPI app starts"""
-
-
-# @app.on_event("shutdown")
-# async def shutdown_event():
-#     """Handle graceful shutdown of FastAPI app"""
-    
 
 # Root endpoint
 @app.get("/")
@@ -102,22 +109,30 @@ def read_root():
     """
     return {"message": "Welcome to the testing API!"}
 
+
 @app.post("/recipients/upload-json/")
 def upload_recipients(user_list: UserList):
-    """ 
+    """
     Clear the previous recipients and upload a new list of recipients to the recipient database in JSON format. Stores in a list of dictionaries.
     [{"first_name": "John", "last_name": "Doe", "email": "johndoe@example.com", "department": "IT"}]
     """
     global recipient_database
     recipient_database = []
     for recipient in user_list.recipients:
-        recipient_database.append({"first_name": recipient.first_name,
-                                   "last_name": recipient.last_name,
-                                   "email": recipient.email,
-                                   "department": recipient.department})
+        recipient_database.append(
+            {
+                "first_name": recipient.first_name,
+                "last_name": recipient.last_name,
+                "email": recipient.email,
+                "department": recipient.department,
+            }
+        )
 
-    return {"message": "Recipients uploaded successfully!",
-            "database": recipient_database}
+    return {
+        "message": "Recipients uploaded successfully!",
+        "database": recipient_database,
+    }
+
 
 @app.post("/recipients/upload-recipient/")
 def upload_recipient(user_list: UserList):
@@ -127,13 +142,17 @@ def upload_recipient(user_list: UserList):
     """
     global recipient_database
     for recipient in user_list.recipients:
-        recipient_database.append({"first_name": recipient.first_name,
-                                   "last_name": recipient.last_name,
-                                   "email": recipient.email,
-                                   "department": recipient.department})
+        recipient_database.append(
+            {
+                "first_name": recipient.first_name,
+                "last_name": recipient.last_name,
+                "email": recipient.email,
+                "department": recipient.department,
+            }
+        )
 
-    return {"message": "Recipient added successfully!",
-            "database": recipient_database}
+    return {"message": "Recipient added successfully!", "database": recipient_database}
+
 
 @app.delete("/recipients/delete-all/")
 def delete_all_recipients():
@@ -144,29 +163,33 @@ def delete_all_recipients():
     recipient_database = []
     return {"message": "All recipients deleted successfully!"}
 
+
 # GET endpoint to retrieve all recipients
 @app.get("/recipients/")
 def get_recipients():
-    """ Get all recipients from the recipient database. """
+    """Get all recipients from the recipient database."""
     if not recipient_database:
         raise HTTPException(status_code=404, detail="No recipients found.")
     return {"recipients": recipient_database}
 
+
 # Get endpoint to launch a campaign
 @app.get("/campaign/launch/")
 def launch_campaign():
-    """ Launch a phishing campaign using the recipient database. Creates and sets up the campaign, then posts the data to GoPhish. """
+    """Launch a phishing campaign using the recipient database. Creates and sets up the campaign, then posts the data to GoPhish."""
 
     global GEMINI_API_KEY, gmail_username, gmail_app_password, topics, prompts, recipient_database, gp_api
 
     # create and setup phishing campaign
 
-    campaign = PhishingCampaign(topics=topics,
-                            prompts=prompts,
-                            username=gmail_username,
-                            password=gmail_app_password,
-                            recipients=recipient_database)
-    
+    campaign = PhishingCampaign(
+        topics=topics,
+        prompts=prompts,
+        username=gmail_username,
+        password=gmail_app_password,
+        recipients=recipient_database,
+    )
+
     campaign.setup_campaigns()
 
     # Post campaign data to GoPhish
@@ -174,9 +197,10 @@ def launch_campaign():
 
     return {"message": "Campaign launched successfully!"}
 
+
 @app.delete("/campaign/delete-all/")
 def delete_gp_data():
-    """ Delete all campaign data from GoPhish. """
+    """Delete all campaign data from GoPhish."""
 
     gp_delete_campaign(gp_api)
     return {"message": "All campaign data deleted successfully!"}

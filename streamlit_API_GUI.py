@@ -9,14 +9,14 @@ from CampaignCreator import load_config
 # Set base URL for requests to API
 
 config = load_config()
-BASE_URL = config["API_base_url"] # from the .env
+BASE_URL = config["API_base_url"]  # from the .env
 
 # App Code
 
 st.title("Upload data and launch campaigns")
 
 # Multiline text input for JSON data
-input_data = st.text_area(label= "The input field for JSON recipients")
+input_data = st.text_area(label="The input field for JSON recipients")
 
 #  Buttons to upload JSON data and add one user
 if st.button("Upload JSON recipients"):
