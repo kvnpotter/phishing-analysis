@@ -64,27 +64,35 @@ Ensure you have the following installed:
 - GoPhish (available from the [website](https://getgophish.com/)) and the API
 
 ### **Setup Instructions**
-1. Clone the repository:
+1. Clone the repository
    ```shell
    git clone https://github.com/kvnpotter/phishing-analysis.git
    cd phishing-analysis
    ```
-2. Create a .env file with following structure
+2. Launch an instance of GoPhish, setup admin user, reporting mail, retrieve API key
+3. Setup OpenAI and Gemini API keys
+4. Get app passwords for necessary email accounts
+5. Create a .env file with following structure
    ```Python
-   print(...)
+   GOPHISH_API_KEY = "YOUR_KEY_HERE"
+   OPENAI_API_KEY = "YOUR_KEY_HERE"
+   GOOGLE_API_KEY = "YOUR_KEY_HERE"
+   gmail_username = "sender_email_address"
+   gmail_app_password = "YOUR_KEY_HERE"
+   smtp_reporting_mail = "smtp host for reporting"
+   smtp_reporting_port = 587
+   reporting_mail_username = "reporting_email_address"
+   reporting_mail_password = "YOUR_KEY_HERE"
+   SUBJECT="Feedback from our phishing campaign"
    ```
-4. Set up GoPhish and configure phishing email templates.
-5. Run the AI-based phishing email generator:
+6. Setup recipient JSON and config file appropriately
+5. Launch the API
    ```shell
-   python generate_emails.py
+   fastapi dev main.py
    ```
-6. Start the API service:
+6. Startup streamlit GUI
    ```shell
-   uvicorn api:app --reload
-   ```
-7. Start the Streamlit dashboard:
-   ```shell
-   streamlit run dashboard.py
+   streamlit run streamlit_API_GUI.py
    ```
 
 ## **Usage**
@@ -129,7 +137,8 @@ Ensure you have the following installed:
 - Add scraping and automate, to obtain more relevant data on the recipient. This was attempted using information from LinkedIn, however most profiles were private, therefore not providing any information. Due to time constraints, the per department solution was kept in the final product.
 - Improve employee response analysis and sending training/congratulations. Due to time constraints, a temporary solution is implemented ; which obtains campaign data from GoPhish and sends emails with training data to all employees who clicked on the link in the email. Scheduler is put into place, two scenarios need to be implemented, one where an employee would automatically receive training as soon as they click on the link or give credentials, and another where periodically (ex. every 3 months) each employee's response to the phishing mails would be evaluated, and additional training sent if they clicked on the link f. ex. > 50% of cases.
 - Get tracking working. As of now, GoPhish does identify cases where the recipient clicked the phishing link, and can obtain credentials, however it does not detect when recipients simply open the email.
-- Allow for user admin on GoPhish instance.
+- Allow for user admin on GoPhish instance, and setting reporting email automatically (however, from the source code of GoPhish, it does not seem possible to do so, and has to be set mmanually via the GUI).
+- Integrate data reporting with actual campaign data. As of now, dummy data is being used, due to time constraints.
 
 
 
