@@ -9,7 +9,7 @@ This repository contains the code and resources for an automated phishing awaren
 
 The campaign is fully automated, utilizing:
 1. **GenAI** to generate relevant phishing emails.
-2. **GoPhish**, an open source application to create and manage phishing campaigns.
+2. [**GoPhish**](https://getgophish.com/), an open source application to create and manage phishing campaigns.
 3. **FastAPI** for recipient upload and campaign management, and interaction with GoPhish.
 4. **Streamlit** for API frontend (GUI) and data reporting.
 5. **Automated Scheduling** for phishing simulations and sending training content.
@@ -53,14 +53,11 @@ This section describes the repo structure in detail
 - streamlit_API_GUI.py : main code for streamlit-based API GUI
 
 
-
-
-
 ## **Installation-Environment Setup**
 
 ### **Prerequisites**
 Ensure you have the following installed:
-- Python (>=3.8)
+- Python
 - GoPhish
 - Streamlit
 - FastAPI
