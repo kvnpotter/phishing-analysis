@@ -97,39 +97,43 @@ Ensure you have the following installed:
 
 ## **Usage**
 
-1. **Launch the phishing campaign:**
-   - Upload target emails via API.
-   - Configure and deploy phishing emails using GoPhish.
-   - Schedule automatic or manual campaigns.
-2. **Analyze responses:**
-   - Run the AI model to assess phishing susceptibility.
-   - Set up the [phishing campaign analysis dashboard](https://github.com/Miriam-Stoehr/phishing-campaign-analysis).
-   - Retrieve email interaction data from GoPhish.
-3. **Generate reports:**
+1. **Uploading recipient data:**
+   - Target information can be uploaded using the API GUI.
+   - Copy the contents of the Employee.json file (after adding recipient emails) and paste in text box in GUI.
+   - Clicking "Upload JSON recipients" will empty the user database and store the provided information.
+   - To add one user, without deleting user database, repeat previous steps but click on "Add one user" instead.
+2. **Launching campaign:**
+   - Campaigns can be launched manually by clicking the button on the GUI. Stored user data will then be used to create the campaign, the content and upload to GoPhish to send the campaign
+   - From API startup, a scheduler is instantiated, regularly (interval set in config) checking the recipient database, and sending campaigns to users in the db.
+   - Launching a campaign will create all the necessary content for GoPhish per user.
+   - Based on the provided department/position, a random selection will be made of 5 possible topics for phishing mails.
+   - The subject is then sent to GenAI, randomly OpenAI or Gemini (disabled at the moment due to rate limitation errors, code is present and can be enabled) to create email content in HTML.
+   - The email content is used to generate the landing page HTML.
+   - Appropriate information on recipient, sender, phishing mail, landing page etc. is used to create the data for GoPhish
+   - The data is posted to GoPhish and automatically launched
+3. **Analyze responses and deliver training:**
+   - Recipient responses are tracked by GoPhish
+   - From API startup, a scheduler is instantiated, regularly (interval set in config) checking the GoPhish database, and retrieving necessary information.
+   - Recipients who clicked on the phishing link will be sent an automated response for training purposes.
+5. **Analyze data and generate reports:**
+   - Set up the [phishing campaign analysis dashboard](https://github.com/Miriam-Stoehr/phishing-campaign-analysis). (Or click on the button in the API GUI)
    - Use the Streamlit dashboard to visualize employee engagement.
-4. **Deliver training:**
-   - Automatically assign training materials to high-risk employees.
 
 ## **Contributors**
 
-- **Kevin** - [https://github.com/kvnpotter]
-- **Celina Bolanos** - [https://github.com/Celina-Bolanos]
-- **Frank** - (https://github.com/FraNnky96)
-- **Stef** - [https://github.com/StefVandekerckhove1]
-- **Olha** - [https://github.com/olhasl]
-- **Miriam** - [https://github.com/Miriam-Stoehr]
-- **fatemeh** - [https://github.com/Fatemeh992]
+- **Kevin** - [https://github.com/kvnpotter] (Creation of API, GUI, modules interacting with GenAI, prompt engineering, integration of other parts including scheduling and email sending)
+- **Celina Bolanos** - [https://github.com/Celina-Bolanos] (Contributions to API, GoPhish integration, possible deployment options)
+- **Frank** - (https://github.com/FraNnky96) (Campaign and training scheduling)
+- **Stef** - [https://github.com/StefVandekerckhove1] (Data analysis and Dashboard)
+- **Olha** - [https://github.com/olhasl] (Data analysis and Dashboard)
+- **Miriam** - [https://github.com/Miriam-Stoehr] (Contributions to the API, GoPhish integration, Data analysis and Dashboard)
+- **fatemeh** - [https://github.com/Fatemeh992] (Creation of topics and employee files, writing training content, contribution to README)
 
 
 ## **Timeline**
 
-- **Phase 1:** Project Initiation & Tool Selection  
-- **Phase 2:** Email Generation & Testing  
-- **Phase 3:** API & Campaign Automation  
-- **Phase 4:** AI Integration & Analysis  
-- **Phase 5:** Dashboard Development  
-- **Phase 6:** Testing & Deployment  
-- **Phase 7:** Training Content Distribution & Final Report
+Start project: 13/01/2025 09:30
+End project: 24/01/2025 16:30
 
 
 ## **List of Improvements**
@@ -139,6 +143,7 @@ Ensure you have the following installed:
 - Get tracking working. As of now, GoPhish does identify cases where the recipient clicked the phishing link, and can obtain credentials, however it does not detect when recipients simply open the email.
 - Allow for user admin on GoPhish instance, and setting reporting email automatically (however, from the source code of GoPhish, it does not seem possible to do so, and has to be set mmanually via the GUI).
 - Integrate data reporting with actual campaign data. As of now, dummy data is being used, due to time constraints.
+- Improve user data storage in SQL database (instead of a list of dictionaries as a variable in the API).
 
 
 
