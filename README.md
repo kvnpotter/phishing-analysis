@@ -121,7 +121,7 @@ Ensure you have the following installed:
 
 ## **Contributors**
 
-- **Kevin** - [https://github.com/kvnpotter] (Creation of API, GUI, modules interacting with GenAI, prompt engineering, integration of other parts including scheduling and email sending)
+- **Kevin** - [https://github.com/kvnpotter] (Creation of API, GUI, modules interacting with GenAI and GoPhish, prompt engineering, integration of other parts including scheduling and email sending)
 - **Celina Bolanos** - [https://github.com/Celina-Bolanos] (Contributions to API, GoPhish integration, possible deployment options)
 - **Frank** - (https://github.com/FraNnky96) (Campaign and training scheduling)
 - **Stef** - [https://github.com/StefVandekerckhove1] (Data analysis and Dashboard)
