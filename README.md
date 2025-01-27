@@ -1,39 +1,45 @@
-
-# **Proximus ADA Phishing Awareness Campaign**
+# **Automated Phishing Awareness Campaign**
 
 
 [Introduction](#introduction)     |     [Description](#description)     |       [Installation-Environment setup](#installation-environment-setup)    |       [Usage](#usage)    |[Contributors](#contributors)    |      [Timeline](#timeline)       |       [List of Improvements](#list-of-improvements)  
 
 ## **Introduction**
 
-This repository contains the code and resources for an automated phishing awareness campaign at Proximus ADA done as a part of Data Science and AI training course at Becode in 2025. The project aims to assess employees' susceptibility to phishing attacks by using AI to analyze their responses to simulated phishing emails. Employees who fall for phishing attempts more than 50% of the time will receive targeted training content to improve their security awareness.
+This repository contains the code and resources for an automated phishing awareness campaign for a Belgian telecommunications company, completed as a part of my AI and Data science bootcamp training at BeCode (Brussels, Belgium). The project aims to assess employee susceptibility to phishing attacks by using AI to generate fake phishing mails, based on available emplopyee information, and to analyze their response. Employees who fall for phishing attempts more than 50% of the time will receive targeted training content to improve their security awareness.
 
 The campaign is fully automated, utilizing:
 1. **GenAI** to generate relevant phishing emails.
-2. **GoPhish** to send and manage phishing campaigns.
-3. **Streamlit/FastAPI** for API and campaign management.
-4. **Automated Scheduling** for regular and manual phishing simulations.
-5. **Training Resources** to educate employees.
-6. **Data Analysis & Insights** to evaluate employee engagement and effectiveness.
+2. **GoPhish**, an open source application to create and manage phishing campaigns.
+3. **FastAPI** for recipient upload and campaign management, and interaction with GoPhish.
+4. **Streamlit** for API frontend (GUI) and data reporting.
+5. **Automated Scheduling** for phishing simulations and sending training content.
+6. **Training Resources** to educate employees.
+7. **Data Analysis & Insights** to evaluate employee engagement and effectiveness.
+
+Specifications for the final project/client expectations:
+1. Fully automated tool which creates campaigns.
+2. Based on provided target info : first and last name, email address and position at the company.
+3. Find information on the person online, and choose a relevant topic for the phishing mail.
+4. Generate a phishing mail about the topic using GenAI.
+5. Create GoPhish objects and submit the data to send campaigns.
+6. Ensure appropriate training for employees, based on their response to phishing mails. (Congratulate employees correctly reporting the mails)
+
+In addition:
+- [**Dashboarding:** Visualization and monitoring of phishing campaigns.](https://github.com/Miriam-Stoehr/phishing-campaign-analysis)
 
 ## **Description**
 
-The phishing campaign operates in a structured workflow:
+This section describes the repo structure and working in detail
 
-### **Data Analysis:**
-- **Generate Emails:** Using GenAI to create phishing emails dynamically.
-- **Send Emails:** Testing and deployment through GoPhish.
-- [**Dashboarding:** Visualization and monitoring of phishing campaigns.](https://github.com/Miriam-Stoehr/phishing-campaign-analysis)
-- **Training Resource:** educational content is provided based on the output.
-- **Align with DE:** Ensure proper data format and API compatibility.
-- **Data Analysis & Insights:** Extract meaningful statistics on phishing responses.
+- /CampaignCreator/ : modules handling campaign creation, including generating phishing mail content and landing pages
+* CampaignCreator.py : a function for creating a phishing campaign, used in local testing (defined as a collection of GoPhish campaigns, one per user in the specified user list)
+* environment_setup.py : a number of utility functions to load environment variables (API keys etc.), prompts (for GenAI), topics (phishing mail topics per department), configuration (file paths, hosts, URLs, scheduler timing in seconds)
+* 
 
-### **Data Engineering:**
-- **API Development:** Create an API (FastAPI or Streamlit) to upload target email lists and trigger campaigns.
-- **Campaign Scheduling:** Support both planned (automated) and manual campaigns.
-- **Follow-up Data Processing:** Retrieve email response data from GoPhish and store it for analysis.
-- **Security & Roles:** Implement access control and secure data handling.
-- **Scheduling:** Automate recurring phishing campaigns.
+
+
+
+
 
 ## **Installation-Environment Setup**
 
@@ -110,12 +116,16 @@ Ensure you have the following installed:
 - **Phase 4:** AI Integration & Analysis  
 - **Phase 5:** Dashboard Development  
 - **Phase 6:** Testing & Deployment  
-- **Phase 7:** Training Content Distribution & Final Report  
+- **Phase 7:** Training Content Distribution & Final Report
+
 
 ## **List of Improvements**
 
-- Enhance AI model accuracy for phishing detection.
-- Improve dashboard UI/UX.
-- Expand phishing scenarios for a more comprehensive assessment.
-- Automate feedback and reporting mechanisms further.
-- Strengthen security and role-based access control.
+- Add scraping and automate, to obtain more relevant data on the recipient. This was attempted using information from LinkedIn, however most profiles were private, therefore not providing any information. Due to time constraints, the per department solution was kept in the final product.
+- Improve employee response analysis and sending training/congratulations. Due to time constraints, a temporary solution is implemented ; which obtains campaign data from GoPhish and sends emails with training data to all employees who clicked on the link in the email. Scheduler is put into place, two scenarios need to be implemented, one where an employee would automatically receive training as soon as they click on the link or give credentials, and another where periodically (ex. every 3 months) each employee's response to the phishing mails would be evaluated, and additional training sent if they clicked on the link f. ex. > 50% of cases.
+- Get tracking working. As of now, GoPhish does identify cases where the recipient clicked the phishing link, and can obtain credentials, however it does not detect when recipients simply open the email.
+- Allow for user admin on GoPhish instance.
+
+
+
+
