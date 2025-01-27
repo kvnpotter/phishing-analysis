@@ -29,13 +29,28 @@ In addition:
 
 ## **Description**
 
-This section describes the repo structure and working in detail
+This section describes the repo structure in detail
 
 - /CampaignCreator/ : modules handling campaign creation, including generating phishing mail content and landing pages
-   * CampaignCreator.py : a function for creating a phishing campaign, used in local testing (defined as a collection of GoPhish campaigns, one per user in the specified user list)
-   * environment_setup.py : a number of utility functions to load environment variables (API keys etc.), prompts (for GenAI), topics (phishing mail topics per department), configuration (file paths, hosts, URLs, scheduler timing in seconds)
-   * 
+   * CampaignCreator.py : a function for creating a phishing campaign, used in local testing (defined as a collection of GoPhish campaigns, one per user in the specified user list).
+   * environment_setup.py : a number of utility functions to load environment variables (API keys etc.), prompts (for GenAI), topics (phishing mail topics per department), configuration (file paths, hosts, URLs, scheduler timing in seconds).
+   * genai_utils.py : functions to select a random topic (of 5), given the department where the employee works, on which to base the phishing email, and to generate phishing email/landing page content in HTML.
+   * PhishingCampaign.py : set up a phishing campaign (defined as a collection of GoPhish campaigns, one per user in the specified user list), based on provided recipient data, topics and prompts. Setup a GoPhish campaign for each user.
 
+- /CampaignScheduler/ : implement scheduling for sending the campaigns, based on user information stored in the API. Periodicity can be set in the config file.
+- /EmailScheduler/ : to implement scheduling for sending the training emails, based on user response stored in GoPhish. Periodicity can be set in the config file.
+
+- /GoPhishConnector/ : module to connect to an instance of GoPhish and interact with the application (send campaigns, delete data).
+
+- /input_data_prompts_topics/ : Directory containing provided user data, prompts written for GenAI, training materual, and some possible topics.
+
+- campaign_script.py : testing script to create campaigns and upload to GoPhish.
+- config.json : specifies the path for prompt and topic files, adresses for API and GoPhish instances and intervals for scheduler.
+- del_gophish.py : manually delete all information from GoPhish
+- gophish_campaign_results.json : stores information on campaigns, used to select users to send training information to
+
+- main.py : main API code
+- streamlit_API_GUI.py : main code for streamlit-based API GUI
 
 
 
