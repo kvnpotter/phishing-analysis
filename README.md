@@ -66,18 +66,12 @@ Ensure you have the following installed:
 ### **Setup Instructions**
 1. Clone the repository:
    ```shell
-   git clone https://github.com/proximus-ada/phishing-awareness.git
-   cd phishing-awareness
+   git clone https://github.com/kvnpotter/phishing-analysis.git
+   cd phishing-analysis
    ```
-2. Create a virtual environment and activate it:
-   ```shell
-   python -m venv venv
-   source venv/bin/activate  # On macOS/Linux
-   venv\Scripts\activate     # On Windows
-   ```
-3. Install dependencies:
-   ```shell
-   pip install -r requirements.txt
+2. Create a .env file with following structure
+   ```Python
+   print(...)
    ```
 4. Set up GoPhish and configure phishing email templates.
 5. Run the AI-based phishing email generator:
