@@ -32,9 +32,9 @@ In addition:
 This section describes the repo structure and working in detail
 
 - /CampaignCreator/ : modules handling campaign creation, including generating phishing mail content and landing pages
-* CampaignCreator.py : a function for creating a phishing campaign, used in local testing (defined as a collection of GoPhish campaigns, one per user in the specified user list)
-* environment_setup.py : a number of utility functions to load environment variables (API keys etc.), prompts (for GenAI), topics (phishing mail topics per department), configuration (file paths, hosts, URLs, scheduler timing in seconds)
-* 
+   * CampaignCreator.py : a function for creating a phishing campaign, used in local testing (defined as a collection of GoPhish campaigns, one per user in the specified user list)
+   * environment_setup.py : a number of utility functions to load environment variables (API keys etc.), prompts (for GenAI), topics (phishing mail topics per department), configuration (file paths, hosts, URLs, scheduler timing in seconds)
+   * 
 
 
 
