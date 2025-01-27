@@ -58,11 +58,10 @@ This section describes the repo structure in detail
 ### **Prerequisites**
 Ensure you have the following installed:
 - Python
-- GoPhish
 - Streamlit
 - FastAPI
-- GenAI SDK
-- Required Python packages (install using `requirements.txt`)
+- GenAI SDK for Gemini and OpenAPI
+- GoPhish (available from the [website](https://getgophish.com/)) and the API
 
 ### **Setup Instructions**
 1. Clone the repository:
