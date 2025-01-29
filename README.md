@@ -144,6 +144,8 @@ End project: 24/01/2025 16:30
 - Allow for user admin on GoPhish instance, and setting reporting email automatically (however, from the source code of GoPhish, it does not seem possible to do so, and has to be set mmanually via the GUI).
 - Integrate data reporting with actual campaign data. As of now, dummy data is being used, due to time constraints.
 - Improve user data storage in SQL database (instead of a list of dictionaries as a variable in the API).
+- Improve speed of campaign creation (concurrency?)
+- Add better error handling when making requests to the APIs
 
 
 
